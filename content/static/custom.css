@@ -1,0 +1,36 @@
+
+/* Small tweaks to make the fonts easier to read */
+h1 {
+    font-size: 200%;
+    color: #17B26F;
+}
+h2 {
+    font-size: 180%;
+    color: #17B26F;
+}
+h3 {
+    font-size: 160%;
+    color: #17B26F;
+}
+h4 {
+    font-size: 140%;
+    color: #17B26F;
+}
+p {
+    font-size: 115%;
+}
+a {
+  color: #17B26F;
+}
+code {
+  color: #D053FF;
+}
+
+blockquote {
+      font-size: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
+}
