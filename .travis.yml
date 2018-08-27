@@ -1,6 +1,7 @@
 # https://github.com/drdoctr/doctr
 # doctr requires python >=3.5
 language: python
+cache: pip
 python:
   - 3.6
 
