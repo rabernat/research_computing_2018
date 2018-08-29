@@ -21,9 +21,9 @@ _Office Hours:_ Thursday, 3:30 - 4:30 pm (DEES Faculty Office)
 
 **Xiaomeng Jin**  
 Dept. of Earth & Environmental Sciences  
-_Email:_ <txjin@ldeo.columbia.edu>
+_Email:_ <xjin@ldeo.columbia.edu>
 _Office:_ Oceanography, 20&E, LDEO
-_Office Hours:_ ???
+_Office Hours:_ Tuesday evening, 7:00 -8:00 pm (DEES student lounge)
 
 ## Overview
 
