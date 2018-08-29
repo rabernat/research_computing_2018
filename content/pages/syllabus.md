@@ -42,6 +42,6 @@ and the course website itself.
 from which they will complete the assignments.
 Students will also be given an educational account on the Habanero cluster computer.
 
-**Grading:** Weekly assignment (50%), assignment presentation (10%), final project (40%)
+**Grading:** Weekly assignment (70%), final project (30%)
 
 ** [Schedule]({filename}/pages/schedule.md) **
