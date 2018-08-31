@@ -21,9 +21,9 @@ _Office Hours:_ Thursday, 3:30 - 4:30 pm (DEES Faculty Office)
 
 **Xiaomeng Jin**  
 Dept. of Earth & Environmental Sciences  
-_Email:_ <xjin@ldeo.columbia.edu>
-_Office:_ Oceanography, 20&E, LDEO
-_Office Hours:_ Tuesday evening, 7:00 -8:00 pm (DEES student lounge)
+_Email:_ <xjin@ldeo.columbia.edu> <br/>
+_Office:_ Oceanography, 207F, LDEO <br/>
+_Office Hours:_ Wednesday, 6:00 - 7:00 pm (DEES student lounge)
 
 ## Overview
 
@@ -43,5 +43,15 @@ from which they will complete the assignments.
 Students will also be given an educational account on the Habanero cluster computer.
 
 **Grading:** Weekly assignment (70%), final project (30%)
+
+**Assignment Grading Rubric:** 
+
++ Total: 100
++ Everything done and answers all correct: 80 <br/>
+  * Missing answer: -5 per question <br/>
+  * Wrong answer: -2 per question <br/>
++ Clean, elegant, efficient code: rate between 0 and 10 <br/>
++ Clear comments and explanations: rate between 0 and 10 <br/>
++ Late penalty: -20 per day (24 hrs) 
 
 ** [Schedule]({filename}/pages/schedule.md) **
