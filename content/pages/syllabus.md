@@ -46,12 +46,12 @@ Students will also be given an educational account on the Habanero cluster compu
 
 **Assignment Grading Rubric:** 
 
-+ Total: 100
-+ Everything done and answers all correct: 80 <br/>
-  * Missing answer: -5 per question <br/>
-  * Wrong answer: -2 per question <br/>
-+ Clean, elegant, efficient code: rate between 0 and 10 <br/>
-+ Clear comments and explanations: rate between 0 and 10 <br/>
-+ Late penalty: -20 per day (24 hrs) 
+- Total: 100
+- All questions complete: 50
+- All questions correct: 30
+(e.g., if there are 10 questions, each questions has 5 points for completeness and 3 points for correctness)
+- Clean, elegant, efficient code: rate between 0 and 10 <br/>
+- Clear comments and explanations: rate between 0 and 10 <br/>
+- Late penalty: -20 per day (24 hrs) 
 
 ** [Schedule]({filename}/pages/schedule.md) **
