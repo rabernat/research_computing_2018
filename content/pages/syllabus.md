@@ -27,18 +27,29 @@ _Office Hours:_ ???
 
 ## Overview
 
-Computing has become an indispensable tool for Earth Scientists. This course will introduce incoming LDEO graduate students to modern computing software, programming tools and best practices that are broadly applicable to carrying out research in the Earth sciences. This includes an introduction to Unix, programming in three commonly used languages (Python, MATLAB and Fortran), version control and data backup, and tools for visualizing geoscience data and making maps. Students will learn the basics of high performance computing and big data analysis tools available on cluster computers. Student learning will be facilitated through a combination of lectures, in-class exercises, homework assignments and class projects. All topics will be taught through example datasets or problems from Earth Sciences. The course is designed to be accessible for Earth Science graduate students in any discipline.
+Computing has become an indispensable tool for Earth Scientists.
+This course will introduce incoming LDEO graduate students to modern computing software,
+programming tools and best practices that are broadly applicable to carrying out research in the Earth sciences.
+This includes an introduction to Unix, version control, basic programming in the open-source Python language.
+The bulk of the course will be devoted to in-depth exploration of the numerical analysis and visualization
+packages which comprise the modern Scientific Python ecosystem, including Numpy, Scipy, Matplotlib,
+Pandas, Xarray, and Holoviews/Geoviews.
+Student learning will be facilitated through a combination of lectures, in-class exercises,
+homework assignments and class projects.
+All topics will be taught through example datasets or problems from Earth Sciences.
+The course is designed to be accessible for Earth Science graduate students in any discipline.
 
 
 ## Course Structure
 
-The course will meet twice a week. New material will be presented by the instructors on Thursday, with an assignment due the following week (students will work in pairs). On Tuesday, the classroom will be “flipped”: one group will be selected randomly to present their assignment in progress. Tuesday class time will be devoted to discussing / critiquing their work, interactive in-class work on the assignment, and
-one-on-one interaction between students and instructors.
+The course will meet twice a week. New material will be presented by the instructor on Thursday, with an assignment due the following week (students will work in pairs). On Tuesday, the classroom will be “flipped”:
+students will work first in small groups and then individually on assignments.
 
 **Textbook:**  There is no required textbook. All necessary material will come from free online resources
 and the course website itself.
 
-**Computers:**  Students will use their laptop to access a cloud-based JupyterLab environment,
+**Computers:**  Students will use their laptop to access a cloud-based
+[JupyterLab environment]({filename}/pages/jupyterhub.md),
 from which they will complete the assignments.
 Students will also be given an educational account on the Habanero cluster computer.
 
