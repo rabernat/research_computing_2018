@@ -6,6 +6,7 @@
 ./index.html
 ./intro-to-python.html
 ./organization-and-packaging-of-python-projects.html
+./pages/jupyterhub.html
 ./pages/schedule.html
 ./pages/syllabus.html
 ./static/custom.css
