@@ -8,8 +8,8 @@ Summary: Overview of course schedule and topics
 
 | date       | topic                                             | Assignment        |
 |------------|---------------------------------------------------|-------------------|
-| T 4 Sept   | Course introduction, Overview of JupyterLab       |                   |
-| Th 6 Sept  | Core Python Language                              |                   |
+| T 4 Sept   | [Course introduction]({filename}/Lectures/introduction.md)       |                   |
+| Th 6 Sept  |  [Overview of JupyterLab]({filename}/Lectures/intro_to_jupyterlab.md), [Core Python Language]({filename/lectures/intro_to_python.ipynb})                              |                   |
 | T 11 Sept  | in class partner activity                         |                   |
 | Th 13 Sept | Python Functions and Classes                      | assignment 1 due  |
 | T 18 Sept  | in class partner activity                         |                   |
