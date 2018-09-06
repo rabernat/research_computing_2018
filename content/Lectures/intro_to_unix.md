@@ -12,7 +12,6 @@ Author: Ryan Abernathey
 ## Navigating Files and Directories
 
 Several commands are frequently used to create, inspect, rename, and delete files and directories.
-To start exploring them,
 
 To get started, open a terminal using the JupyterLab launcher. You will see
 something like this.
