@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Intro to Unix - Research Computing in Earth Sciences</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="./intro-to-unix.html">
+
+        <meta name="author" content="Ryan Abernathey" />
+        <meta name="keywords" content="unix,shell,bash,file system" />
+        <meta name="description" content="Introduction to basic Unix commands and the file system" />
+
+        <meta property="og:site_name" content="Research Computing in Earth Sciences" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Intro to Unix"/>
+        <meta property="og:url" content="./intro-to-unix.html"/>
+        <meta property="og:description" content="Introduction to basic Unix commands and the file system"/>
+        <meta property="article:published_time" content="2018-09-06" />
+            <meta property="article:section" content="lectures" />
+            <meta property="article:tag" content="unix" />
+            <meta property="article:tag" content="shell" />
+            <meta property="article:tag" content="bash" />
+            <meta property="article:tag" content="file system" />
+            <meta property="article:author" content="Ryan Abernathey" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="./theme/css/bootstrap.lumen.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="./theme/css/pygments/default.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+        <link href="./static/custom.css" rel="stylesheet">
+
+
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="./" class="navbar-brand">
+Research Computing in Earth Sciences            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="./pages/jupyterhub.html">
+                             JupyterHub
+                          </a></li>
+                         <li><a href="./pages/schedule.html">
+                             Schedule
+                          </a></li>
+                         <li><a href="./pages/syllabus.html">
+                             Syllabus
+                          </a></li>
+                        <li class="active">
+                            <a href="./category/lectures.html">Lectures</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="./intro-to-unix.html"
+                       rel="bookmark"
+                       title="Permalink to Intro to Unix">
+                        Intro to Unix
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2018-09-06T00:00:00-05:00"> Thu 06 September 2018</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/unix.html">unix</a>
+        /
+	<a href="./tag/shell.html">shell</a>
+        /
+	<a href="./tag/bash.html">bash</a>
+        /
+	<a href="./tag/file-system.html">file system</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><em>The notes below are modified from the excellent <a href="http://swcarpentry.github.io/shell-novice/">Unix Shell tutorial </a> that is freely available on the Software Carpentry website. I highly recommend checking out the full version for further reading. The material is being used here under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a>.</em></p>
+<hr>
+<h2>Navigating Files and Directories</h2>
+<p>Several commands are frequently used to create, inspect, rename, and delete files and directories.
+To start exploring them,</p>
+<p>To get started, open a terminal using the JupyterLab launcher. You will see
+something like this.</p>
+<div class="highlight"><pre><span></span>jovyan@jupyter-rabernat:~$
+</pre></div>
+
+
+<p>The dollar sign is a <strong>prompt</strong>, which shows us that the shell is waiting for input.
+<code>jovyan</code> is our <strong>username</strong> and <code>jupyter-rabernat</code> is the <strong>hostname</strong>.
+Because we are using JupyterHub on the cloud, we all have the same username
+("jovyan" = resident of the planet Jupyter). However, we each have a different
+hostname (the name of the computer we are using), which corresponds to a
+"virtual machine" running in the cloud. From now on, we will just use a <code>$</code>
+to indicate the prompt.</p>
+<p>To find out your username in general, you can use the command</p>
+<div class="highlight"><pre><span></span>$ whoami
+jovyan
+</pre></div>
+
+
+<p>and to find out your hostname</p>
+<div class="highlight"><pre><span></span>$ hostname
+jupyter-rabernat
+</pre></div>
+
+
+<p>Next,
+let's find out where we are by running a command called <code>pwd</code>
+(which stands for "print working directory").
+At any moment,
+our <strong>current working directory</strong>
+is our current default directory,
+i.e.,
+the directory that the computer assumes we want to run commands in
+unless we explicitly specify something else.
+Here,
+the computer's response is <code>/home/jovyan</code>,
+which is the <strong>home directory</strong> of the user named <code>jovyan</code>.</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">pwd</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>/home/jovyan
+</pre></div>
+
+
+<p>To understand what a "home directory" is,
+let's have a look at how the file system as a whole is organized.  For the
+sake of this example, we'll be
+illustrating the filesystem on our scientist Nelle's computer.  After this
+illustration, you'll be learning commands to explore your own filesystem,
+which will be constructed in a similar way, but not be exactly identical.  </p>
+<p>On a Unix computer, the filesystem looks like something this:</p>
+<p><img alt="The File System" src="https://fsl.fmrib.ox.ac.uk/fslcourse/unix_intro/tree.gif"></p>
+<p>At the top is the <strong>root directory</strong>
+that holds everything else.
+We refer to it using a slash character <code>/</code> on its own;
+this is the leading slash in <code>/home/jovyan</code>.</p>
+<p>Inside that directory are several other directories:
+<code>bin</code> (which is where some built-in programs are stored),
+<code>lib</code> (for the software "libraries" used by different programs),
+<code>home</code> (where users' personal directories are located),
+<code>etc</code> (system-wide configuration files),
+and so on.  </p>
+<p>Now let's learn the command that will let us see the contents of our
+own filesystem.  We can see what's in our home directory by running <code>ls</code>,
+which stands for "listing":</p>
+<div class="highlight"><pre><span></span>$ ls
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>config.yaml  examples  lost+found  work  worker-template.yaml
+</pre></div>
+
+
+<p><code>ls</code> prints the names of the files and directories in the current directory in
+alphabetical order,
+arranged neatly into columns.
+We can make its output more comprehensible by using the <strong>flag</strong> <code>-F</code>,
+which tells <code>ls</code> to add a trailing <code>/</code> to the names of directories:</p>
+<div class="highlight"><pre><span></span>$ ls -F
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>config.yaml  examples/  lost+found/  work/  worker-template.yaml
+</pre></div>
+
+
+<p><code>ls</code> has lots of other options. To find out what they are, we can type:</p>
+<div class="highlight"><pre><span></span>$ man ls
+</pre></div>
+
+
+<p><code>man</code> is the Unix "manual" command:
+it prints a description of a command and its options,
+and (if you're lucky) provides a few examples of how to use it. To navigate through the <code>man</code> pages,
+you may use the up and down arrow keys to move line-by-line,
+or try the "b" and spacebar keys to skip up and down by full page.
+Quit the <code>man</code> pages by typing "q".</p>
+<p>Here,
+we can see that our home directory contains mostly <strong>sub-directories</strong>.
+Any names in your output that don't have trailing slashes,
+are plain old <strong>files</strong>.</p>
+<p>We can also use <code>ls</code> to see the contents of a different directory.  Let's take a
+look at our <code>examples</code> directory by running <code>ls -F examples</code>,
+i.e.,
+the command <code>ls</code> with the <strong>arguments</strong> <code>-F</code> and <code>examples</code>.
+The second argument --- the one <em>without</em> a leading dash --- tells <code>ls</code> that
+we want a listing of something other than our current working directory:</p>
+<div class="highlight"><pre><span></span>$ ls -F examples
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>content/                                                LICENSE           publishconf.py
+develop_server.sh*                                      Makefile          README.md
+DONT_SAVE_ANYTHING_HERE.md                              pelicanconf.py    themes/
+fabfile.py                                              pelican-plugins/
+github_deploy_key_rabernat_research_computing_2018.enc  plugins/
+</pre></div>
+
+
+<p>The output is the list of all the files in the <code>examples</code> directory.
+The examples directory on our JupyterHub is automatically populated with files
+from the <a href="https://github.com/rabernat/research_computing_2018">Git Source Repository for the class</a></p>
+<p>The command to change locations is <code>cd</code> followed by a
+directory name to change our working directory.
+<code>cd</code> stands for "change directory",
+which is a bit misleading:
+the command doesn't change the directory,
+it changes the shell's idea of what directory we are in.</p>
+<p>Let's say we want to move to the <code>content</code> directory we saw above.  We can
+use the following series of commands to get there:</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> examples
+$ <span class="nb">cd</span> content
+</pre></div>
+
+
+<p>These commands will move us from our home directory onto into
+the <code>examples</code> directory, then into the <code>content</code> directory. <code>cd</code> doesn't print anything,
+but if we run <code>pwd</code> after it, we can see that we are now
+in <code>/home/jovyan/examples/content</code>.
+If we run <code>ls</code> without arguments now,
+it lists the contents of <code>/home/jovyan/examples/content</code>,
+because that's where we now are.</p>
+<p>We now know how to go down the directory tree, but
+how do we go up?<br>
+There is a shortcut in the shell to move up one directory level
+that looks like this:</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ..
+</pre></div>
+
+
+<p><code>..</code> is a special directory name meaning
+"the directory containing this one",
+or more succinctly,
+the <strong>parent</strong> of the current directory.
+Sure enough,
+if we run <code>pwd</code> after running <code>cd ..</code>, we're back in <code>/home/jovyan/examples</code>:</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">pwd</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>/home/jovyan/examples
+</pre></div>
+
+
+<p>e special directory <code>..</code> doesn't usually show up when we run <code>ls</code>.  If we want
+to display it, we can give <code>ls</code> the <code>-a</code> flag:</p>
+<div class="highlight"><pre><span></span>$ ls -F -a
+</pre></div>
+
+
+<p><code>-a</code> stands for "show all";
+it forces <code>ls</code> to show us file and directory names that begin with <code>.</code>,
+such as <code>..</code> (which, if we're in <code>/home/jovyan</code>, refers to the <code>/home</code> directory)
+As you can see,
+it also displays another special directory that's just called <code>.</code>,
+which means "the current working directory".
+It may seem redundant to have a name for it,
+but we'll see some uses for it soon.</p>
+<p>Note that in most command line tools, multiple parameters can be combined
+with a single <code>-</code> and no spaces between the parameters: <code>ls -F -a</code> is
+equivalent to <code>ls -Fa</code>.</p>
+<p>These then, are the basic commands for navigating the filesystem on your computer:
+<code>pwd</code>, <code>ls</code> and <code>cd</code>.  Let's explore some variations on those commands.  What happens
+if you type <code>cd</code> on its own, without giving
+a directory?  </p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span>
+</pre></div>
+
+
+<p>How can you check what happened?  <code>pwd</code> gives us the answer!  </p>
+<div class="highlight"><pre><span></span>$ <span class="nb">pwd</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>/home/jovyan
+</pre></div>
+
+
+<p>It turns out that <code>cd</code> without an argument will return you to your home directory,
+which is great if you've gotten lost in your own filesystem.  </p>
+<p>Let's try returning to the <code>content</code> directory from before.  Last time, we used
+three commands, but we can actually string together the list of directories
+to move to <code>data</code> in one step:</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> examples/content
+</pre></div>
+
+
+<p>Check that we've moved to the right place by running <code>pwd</code> and <code>ls -F</code>  </p>
+<p>If we want to move up one level from the data directory, we could use <code>cd ..</code>.  But
+there is another way to move to any directory, regardless of your
+current location.  </p>
+<p>So far, when specifying directory names, or even a directory path (as above),
+we have been using <strong>relative paths</strong>.  When you use a relative path with a command
+like <code>ls</code> or <code>cd</code>, it tries to find that location  from where we are,
+rather than from the root of the file system.  </p>
+<p>However, it is possible to specify the <strong>absolute path</strong> to a directory by
+including its entire path from the root directory, which is indicated by a
+leading slash.  The leading <code>/</code> tells the computer to follow the path from
+the root of the file system, so it always refers to exactly one directory,
+no matter where we are when we run the command.</p>
+<p>This allows us to move to our <code>examples</code> directory from anywhere on
+the filesystem.  To find the absolute path
+we're looking for, we can use <code>pwd</code> and then extract the piece we need
+to move to <code>examples</code>.  </p>
+<div class="highlight"><pre><span></span>$ <span class="nb">pwd</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>/home/jovyan/examples/content
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> /home/jovyan/examples
+</pre></div>
+
+
+<p>Run <code>pwd</code> and <code>ls -F</code> to ensure that we're in the directory we expect.  </p>
+<h4>Two More Shortcuts</h4>
+<p>The shell interprets the character <code>~</code> (tilde) at the start of a path to
+mean "the current user's home directory". For example, if Nelle's home
+directory is <code>/home/jovyan</code>, then <code>~/examples</code> is equivalent to
+<code>/home/jovyan/examples</code>. This only works if it is the first character in the
+path.</p>
+<p>Another shortcut is the <code>-</code> (dash) character.  <code>cd</code> will translate <code>-</code> into
+<em>the previous directory I was in</em>, which is faster than having to remember,
+then type, the full path.  This is a <em>very</em> efficient way of moving back
+and forth between directories. The difference between <code>cd ..</code> and <code>cd -</code> is
+that the former brings you <em>up</em>, while the latter brings you <em>back</em>. You can
+think of it as the <em>Last Channel</em> button on a TV remote.</p>
+<h4>Tab Completion</h4>
+<p>Typing the full path to directories and files can be slow and annoying.
+Fortunately, we have "tab completion" to help us. Try typing <code>cd ex</code> and then
+press the <code>&lt;tab&gt;</code>. The system will try to "auto complete" your command.
+Pressing tab twice brings up a list of all the files, and so on.
+This is called <strong>tab completion</strong>,
+and we will see it in many other tools as we go on.</p>
+<h4>Key Points:</h4>
+<ul>
+<li>"The file system is responsible for managing information on the disk."</li>
+<li>"Information is stored in files, which are stored in directories (folders)."</li>
+<li>"Directories can also store other directories, which forms a directory tree."</li>
+<li>"<code>cd path</code> changes the current working directory."</li>
+<li>"<code>ls path</code> prints a listing of a specific file or directory; <code>ls</code> on its own lists the current working directory."</li>
+<li><code>pwd</code> prints the user's current working directory.</li>
+<li><code>whoami</code> shows the user's current identity.</li>
+<li><code>/</code> on its own is the root directory of the whole file system.</li>
+<li>A relative path specifies a location starting from the current location.</li>
+<li>An absolute path specifies a location from the root of the file system.</li>
+<li>Directory names in a path are separated with '/' on Unix, but '\\' on Windows.</li>
+<li>'..' means 'the directory above the current one'; '.' on its own means 'the current directory'.</li>
+<li>Most files' names are <code>something.extension</code>. The extension isn't required, and doesn't guarantee anything, but is normally used to indicate the type of data in the file.</li>
+<li>Most commands take options (flags) which begin with a '-'.</li>
+</ul>
+<h2>Working with Files and Directories</h2>
+<p>We now know how to explore files and directories,
+but how do we create them in the first place?
+Let's go back to our home directory
+and use <code>ls -F</code> to see what it contains:</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span>
+$ <span class="nb">pwd</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>/home/jovyan
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>$ ls -F
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>config.yaml  examples/  lost+found/  work/  worker-template.yaml
+</pre></div>
+
+
+<p>Let's create a new directory called <code>thesis</code> using the command <code>mkdir thesis</code>
+(which has no output):</p>
+<div class="highlight"><pre><span></span>$ mkdir thesis
+</pre></div>
+
+
+<p>As you might guess from its name,
+<code>mkdir</code> means "make directory".
+Since <code>thesis</code> is a relative path
+(i.e., doesn't have a leading slash),
+the new directory is created in the current working directory:</p>
+<div class="highlight"><pre><span></span>$ ls -F
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>config.yaml  examples/  lost+found/  thesis/  work/  worker-template.yaml
+</pre></div>
+
+
+<h2>Good names for files and directories</h2>
+<p>Complicated names of files and directories can make your life painful
+ when working on the command line. Here we provide a few useful
+ tips for the names of your files.</p>
+<ol>
+<li>
+<p>Don't use whitespaces.</p>
+<p>Whitespaces can make a name more meaningful
+   but since whitespace is used to break arguments on the command line
+   is better to avoid them on name of files and directories.
+You can use <code>-</code> or <code>_</code> instead of whitespace.</p>
+</li>
+<li>
+<p>Don't begin the name with <code>-</code> (dash).</p>
+<p>Commands treat names starting with <code>-</code> as options.</p>
+</li>
+<li>
+<p>Stick with letters, numbers, <code>.</code> (period), <code>-</code> (dash) and <code>_</code> (underscore).</p>
+<p>Many other characters have special meanings on the command line.
+We will learn about some of these during this lesson.
+There are special characters that can cause your command to not work as
+expected and can even result in data loss.</p>
+</li>
+</ol>
+<p>If you need to refer to names of files or directories that have whitespace
+ or another non-alphanumeric character, you should surround the name in quotes (<code>""</code>).</p>
+<p>Since we've just created the <code>thesis</code> directory, there's nothing in it yet:</p>
+<div class="highlight"><pre><span></span>$ ls -F thesis
+</pre></div>
+
+
+<p>Let's change our working directory to <code>thesis</code> using <code>cd</code>.
+We then create a blank new file called <code>draft.txt</code> using the <code>touch command</code>:</p>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> thesis
+$ touch draft.txt
+</pre></div>
+
+
+<p>Now we can edit the file in JupyterLab's text editor.
+Let's type in a few lines of text.
+Once we're happy with our text, we save the file, and
+return to the shell.</p>
+<p><code>ls</code> now shows that we have created a file called <code>draft.txt</code>:</p>
+<div class="highlight"><pre><span></span>$ ls
+draft.txt
+</pre></div>
+
+
+<p>Let's tidy up by running <code>rm draft.txt</code>:</p>
+<div class="highlight"><pre><span></span>$ rm draft.txt
+</pre></div>
+
+
+<p>This command removes files (<code>rm</code> is short for "remove").
+If we run <code>ls</code> again,
+its output is empty once more,
+which tells us that our file is gone:</p>
+<div class="highlight"><pre><span></span>$ ls
+</pre></div>
+
+
+<h4>Deleting Is Forever</h4>
+<p>The Unix shell doesn't have a trash bin that we can recover deleted
+files from (though most graphical interfaces to Unix do).  Instead,
+when we delete files, they are unhooked from the file system so that
+their storage space on disk can be recycled. Tools for finding and
+recovering deleted files do exist, but there's no guarantee they'll
+work in any particular situation, since the computer may recycle the
+file's disk space right away.</p>
+<p>Let's re-create that file
+and then move up one directory to <code>/home/jovyan</code> using <code>cd ..</code>:</p>
+<div class="highlight"><pre><span></span>$ touch draft.txt
+$ <span class="nb">cd</span> ..
+</pre></div>
+
+
+<p>If we try to remove the entire <code>thesis</code> directory using <code>rm thesis</code>,
+we get an error message:</p>
+<div class="highlight"><pre><span></span>$ rm thesis
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">rm</span><span class="o">:</span> <span class="n">cannot</span> <span class="n">remove</span> <span class="err">`</span><span class="n">thesis</span><span class="err">`</span><span class="o">:</span> <span class="n">Is</span> <span class="n">a</span> <span class="n">directory</span>
+</pre></div>
+
+
+<p>This happens because <code>rm</code> by default only works on files, not directories.</p>
+<p>To really get rid of <code>thesis</code> we must also delete the file <code>draft.txt</code>.
+We can do this with the <a href="https://en.wikipedia.org/wiki/Recursion">recursive</a> option for <code>rm</code>:</p>
+<div class="highlight"><pre><span></span>$ rm -r thesis
+</pre></div>
+
+
+<h4>With Great Power Comes Great Responsibility</h4>
+<p>Removing the files in a directory recursively can be very dangerous
+ operation. If we're concerned about what we might be deleting we can
+ add the "interactive" flag <code>-i</code> to <code>rm</code> which will ask us for confirmation
+ before each step</p>
+<div class="highlight"><pre><span></span> $ rm -r -i thesis
+ rm: descend into directory ‘thesis’? y
+ rm: remove regular file ‘thesis/draft.txt’? y
+ rm: remove directory ‘thesis’? y
+</pre></div>
+
+
+<p>This removes everything in the directory, then the directory itself, asking
+ at each step for you to confirm the deletion.</p>
+<p>Let's create that directory and file one more time.</p>
+<div class="highlight"><pre><span></span>$ mkdir thesis
+$ touch thesis/draft.txt
+$ ls thesis
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>draft.txt
+</pre></div>
+
+
+<p><code>draft.txt</code> isn't a particularly informative name,
+so let's change the file's name using <code>mv</code>,
+which is short for "move":</p>
+<div class="highlight"><pre><span></span>$ mv thesis/draft.txt thesis/quotes.txt
+</pre></div>
+
+
+<p>The first parameter tells <code>mv</code> what we're "moving",
+while the second is where it's to go.
+In this case,
+we're moving <code>thesis/draft.txt</code> to <code>thesis/quotes.txt</code>,
+which has the same effect as renaming the file.
+Sure enough,
+<code>ls</code> shows us that <code>thesis</code> now contains one file called <code>quotes.txt</code>:</p>
+<div class="highlight"><pre><span></span>$ ls thesis
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>quotes.txt
+</pre></div>
+
+
+<p>One has to be careful when specifying the target file name, since <code>mv</code> will
+silently overwrite any existing file with the same name, which could
+lead to data loss. An additional flag, <code>mv -i</code> (or <code>mv --interactive</code>),
+can be used to make <code>mv</code> ask you for confirmation before overwriting.</p>
+<p>Just for the sake of consistency,
+<code>mv</code> also works on directories</p>
+<p>Let's move <code>quotes.txt</code> into the current working directory.
+We use <code>mv</code> once again,
+but this time we'll just use the name of a directory as the second parameter
+to tell <code>mv</code> that we want to keep the filename,
+but put the file somewhere new.
+(This is why the command is called "move".)
+In this case,
+the directory name we use is the special directory name <code>.</code> that we mentioned earlier.</p>
+<div class="highlight"><pre><span></span>$ mv thesis/quotes.txt .
+</pre></div>
+
+
+<p>The effect is to move the file from the directory it was in to the current working directory.
+<code>ls</code> now shows us that <code>thesis</code> is empty:</p>
+<div class="highlight"><pre><span></span>$ ls thesis
+</pre></div>
+
+
+<p>Further,
+<code>ls</code> with a filename or directory name as a parameter only lists that file or directory.
+We can use this to see that <code>quotes.txt</code> is still in our current directory:</p>
+<div class="highlight"><pre><span></span>$ ls quotes.txt
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>quotes.txt
+</pre></div>
+
+
+<p>The <code>cp</code> command works very much like <code>mv</code>,
+except it copies a file instead of moving it.
+We can check that it did the right thing using <code>ls</code>
+with two paths as parameters --- like most Unix commands,
+<code>ls</code> can be given multiple paths at once:</p>
+<div class="highlight"><pre><span></span>$ cp quotes.txt thesis/quotations.txt
+$ ls quotes.txt thesis/quotations.txt
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>quotes.txt   thesis/quotations.txt
+</pre></div>
+
+
+<p>To prove that we made a copy,
+let's delete the <code>quotes.txt</code> file in the current directory
+and then run that same <code>ls</code> again.</p>
+<div class="highlight"><pre><span></span>$ rm quotes.txt
+$ ls quotes.txt thesis/quotations.txt
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="n">ls</span><span class="o">:</span> <span class="n">cannot</span> <span class="n">access</span> <span class="n">quotes</span><span class="o">.</span><span class="na">txt</span><span class="o">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="n">or</span> <span class="n">directory</span>
+<span class="n">thesis</span><span class="o">/</span><span class="n">quotations</span><span class="o">.</span><span class="na">txt</span>
+</pre></div>
+
+
+<p>This time it tells us that it can't find <code>quotes.txt</code> in the current directory,
+but it does find the copy in <code>thesis</code> that we didn't delete.</p>
+<h3>Key Points</h3>
+<ul>
+<li><code>cp old new</code> copies a file.</li>
+<li><code>mkdir path</code> creates a new directory.</li>
+<li><code>mv old new</code> moves (renames) a file or directory.</li>
+<li><code>rm path</code> removes (deletes) a file.</li>
+<li>Use of the Control key may be described in many ways, including <code>Ctrl-X</code>, <code>Control-X</code>, and <code>^X</code>.</li>
+<li>The shell does not have a trash bin: once something is deleted, it's really gone.</li>
+<li>Depending on the type of work you do, you may need a more powerful text editor than Nano.</li>
+</ul>
+<h2>Learning More</h2>
+<p>The goal of this lesson was to familiarize you with the basics of working
+with files and directories.
+There is a <strong>lot more</strong> to the unix shell and filexsystem than what we have  covered here!
+To ge deeper with self study, we recommend the excellent
+<a href="https://swcarpentry.github.io/shell-novice/">Software Carpentry Unix Shell Lesson</a>,
+on which the above material was based.</p>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="./intro-to-unix.html">Intro to Unix</a></li>
+    <li class="list-group-item"><a href="./introduction-to-jupyterlab.html">Introduction to JupyterLab</a></li>
+    <li class="list-group-item"><a href="./course-introduction.html">Course Introduction</a></li>
+    <li class="list-group-item"><a href="./organization-and-packaging-of-python-projects.html">Organization and Packaging of Python Projects</a></li>
+    <li class="list-group-item"><a href="./intro-to-python.html">Introduction to Python</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Tag Cloud -->
+<li class="list-group-item">
+  <a href="./"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+  <ul class="list-group " id="tags">
+    <li class="list-group-item tag-1">
+      <a href="./tag/programming.html">programming</a>
+    </li>
+    <li class="list-group-item tag-1">
+      <a href="./tag/python.html">python</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/file-system.html">file system</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/packaging.html">packaging</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/bash.html">bash</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/shell.html">shell</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/unix.html">unix</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/jupyter.html">Jupyter</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Tag Cloud -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2018 Ryan Abernathey
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>                <p><small>  <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/deed.en"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>
+    Content
+  licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/deed.en">Creative Commons Attribution-NonCommercial 4.0 International License</a>, except where indicated otherwise.
+</small></p>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="./theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="./theme/js/respond.min.js"></script>
+
+    <script src="./theme/js/bodypadding.js"></script>
+
+
+</body>
+</html>
