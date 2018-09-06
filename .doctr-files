@@ -3,6 +3,7 @@
 ./authors.html
 ./categories.html
 ./category/lectures.html
+./course-introduction.html
 ./index.html
 ./intro-to-python.html
 ./organization-and-packaging-of-python-projects.html
