@@ -6,6 +6,7 @@
 ./course-introduction.html
 ./index.html
 ./intro-to-python.html
+./introduction-to-jupyterlab.html
 ./organization-and-packaging-of-python-projects.html
 ./pages/jupyterhub.html
 ./pages/schedule.html
@@ -14,6 +15,7 @@
 ./static/delaunay.png
 ./static/trajectories.jpg
 ./static/trajectories.png
+./tag/jupyter.html
 ./tag/packaging.html
 ./tag/programming.html
 ./tag/python.html
