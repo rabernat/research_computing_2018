@@ -1,4 +1,6 @@
+./Assignments/assignment_1.ipynb-meta
 ./archives.html
+./assignment-1-unix-git-basic-python.html
 ./author/ryan-abernathey.html
 ./authors.html
 ./categories.html
@@ -6,10 +8,9 @@
 ./course-introduction.html
 ./index.html
 ./intro-to-git.html
-./intro-to-python.html
 ./intro-to-unix.html
 ./introduction-to-jupyterlab.html
-./organization-and-packaging-of-python-projects.html
+./introduction-to-python.html
 ./pages/jupyterhub.html
 ./pages/schedule.html
 ./pages/syllabus.html
@@ -22,7 +23,6 @@
 ./tag/git.html
 ./tag/github.html
 ./tag/jupyter.html
-./tag/packaging.html
 ./tag/programming.html
 ./tag/python.html
 ./tag/shell.html

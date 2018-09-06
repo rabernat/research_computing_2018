@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Organization and Packaging of Python Projects - Research Computing in Earth Sciences</title>
+    <title>Assignment 1: Unix, Git, Basic Python - Research Computing in Earth Sciences</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,22 +9,22 @@
 
 
 
-<link rel="canonical" href="./organization-and-packaging-of-python-projects.html">
+<link rel="canonical" href="./assignment-1-unix-git-basic-python.html">
 
         <meta name="author" content="Ryan Abernathey" />
-        <meta name="keywords" content="python,programming,packaging" />
-        <meta name="description" content="Organization and Packaging of Python Projects¶A complex research project often relies and many different programs and software packages to accomplish the research goals. An important part of scientific computing is deciding how to organize and structure the code you use for research. A well-structured project can make you a more efficient and effective researcher. It is also a key component of scientific reproducibility" />
+        <meta name="keywords" content="unix,git,python" />
+        <meta name="description" content="Assignment 1¶Part 1: Files, Git, GitHub¶Use JupyterLab to launch a terminal and use the terminal to do the following tasks: Create a new directory called resume within your home directory Create an empty file within this directory called Readme.md Now use JupyterLab to edit the file: Navigate to the directory in the file browser" />
 
         <meta property="og:site_name" content="Research Computing in Earth Sciences" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Organization and Packaging of Python Projects"/>
-        <meta property="og:url" content="./organization-and-packaging-of-python-projects.html"/>
-        <meta property="og:description" content="Organization and Packaging of Python Projects¶A complex research project often relies and many different programs and software packages to accomplish the research goals. An important part of scientific computing is deciding how to organize and structure the code you use for research. A well-structured project can make you a more efficient and effective researcher. It is also a key component of scientific reproducibility"/>
-        <meta property="article:published_time" content="2017-11-09" />
+        <meta property="og:title" content="Assignment 1: Unix, Git, Basic Python"/>
+        <meta property="og:url" content="./assignment-1-unix-git-basic-python.html"/>
+        <meta property="og:description" content="Assignment 1¶Part 1: Files, Git, GitHub¶Use JupyterLab to launch a terminal and use the terminal to do the following tasks: Create a new directory called resume within your home directory Create an empty file within this directory called Readme.md Now use JupyterLab to edit the file: Navigate to the directory in the file browser"/>
+        <meta property="article:published_time" content="2018-09-06" />
             <meta property="article:section" content="lectures" />
+            <meta property="article:tag" content="unix" />
+            <meta property="article:tag" content="git" />
             <meta property="article:tag" content="python" />
-            <meta property="article:tag" content="programming" />
-            <meta property="article:tag" content="packaging" />
             <meta property="article:author" content="Ryan Abernathey" />
 
 
@@ -85,10 +85,10 @@ Research Computing in Earth Sciences            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./organization-and-packaging-of-python-projects.html"
+                    <a href="./assignment-1-unix-git-basic-python.html"
                        rel="bookmark"
-                       title="Permalink to Organization and Packaging of Python Projects">
-                        Organization and Packaging of Python Projects
+                       title="Permalink to Assignment 1: Unix, Git, Basic Python">
+                        Assignment 1: Unix, Git, Basic Python
                     </a>
                 </h1>
             </header>
@@ -98,7 +98,7 @@ Research Computing in Earth Sciences            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-11-09T00:00:00-05:00"> Thu 09 November 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2018-09-06T00:00:00-05:00"> Thu 06 September 2018</time>
     </span>
 
 
@@ -106,11 +106,11 @@ Research Computing in Earth Sciences            </a>
 
 
 <span class="label label-default">Tags</span>
+	<a href="./tag/unix.html">unix</a>
+        /
+	<a href="./tag/git.html">git</a>
+        /
 	<a href="./tag/python.html">python</a>
-        /
-	<a href="./tag/programming.html">programming</a>
-        /
-	<a href="./tag/packaging.html">packaging</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -1090,513 +1090,162 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Organization-and-Packaging-of-Python-Projects">Organization and Packaging of Python Projects<a class="anchor-link" href="#Organization-and-Packaging-of-Python-Projects">¶</a></h1><p>A complex research project often relies and many different programs and software packages to accomplish the research goals. 
-An important part of scientific computing is deciding how to organize and structure the code you use for research.
-A well-structured project can make you a more efficient and effective researcher.
-It is also a key component of <a href="http://lorenabarba.com/blog/barbagroup-reproducibility-syllabus/">scientific reproducibility</a>.</p>
-<p>Just putting all of your code into git repositories won't magically turn a mess of scripts into a beautiful, well-organized project.
-More deliberate effort is required.</p>
-<h2 id="Types-of-Projects">Types of Projects<a class="anchor-link" href="#Types-of-Projects">¶</a></h2><p>Not all projects are created equal.
-Based on my experience, I categorize three different types of "research code" scenarios commonly encountered in geosciences.</p>
+<h1 id="Assignment-1">Assignment 1<a class="anchor-link" href="#Assignment-1">¶</a></h1><h2 id="Part-1:-Files,-Git,-GitHub">Part 1: Files, Git, GitHub<a class="anchor-link" href="#Part-1:-Files,-Git,-GitHub">¶</a></h2><p>Use JupyterLab to launch a terminal and use the terminal to do the following tasks:</p>
 <ol>
-<li><strong>Exploratory analyses</strong>: When exploring a new idea, a single notebook or script is often all we need.</li>
-<li><strong>A Single Paper</strong>: The "paper" is a standard unit of scientific output. The code related to a single paper usually belongs together. </li>
-<li><strong>Reusable software elements</strong>: In the course of our research computing, we often identify specialized routines that we want to package for reuse in other projects, or by other scientists. This is where "scripts" become "software."</li>
+<li>Create a new directory called <code>resume</code> within your home directory</li>
+<li>Create an empty file within this directory called <code>Readme.md</code></li>
 </ol>
-<p>This lecture outlines some suggested practices for each category.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exploratory-Analysis">Exploratory Analysis<a class="anchor-link" href="#Exploratory-Analysis">¶</a></h2><p>When starting something new, we are often motivated to just start coding and get some results quick.
-This is fine!
-Jupyter notebooks are an ideal format for open-ended exploratory analysis, since they are totally self-contained: they encapsulate text, code, and figures.
-If we find someting cool or useful, it is important to preserve these exploratory notebooks.</p>
-<p>A dedicated github repository can be overkill for a single file.
-Instead, I recommend github's "<a href="https://help.github.com/articles/about-gists/">gist</a>" mechanism for saving and sharing such "one-off" notebooks and code snippets.
-Gists are like mini repos you can easily share and embed.
-(You can create one right now by going to <a href="https://gist.github.com/">https://gist.github.com/</a>.)</p>
-<p>You can upload any file (including an <code>.ipynb</code> notebook file) by dragging and dropping it into the gist website.
-You have the choice of making you gist public or secret. (There is no private option, but a secret gist can only be seen by others if you give them the URL.)</p>
-<p>There is also a fantastically easy way to create notebook gists directly from your notebook itself.
-This requires the jupyter <a href="https://github.com/minrk/ipython_extensions#gist">gist extension</a> by <a href="https://github.com/minrk">Min RK</a>. To install this extension, type the following from the command line:</p>
-<pre><code>jupyter nbextension install https://rawgithub.com/minrk/ipython_extensions/master/nbextensions/gist.js --user
-jupyter nbextension enable gist
-
-</code></pre>
-<p>When you restart your notebook, you will see a little arrow button in the notebook toolbar. Clicking on this button for the first time will prompt you to enter a <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/">Github personal access token</a>.
-Follow the link to go to <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> and choose "Generate new token." The only "scope" your token needs to have is "Create gist." Once the token is generated, copy and paste it back into the notebook dialog. Your notebook will now automatically be posted as a gist, and a link to the <a href="http://nbviewer.jupyter.org/">nbviewer</a> view of it will appear in the toolbar. If you click the button again, the gist will update. Amazing!</p>
-<p>I have found this to be a great way to quickly save exploratory notebooks and share them with collaborators.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="A-Single-Paper">A Single Paper<a class="anchor-link" href="#A-Single-Paper">¶</a></h2><h3 id="Scientific-Reproducibility">Scientific Reproducibility<a class="anchor-link" href="#Scientific-Reproducibility">¶</a></h3><p>Reproducibility is a cornerstone of the scientific process.
-However, today one often reads that science is in the midst of a <a href="http://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970">reproducibility crisis</a>.
-This crisis may be due to increasing complexity and cost of scientific analysis, together with mounting pressure to publish as much and as quickly as possible.</p>
-<p>Today almost all earth science relies on some form of computation, from simple statistical analysis and curve fitting to advanced numerical simulation.
-In principle, computational science should be highly reproducible.
-However, it also brings unique challenges.
-A great overview of the challenges and best practices is given in
-<em>Barba, Lorena A. (2017): Barba-group Reproducibility Syllabus. figshare. <a href="https://doi.org/10.6084/m9.figshare.4879928.v1">https://doi.org/10.6084/m9.figshare.4879928.v1</a>.</em>
-Many of the suggestions in this lecture are adopted or paraphrased from <em>Barba (2017)</em>.</p>
-<p>Keep in mind that the audience for a reproducibile project is not just other scientists...it's <em>you</em>, a year from now, or whenever you need to repeat and / or build on earlier work. Most scientists build on their Ph.D. work for a decade following graduation. Extra time spent on reproducibility now will make you more productive in the long run.</p>
-<p>We begin with an important observation.</p>
-<blockquote><p>An article about computational science … is not the scholarship itself, it’s merely scholarship advertisement. The actual scholarship is the complete software development environment and the complete set of instructions which generated the figures.</p>
-</blockquote>
-<p><em>Donoho, D. et al. (2009), Reproducible research in computational harmonic analysis, Comp. Sci. Eng. 11(1):8–18, doi: <a href="http://dx.doi.org/10.1109/MCSE.2009.15">10.1109/MCSE.2009.15</a></em></p>
-<p><a href="http://dx.doi.org/10.1371/journal.pcbi.1003285">Sandve et al. (2013)</a> give some specific recommmendations for computational reproducibility.</p>
+<p>Now use JupyterLab to edit the file:</p>
 <ol>
-<li>For every result, keep track of how it was produced</li>
-<li>Avoid manual data-manipulation steps</li>
-<li>Archive the exact versions of all external programs used</li>
-<li>Version-control all custom scripts</li>
-<li>Record all intermediate results, when possible in standard formats</li>
-<li>For analyses that include randomness, note underlying random seeds</li>
-<li>Always store raw data behind plots</li>
-<li>Generate hierarchical analysis output, allowing layers of increasing detail to be inspected</li>
-<li>Connect textual statements to underlying results</li>
-<li>Provide public access to scripts, runs, and results</li>
+<li>Navigate to the directory in the file browser</li>
+<li>Open <code>Readme.md</code> in the text editor</li>
+<li>Open <code>Readme.md</code> in in Markdown Preview</li>
+<li>Arrange these files side-by-side so you can see your document rendered</li>
+<li><p>Edit the file in the editor. Add the following information:</p>
+<ol>
+<li>Top level heading with your name</li>
+<li>An image. It can be a photo of you or, if you prefer, a photo of your spirit animal.</li>
+<li>Secondary heading entitled "Education"</li>
+<li>A list of schools you attended, hyperlinked to the websites of those insitutions</li>
 </ol>
-<p>These recommendations suggest a certain structure for a project.</p>
-<h3 id="Project-Layout">Project Layout<a class="anchor-link" href="#Project-Layout">¶</a></h3><p>A reproducible single-paper project directory structure might look something like this</p>
-<pre><code>README.md
-LICENSE
-environment.yml
-data/intermediate_results.csv
-notebooks/process_raw_data.ipynb
-notebooks/figure1.ipynb
-notebooks/figure2.ipynb
-notebooks/helper.py
-manuscript/manuscript.tex
-
-</code></pre>
-<p>A great example of such a paper is <a href="https://crocha700.github.io/">Cesar Rocha</a>'s Upper Ocean Seasonality project: <a href="https://github.com/crocha700/UpperOceanSeasonality">https://github.com/crocha700/UpperOceanSeasonality</a>.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Reuseable-Software-Elements">Reuseable Software Elements<a class="anchor-link" href="#Reuseable-Software-Elements">¶</a></h2><p>Scientific software can perhaps be grouped into two categories: single-use "scripts" that are used in a very specific context to do a very specific thing (e.g.~to generate a specific figure for a paper), and reuseable components which encapsulate a more generic workflow. Once you find yourself repeating the same chunks of code in many different scripts or projects, it's time to start composing reusable software elements.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Modules">Modules<a class="anchor-link" href="#Modules">¶</a></h3><p>The basic element of reusability in python is the <a href="https://docs.python.org/3/tutorial/modules.html">module</a>.
-A module is a <code>.py</code> file which contains python objects which can be <em>imported</em> by other scripts or notebooks.
-Let's illustrate how modules work with a simple example.</p>
-<p>A common task in geoscience is to calculate the <a href="https://en.wikipedia.org/wiki/Great-circle_distance">great-circle distance</a> between two points on the globe.
-There are several <a href="https://pypi.python.org/pypi/geopy">pacakges</a> that could do this for you, but let's write our own as an example of a module.</p>
-<p>The formula for great circle distance is</p>
-<p><img alt="great circle distance formula" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/75af53b063ee43aed3de186b1a98af5c150185b8"></p>
-<p>(Note that this formula requires 64-bit precision for adequate accuracy.)</p>
-<p>Let's write a module to do this calculation. Open a file called <code>gcdistance.py</code> in a text editor. (The file should be in the same directory as the notebook you are working in now.) Populate it with the following code:</p>
-<div class="highlight"><pre><span></span><span class="sd">"""</span>
-<span class="sd">A python module for computing great circle distance</span>
-<span class="sd">"""</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-
-<span class="c1"># approximate radius of Earth</span>
-<span class="n">R</span> <span class="o">=</span> <span class="mf">6.371e6</span>
-
-<span class="k">def</span> <span class="nf">great_circle_distance</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
-    <span class="sd">"""Calculate great-circle distance between two points.</span>
-
-<span class="sd">    PARAMETERS</span>
-<span class="sd">    ----------</span>
-<span class="sd">    point1 : tuple</span>
-<span class="sd">        A (lat, lon) pair of coordinates in degrees</span>
-<span class="sd">    point2 : tuple</span>
-<span class="sd">        A (lat, lon) pair of coordinates in degrees</span>
-
-<span class="sd">    RETURNS</span>
-<span class="sd">    -------</span>
-<span class="sd">    distance : float</span>
-<span class="sd">    """</span>
-
-    <span class="c1"># unpack coordinates</span>
-    <span class="n">lat1</span><span class="p">,</span> <span class="n">lon1</span> <span class="o">=</span> <span class="n">point1</span>
-    <span class="n">lat2</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="n">point2</span>
-
-    <span class="c1"># unpack and convert everything to radians</span>
-    <span class="n">phi1</span><span class="p">,</span> <span class="n">lambda1</span><span class="p">,</span> <span class="n">phi2</span><span class="p">,</span> <span class="n">lambda2</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> 
-                                    <span class="p">(</span><span class="n">point1</span> <span class="o">+</span> <span class="n">point2</span><span class="p">)]</span>
-
-    <span class="c1"># apply formula</span>
-    <span class="c1"># https://en.wikipedia.org/wiki/Great-circle_distance</span>
-    <span class="k">return</span> <span class="n">R</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span>
-        <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi2</span><span class="p">)</span> <span class="o">+</span> 
-        <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lambda2</span> <span class="o">-</span> <span class="n">lambda1</span><span class="p">))</span>
-</pre></div>
-<p>The module begins with a <a href="https://www.python.org/dev/peps/pep-0257/">docstring</a> explaining what it does. Then it contains some data (just a constant <code>R</code>) and a single function.</p>
-<p>Now let's import our module</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [4]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">gcdistance</span>
-<span class="n">help</span><span class="p">(</span><span class="n">gcdistance</span><span class="p">)</span> 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Help on module gcdistance:
-
-NAME
-    gcdistance - A python module for computing great circle distance
-
-FUNCTIONS
-    great_circle_distance(point1, point2)
-        Calculate great-circle distance between two points.
-        
-        PARAMETERS
-        ----------
-        point1 : tuple
-            A (lat, lon) pair of coordinates in degrees
-        point2 : tuple
-            A (lat, lon) pair of coordinates in degrees
-            
-        RETURNS
-        -------
-        distance : float
-
-DATA
-    R = 6371000.0
-
-FILE
-    /Users/rpa/Teaching/research_computing/content/lectures/python/gcdistance.py
-
-
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>And let's try using it to make a calculation</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [2]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gcdistance</span><span class="o">.</span><span class="n">great_circle_distance</span><span class="p">((</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[2]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>1460007.1890493981</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We could just import the function we need</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [5]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">gcdistance</span> <span class="k">import</span> <span class="n">R</span><span class="p">,</span> <span class="n">great_circle_distance</span>
-<span class="n">R</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[5]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>6371000.0</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If we change the module, we need to either restart our kernel or else reload the module. (Note that functions imported via <code>from module import func</code> cannot be reloaded.)</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [8]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">importlib</span> <span class="k">import</span> <span class="n">reload</span>
-<span class="n">reload</span><span class="p">(</span><span class="n">gcdistance</span><span class="p">)</span> 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[8]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre><module &#x27;gcdistance&#x27; from &#x27; users rpa teaching research_computing content lectures python gcdistance.py&#x27;></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Modules are a simple way to share code between different scripts or notebooks in the same project. <em>Module files must reside in the same directory as any script which imports them!</em> This is a big limitation; it means you can't share modules between different projects.</p>
-<p>Once you have a piece of code that is general-purpose enough to share between projects, you need to create a package.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Aside:-Python-Style">Aside: Python Style<a class="anchor-link" href="#Aside:-Python-Style">¶</a></h3><p>There are few absolute rules for python code style, but there is a detailed <a href="https://www.python.org/dev/peps/pep-0008/">recommended style guide</a>. Some especially relevant points are:</p>
-<ul>
-<li>Line length should not exceed 79 characters</li>
-<li>Module names should be <code>lowercase</code></li>
-<li>Function and variable names should be <code>lower_case_with_underscores</code></li>
-<li>Class names should be <code>CamelCase</code></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Packages">Packages<a class="anchor-link" href="#Packages">¶</a></h3><p><a href="https://docs.python.org/3/tutorial/modules.html#packages">Packages</a> are python's way of encapsulating reusable code elements for sharing with others. Packaging is a huge and complicated topic. We will just scratch the surface.</p>
-<p>We have already interacted with many packages already. Browse some of their github repositories to explore the structure of a large python package:</p>
-<ul>
-<li>NumPy: <a href="https://github.com/numpy/numpy">https://github.com/numpy/numpy</a></li>
-<li>Pandas: <a href="https://github.com/pandas-dev/pandas">https://github.com/pandas-dev/pandas</a></li>
-<li>Xarray: <a href="https://github.com/pydata/xarray">https://github.com/pydata/xarray</a></li>
-</ul>
-<p>An example of a smaller, more understandable package is my xrft package:</p>
-<ul>
-<li>xrft: <a href="https://github.com/rabernat/xrft">https://github.com/rabernat/xrft</a></li>
-</ul>
-<p>These packages all have a common basic structure. Imagine we wanted to turn our great-circle distance module into a package. It would look like this.</p>
-<pre><code>README.md
-LICENSE
-environment.yml
-requirements.txt
-setup.py
-gcdistance/__init__.py
-gcdistance/gcdistance.py
-gcdistance/tests/__init__.py
-gcdistancs/tests/test_gcdistance.py
-
-</code></pre>
-<p>The actual package is contained in the <code>gcdistance</code> subdirectory. The other files are auxilliary files which help others understand and install your package. Here is an overview of what they do</p>
-<table class="table table-striped table-hover">
-<thead><tr>
-<th>File Name</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>README.txt</code></td>
-<td>Explain what the package is for</td>
-</tr>
-<tr>
-<td><code>LICENSE</code></td>
-<td>Defines the legal terms under which other can use the package. <a href="https://opensource.org/licenses/category">Open source</a> is encouraged!</td>
-</tr>
-<tr>
-<td><code>environment.yml</code></td>
-<td>A conda environment which describes the package's dependencies (<a href="https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file">more info</a>)</td>
-</tr>
-<tr>
-<td><code>requirements.txt</code></td>
-<td>A file which describes the package's dependences for pip. (<a href="https://pip.pypa.io/en/stable/user_guide/#requirements-files">more info</a>)</td>
-</tr>
-<tr>
-<td><code>setup.py</code></td>
-<td>A special python script which installs your package. (<a href="https://pythonhosted.org/an_example_pypi_project/setuptools.html">more info</a>)</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-actual-package">The actual package<a class="anchor-link" href="#The-actual-package">¶</a></h3><p>The directory <code>gcdistance</code> is the actual package. Any directory that contains an <code>__init__.py</code> file is recognized by python as a package. This file can be blank, bu it needs to be present. From the root directory, we can import a module from the package as follows</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gcdistance</span> <span class="kn">import</span> <span class="n">gcdistance</span>
-</pre></div>
-<p>Yes, this is a bit redundant. That's because the <code>gcdistance.py</code> module has the same name as the <code>gcdistance</code> package directory.</p>
-<p>However, this import will only work from the parent directory. It is not globally accessible from your python environment.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>setup.py</code> is the magic file that makes your package installable and accessible anywhere. Here is an extremely basic <code>setup.py</code></p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
-
-<span class="n">setup</span><span class="p">(</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s2">"gcdistance"</span><span class="p">,</span>
-    <span class="n">version</span> <span class="o">=</span> <span class="s2">"0.0.1"</span><span class="p">,</span>
-    <span class="n">author</span> <span class="o">=</span> <span class="s2">"Ryan Abernathey"</span><span class="p">,</span>
-    <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">'gcdistance'</span><span class="p">],</span>
-    <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span><span class="s1">'numpy'</span><span class="p">],</span>
-<span class="p">)</span>
-</pre></div>
-<p>There is a dizzying range of <a href="https://setuptools.readthedocs.io/en/latest/setuptools.html">options</a> for <code>setup.py</code>. More fields are required if you want to <a href="https://pythonhosted.org/an_example_pypi_project/setuptools.html">upload your package</a> to pypi (so it is installable via <code>pip</code>).</p>
-<p>To run the setup script, we call the following from the command line</p>
-<pre><code>python setup.py install
-
-</code></pre>
-<p>The package files are copied to our python library directory.
-If we plan to keep developing the package, we can install it in "developer mode" as</p>
-<pre><code>python setup.py develop
-
-</code></pre>
-<p>In this case, the files are symlinked rather than copied.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Testing">Testing<a class="anchor-link" href="#Testing">¶</a></h2><p>A software package requires <a href="https://en.wikipedia.org/wiki/Software_testing">tests</a> to ensure that it works properly. Matt Rocklin has a great <a href="http://matthewrocklin.com/blog/work/2016/02/08/tests">blog post</a> on why we should write tests for our code.</p>
-<p>Tests don't have to be complicated. They are simply a check to verify that your code does what it is supposed to do.</p>
-<p>To add tests to our project, we create create the file <code>gcdistance/tests/test_gcdistance.py</code>. (We also need an <code>__init__.py</code> file in the <code>tests</code> directory.) The example below shows an example of a test function for our package.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pytest</span>
-
-<span class="kn">from</span> <span class="nn">gcdistance.gcdistance</span> <span class="kn">import</span> <span class="n">great_circle_distance</span>
-
-<span class="k">def</span> <span class="nf">test_great_circle_distance</span><span class="p">():</span>
-    <span class="c1"># some known results</span>
-    <span class="c1"># distance between two same points should be zero</span>
-    <span class="k">assert</span> <span class="n">great_circle_distance</span><span class="p">((</span><span class="mf">20.</span><span class="p">,</span> <span class="mf">30.</span><span class="p">),</span> <span class="p">(</span><span class="mf">20.</span><span class="p">,</span> <span class="mf">30.</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span>
-
-    <span class="c1"># check distance between new york and london</span>
-    <span class="n">new_york</span> <span class="o">=</span> <span class="mf">40.7128</span><span class="p">,</span> <span class="o">-</span><span class="mf">74.0060</span>
-    <span class="n">london</span> <span class="o">=</span> <span class="mf">51.5074</span><span class="p">,</span> <span class="mf">0.1278</span>
-    <span class="n">dist_nyc_london</span> <span class="o">=</span> <span class="n">great_circle_distance</span><span class="p">(</span><span class="n">new_york</span><span class="p">,</span> <span class="n">london</span><span class="p">)</span>
-
-    <span class="c1"># very strict, doesn't actually work</span>
-    <span class="c1"># assert dist_nyc_london == 5.587e6</span>
-
-    <span class="c1"># an approximate version of the above</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">dist_nyc_london</span><span class="p">,</span> <span class="mf">5.587e6</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">)</span>
-
-    <span class="c1"># now check that we can't pass the wrong number of arguments</span>
-    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
-        <span class="n">great_circle_distance</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-</pre></div>
-<p>We will use <a href="https://docs.pytest.org/en/latest/getting-started.html">pytest</a> to run our tests. If you don't have pytest installed in your active python environment, take a minute to run <code>pip install pytest</code> from the command line. Now run</p>
-<div class="highlight"><pre><span></span>py.test -v
-</pre></div>
-<p>from the root directory of your project. You should see a notification that the tests passed. Try playing around with the tests to cause something to fail.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Continuous-Integration-with-Travis-CI">Continuous Integration with Travis CI<a class="anchor-link" href="#Continuous-Integration-with-Travis-CI">¶</a></h3><p>You can configure automatic testing of your package by integrating github with <a href="https://travis-ci.org/">Travis-CI</a>. Travis-CI is a free "continuous integration" service: it automatically downloads your package and runs your tests in the cloud every time you commit to your repository. The travis <a href="https://docs.travis-ci.com/user/getting-started">getting started guide</a> gives a great overview of how to use the service.</p>
-<p>For us to use travis with our project, the steps are simple:</p>
-<ol>
-<li>Push the repo to github (repo must be public)</li>
-<li>Log in to <a href="https://travis-ci.org">https://travis-ci.org</a> and click the switch to enable your repo</li>
-<li><p>Add a <code>.travis.yml</code> file to your project with the following contents:</p>
-<pre><code> language: python
- python:
- - 3.6
- script:
- - pytest</code></pre>
 </li>
-<li>Add the file, commit, and push to github</li>
-<li>Go to <a href="https://travis-ci.org">https://travis-ci.org</a> and watch the magic happen!</li>
+<li><p>Save the file</p>
+</li>
 </ol>
+<p>Now go back to the terminal and do the following:</p>
+<ol>
+<li>Initialize a new git repository in the <code>resume</code> directory</li>
+<li>Add the <code>Readme.md</code> file to the repository</li>
+<li>Create a new commit with a commit message</li>
+<li>Check the git log to see your commit history</li>
+<li>Go to github and create a <a href="https://github.com/new">new public repository</a> entitled <code>resume</code></li>
+<li>Push your local resume repository to GitHub following the instructions.</li>
+<li>View your online resume at <code>http://github.com/<your github username>/resume</code></li>
+</ol>
+<p>Finally, go back to the editor and add a new subsection called "Research Interests" to your <code>Readme.md</code> file. Update your local git repository and push your changes to GitHub. Verify that the remote repository is updated.</p>
+<p>To "hand in" this part of the assignment, just provide the link to your repository in the notebook cell below.</p>
+<h2 id="Create-your-Assignments-Repository">Create your Assignments Repository<a class="anchor-link" href="#Create-your-Assignments-Repository">¶</a></h2><p>Now that you know how to create a git repository, you should create your assignments repository.</p>
+<ul>
+<li>Create a new directory called <code>rces-assignments</code> in your home directory.</li>
+<li><p>Copy the first assignment template into this directory (you will have to repeat this step each time a new assignment comes out.)</p>
+<pre><code>  cp examples/content/Assignments/assignment_1.ipynb rces-assignments/</code></pre>
+</li>
+</ul>
+<ul>
+<li>Initialize a new git repository </li>
+<li>Add the file and make your first commit</li>
+<li>Create a new <strong>private</strong> repository on GitHub called <code>rces-assignments</code>. (Call it exactly like that. Do not vary the spelling, capitalization, or punctuation.)</li>
+<li>Push your <code>rces-assignments</code> repository to github</li>
+<li>On github, go to "settings" -> "collaborators" and add <code>rabernat</code> and <code>xjin49</code></li>
+<li>Push new commits to this repository whenever you are ready to hand in your assignments</li>
+</ul>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="mf">1.12345678</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.1</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Part-2:-Lists-and-Loops">Part 2: Lists and Loops<a class="anchor-link" href="#Part-2:-Lists-and-Loops">¶</a></h2><p>In this problem, we will explore the basic data structures and flow controls of python by <em>manually parsing a CSV file</em>.</p>
+<p>Note that this is a futile exercise. In the "real world" you should never manually parse a CSV file. There are utilities out there that will do it for you much more quickly and efficiently. However, it is a useful exercise for learning python.</p>
+<p>First we need to download a data file to parse. We can do this from the terminal, OR we can use <code>!</code> to run shell commands directly from the notebook. However you do it, you need to run these commands:</p>
+<pre><code>wget https://tinyurl.com/rces-roster
+mv rces-roster rces-roster.csv
+
+</code></pre>
+<p>Before starting the python part, use the JupyterLab file browser to browse to this file. Click to open it. What do you see?</p>
 </div>
 </div>
 </div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt output_prompt">Out[3]:</div>
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="mf">1.1</span> <span class="o"><</span> <span class="mf">1.12</span>
-<span class="k">assert</span> <span class="mf">1.1</span> <span class="o">></span> <span class="mf">1.0</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we will begin the process of reading the file with python</p>
+<h3 id="Open-the-file-using-the-open-function">Open the file using the <code>open</code> function<a class="anchor-link" href="#Open-the-file-using-the-open-function">¶</a></h3><p>Specifically, run the command</p>
+<pre><code>file = open('rces-roster.csv')</code></pre>
 </div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Use-the-help-function-to-get-the-documentation-for-your-new-variable-file">Use the <code>help</code> function to get the documentation for your new variable <code>file</code><a class="anchor-link" href="#Use-the-help-function-to-get-the-documentation-for-your-new-variable-file">¶</a></h3><p>This will produce a long list of methods you can use with <code>file</code>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Read-the-lines-of-the-file-into-a-variable-called-lines">Read the lines of the file into a variable called <code>lines</code><a class="anchor-link" href="#Read-the-lines-of-the-file-into-a-variable-called-lines">¶</a></h3><p>Hint: use the documentation above to find the method that sounds most likely to do what you want.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What type of object is <code>lines</code>?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It should be a familiar type we learned about in class.</p>
+<h3 id="Display-lines-at-the-end-of-a-cell-in-order-to-see-its-contents">Display <code>lines</code> at the end of a cell in order to see its contents<a class="anchor-link" href="#Display-lines-at-the-end-of-a-cell-in-order-to-see-its-contents">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Use-slicing-to-display-the-first-three-items-of-the-list.-And-the-last-3">Use slicing to display the first three items of the list. And the last 3<a class="anchor-link" href="#Use-slicing-to-display-the-first-three-items-of-the-list.-And-the-last-3">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Create-a-new-list-called-data-that-does-not-contain-the-header-row">Create a new list called <code>data</code> that does not contain the header row<a class="anchor-link" href="#Create-a-new-list-called-data-that-does-not-contain-the-header-row">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Now-iterate-through-lines-and-print-the-item-if-it-contains-your-uni">Now iterate through <code>lines</code> and <code>print</code> the item if it contains your uni<a class="anchor-link" href="#Now-iterate-through-lines-and-print-the-item-if-it-contains-your-uni">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>By now you have figured out what is in this data. Let's now transform it into a more useful format.</p>
+<h3 id="Write-code-to-transform-the-data-into-a-dictionary-whose-keys-are-UNIs-and-whose-values-are-full-names.">Write code to transform the data into a dictionary whose keys are UNIs and whose values are full names.<a class="anchor-link" href="#Write-code-to-transform-the-data-into-a-dictionary-whose-keys-are-UNIs-and-whose-values-are-full-names.">¶</a></h3><p>(You might need to review Python's <a href="https://docs.python.org/3/library/stdtypes.html#textseq">string methods</a>.)</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Use-this-dictionary-to-look-up-your-own-name-using-your-uni">Use this dictionary to look up your own name using your uni<a class="anchor-link" href="#Use-this-dictionary-to-look-up-your-own-name-using-your-uni">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Figure-out-who-has-the-longest-last-name-in-the-class">Figure out who has the longest last name in the class<a class="anchor-link" href="#Figure-out-who-has-the-longest-last-name-in-the-class">¶</a></h3>
 </div>
 </div>
 </div>
@@ -1646,12 +1295,12 @@ If we plan to keep developing the package, we can install it in "developer mode"
 <li class="list-group-item">
   <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
   <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="./assignment-1-unix-git-basic-python.html">Assignment 1: Unix, Git, Basic Python</a></li>
     <li class="list-group-item"><a href="./intro-to-git.html">Intro to Git</a></li>
     <li class="list-group-item"><a href="./intro-to-unix.html">Intro to Unix</a></li>
     <li class="list-group-item"><a href="./introduction-to-jupyterlab.html">Introduction to JupyterLab</a></li>
+    <li class="list-group-item"><a href="./introduction-to-python.html">Introduction to Python</a></li>
     <li class="list-group-item"><a href="./course-introduction.html">Course Introduction</a></li>
-    <li class="list-group-item"><a href="./organization-and-packaging-of-python-projects.html">Organization and Packaging of Python Projects</a></li>
-    <li class="list-group-item"><a href="./intro-to-python.html">Introduction to Python</a></li>
   </ul>
 </li>
 <!-- End Sidebar/Recent Posts -->
@@ -1661,37 +1310,34 @@ If we plan to keep developing the package, we can install it in "developer mode"
   <a href="./"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
   <ul class="list-group " id="tags">
     <li class="list-group-item tag-1">
+      <a href="./tag/unix.html">unix</a>
+    </li>
+    <li class="list-group-item tag-1">
       <a href="./tag/python.html">python</a>
     </li>
     <li class="list-group-item tag-1">
-      <a href="./tag/programming.html">programming</a>
+      <a href="./tag/git.html">git</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/git.html">git</a>
+      <a href="./tag/shell.html">shell</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/github.html">github</a>
     </li>
     <li class="list-group-item tag-4">
+      <a href="./tag/version-control.html">version control</a>
+    </li>
+    <li class="list-group-item tag-4">
       <a href="./tag/jupyter.html">Jupyter</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/packaging.html">packaging</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/unix.html">unix</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/bash.html">bash</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/version-control.html">version control</a>
+      <a href="./tag/programming.html">programming</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/file-system.html">file system</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/shell.html">shell</a>
     </li>
   </ul>
 </li>
