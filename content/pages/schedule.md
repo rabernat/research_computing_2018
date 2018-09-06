@@ -9,9 +9,9 @@ Summary: Overview of course schedule and topics
 | date       | topic                                             | Assignment        |
 |------------|---------------------------------------------------|-------------------|
 | T 4 Sept   | [Course introduction]({filename}/Lectures/introduction.md)       |                   |
-| Th 6 Sept  |  [Overview of JupyterLab]({filename}/Lectures/intro_to_jupyterlab.md), [Core Python Language]({filename/lectures/intro_to_python.ipynb})                              |                   |
+| Th 6 Sept  |  [Overview of JupyterLab]({filename}/Lectures/intro_to_jupyterlab.md), [Intro to Unix]({filename}/Lectures/intro_to_unix.md), [Intro to Git]({filename}/Lectures/intro_to_git.md), [Core Python Language]({filename}/Lectures/intro_to_python.ipynb)                              |                   |
 | T 11 Sept  | in class partner activity                         |                   |
-| Th 13 Sept | Python Functions and Classes                      | assignment 1 due  |
+| Th 13 Sept | Python Functions and Classes                      | [assignment 1 due]({filename}/Assignments/assignment_1.ipynb)  |
 | T 18 Sept  | in class partner activity                         |                   |
 | Th 20 Sept | Numpy and Matplotlib I                            | assignment 2 due  |
 | T 25 Sept  | in class partner activity                         |                   |
