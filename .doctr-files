@@ -9,6 +9,7 @@
 ./category/assignments.html
 ./category/lectures.html
 ./course-introduction.html
+./functions-classes-and-modules.html
 ./index.html
 ./intro-to-git.html
 ./intro-to-unix.html
@@ -28,6 +29,7 @@
 ./tag/git.html
 ./tag/github.html
 ./tag/jupyter.html
+./tag/modules.html
 ./tag/programming.html
 ./tag/python.html
 ./tag/shell.html
