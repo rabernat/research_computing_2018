@@ -25,7 +25,6 @@
 ./static/delaunay.png
 ./static/trajectories.jpg
 ./static/trajectories.png
-./tag/arrays.html
 ./tag/assignment.html
 ./tag/bash.html
 ./tag/classes.html
@@ -36,7 +35,6 @@
 ./tag/jupyter.html
 ./tag/matplotlib.html
 ./tag/modules.html
-./tag/ndarray.html
 ./tag/numpy.html
 ./tag/programming.html
 ./tag/python.html
