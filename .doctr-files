@@ -1,8 +1,10 @@
+./Assignments/Assignment_3.ipynb-meta
 ./Assignments/assignment_1.ipynb-meta
 ./Assignments/assignment_2.ipynb-meta
 ./archives.html
 ./assignment-1-unix-git-basic-python.html
 ./assignment-2-python-functions-classes-and-modules.html
+./assignment-3-numpy-and-matplotlib.html
 ./author/ryan-abernathey.html
 ./authors.html
 ./categories.html
@@ -22,6 +24,7 @@
 ./static/delaunay.png
 ./static/trajectories.jpg
 ./static/trajectories.png
+./tag/assignment.html
 ./tag/bash.html
 ./tag/classes.html
 ./tag/file-system.html
@@ -29,7 +32,9 @@
 ./tag/git.html
 ./tag/github.html
 ./tag/jupyter.html
+./tag/matplotlib.html
 ./tag/modules.html
+./tag/numpy.html
 ./tag/programming.html
 ./tag/python.html
 ./tag/shell.html
