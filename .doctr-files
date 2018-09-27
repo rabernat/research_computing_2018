@@ -17,6 +17,7 @@
 ./intro-to-unix.html
 ./introduction-to-jupyterlab.html
 ./introduction-to-python.html
+./more-matplotlib.html
 ./numpy-and-matplotlib.html
 ./pages/jupyterhub.html
 ./pages/schedule.html
