@@ -11,13 +11,13 @@ Summary: Overview of course schedule and topics
 | T 4 Sept   | [Course introduction]({filename}/Lectures/introduction.md)       |                   |
 | Th 6 Sept  |  [Overview of JupyterLab]({filename}/Lectures/intro_to_jupyterlab.md), [Intro to Unix]({filename}/Lectures/intro_to_unix.md), [Intro to Git]({filename}/Lectures/intro_to_git.md), [Core Python Language]({filename}/Lectures/intro_to_python.ipynb)                              |                   |
 | T 11 Sept  | in class partner activity                         |                   |
-| Th 13 Sept | Python Functions and Classes                      | [assignment 1 due]({filename}/Assignments/assignment_1.ipynb)  |
+| Th 13 Sept | [Python Functions and Classes]({filename}/Lectures/functions_classes_modules.ipynb)                       | [assignment 1 due]({filename}/Assignments/assignment_1.ipynb)  |
 | T 18 Sept  | in class partner activity                         |                   |
-| Th 20 Sept | Numpy and Matplotlib I                            | assignment 2 due  |
+| Th 20 Sept | [Numpy and Matplotlib I]({filename}/Lectures/numpy_and_matplotlib.ipynb)                             | [assignment 2 due]({filename}/Assignments/assignment_2.ipynb)   |
 | T 25 Sept  | in class partner activity                         |                   |
-| Th 27 Sept | Exploring the Scipy Library                       | assignment 3 due  |
+| Th 27 Sept | [More Matplotlib]({filename}/Lectures/more_matplotlib.ipynb)                       | [assignment 3 due]({filename}/Assignments/Assignment_3.ipynb)   |
 | T 2 Oct    | in class partner activity                         |                   |
-| Th 4 Oct   | Pandas for Tabular Data I: Basics                 | assignment 4 due  |
+| Th 4 Oct   | Pandas for Tabular Data I: Basics                 | [assignment 4 due]({filename}/Assignments/assignment_4.ipynb)   |
 | T 9 Oct    | in class partner activity                         |                   |
 | Th 11 Oct  | Pandas for Tabular Data II: Advanced Pandas       | assignment 5 due  |
 | T 16 Oct   | in class partner activity                         |                   |
