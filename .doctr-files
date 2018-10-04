@@ -24,6 +24,7 @@
 ./pages/jupyterhub.html
 ./pages/schedule.html
 ./pages/syllabus.html
+./pandas.html
 ./static/custom.css
 ./static/delaunay.png
 ./static/trajectories.jpg
@@ -39,11 +40,13 @@
 ./tag/matplotlib.html
 ./tag/modules.html
 ./tag/numpy.html
+./tag/pandas.html
 ./tag/programming.html
 ./tag/python.html
 ./tag/shell.html
 ./tag/unix.html
 ./tag/version-control.html
+./tag/visualization.html
 ./tags.html
 ./theme/css/bootstrap.amelia.min.css
 ./theme/css/bootstrap.cerulean.min.css
