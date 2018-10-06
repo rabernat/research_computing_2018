@@ -19,9 +19,9 @@ Summary: Overview of course schedule and topics
 | T 2 Oct    | in class partner activity                         |                   |
 | Th 4 Oct   | Pandas for Tabular Data I: Basics                 | [assignment 4 due]({filename}/Assignments/assignment_4.ipynb)   |
 | T 9 Oct    | in class partner activity                         |                   |
-| Th 11 Oct  | Pandas for Tabular Data II: Advanced Pandas       | assignment 5 due  |
+| Th 11 Oct  | Pandas for Tabular Data II: Advanced Pandas       | --  |
 | T 16 Oct   | in class partner activity                         |                   |
-| Th 18 Oct  | XArray for Multidimensional Data I: Basics        | assignment 6 due  |
+| Th 18 Oct  | XArray for Multidimensional Data I: Basics        | [assignment 5 due]({filename}/Assignments/assignment_5_pandas.ipynb)  |
 | T 23 Oct   | in class partner activity                         |                   |
 | Th 25 Oct  | XArray for Multidimensional Data II: Intermediate | assignment 7 due  |
 | T 30 Oct   | in class partner activity                         |                   |
