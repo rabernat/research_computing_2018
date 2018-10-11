@@ -26,6 +26,7 @@
 ./pages/jupyterhub.html
 ./pages/schedule.html
 ./pages/syllabus.html
+./pandas-groupby.html
 ./pandas.html
 ./static/custom.css
 ./static/delaunay.png
