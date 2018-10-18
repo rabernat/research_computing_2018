@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Assignment 2: Python Functions, Classes, and Modules - Research Computing in Earth Sciences</title>
+    <title>Assignment 7: Xarray Fundamentals - Research Computing in Earth Sciences</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,22 +9,21 @@
 
 
 
-<link rel="canonical" href="./assignment-2-python-functions-classes-and-modules.html">
+<link rel="canonical" href="./assignment-7-xarray-fundamentals.html">
 
         <meta name="author" content="Ryan Abernathey" />
-        <meta name="keywords" content="python,functions,classes" />
-        <meta name="description" content="Assignment 2: Python Functions and Classes¶Part I: Exploring the Python Standard Library¶Skim the documentation for the datetime module 1. Import the datetime module¶" />
+        <meta name="keywords" content="python,xarray" />
+        <meta name="description" content="Assignment 8 : Xarray¶In this assignment, we will use Xarray to analyze top-of-atmosphere radiation data from NASA&#39;s CERES project. Public domain, by NASA, from Wikimedia Commons I have pre-downloaded and subsetted a portion of this dataset for use in our class. You can download it here: http://ldeo.columbia.edu/~rpa/CERES_EBAF-TOA_Edition4.0_200003-201701.condensed.nc. The size of the data file is 702.53 MB. It will take a minute or two to download." />
 
         <meta property="og:site_name" content="Research Computing in Earth Sciences" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Assignment 2: Python Functions, Classes, and Modules"/>
-        <meta property="og:url" content="./assignment-2-python-functions-classes-and-modules.html"/>
-        <meta property="og:description" content="Assignment 2: Python Functions and Classes¶Part I: Exploring the Python Standard Library¶Skim the documentation for the datetime module 1. Import the datetime module¶"/>
-        <meta property="article:published_time" content="2018-09-13" />
+        <meta property="og:title" content="Assignment 7: Xarray Fundamentals"/>
+        <meta property="og:url" content="./assignment-7-xarray-fundamentals.html"/>
+        <meta property="og:description" content="Assignment 8 : Xarray¶In this assignment, we will use Xarray to analyze top-of-atmosphere radiation data from NASA&#39;s CERES project. Public domain, by NASA, from Wikimedia Commons I have pre-downloaded and subsetted a portion of this dataset for use in our class. You can download it here: http://ldeo.columbia.edu/~rpa/CERES_EBAF-TOA_Edition4.0_200003-201701.condensed.nc. The size of the data file is 702.53 MB. It will take a minute or two to download."/>
+        <meta property="article:published_time" content="2018-10-18" />
             <meta property="article:section" content="assignments" />
             <meta property="article:tag" content="python" />
-            <meta property="article:tag" content="functions" />
-            <meta property="article:tag" content="classes" />
+            <meta property="article:tag" content="xarray" />
             <meta property="article:author" content="Ryan Abernathey" />
 
 
@@ -88,10 +87,10 @@ Research Computing in Earth Sciences            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./assignment-2-python-functions-classes-and-modules.html"
+                    <a href="./assignment-7-xarray-fundamentals.html"
                        rel="bookmark"
-                       title="Permalink to Assignment 2: Python Functions, Classes, and Modules">
-                        Assignment 2: Python Functions, Classes, and Modules
+                       title="Permalink to Assignment 7: Xarray Fundamentals">
+                        Assignment 7: Xarray Fundamentals
                     </a>
                 </h1>
             </header>
@@ -101,7 +100,7 @@ Research Computing in Earth Sciences            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2018-09-13T00:00:00-05:00"> Thu 13 September 2018</time>
+        <i class="fa fa-calendar"></i><time datetime="2018-10-18T00:00:00-05:00"> Thu 18 October 2018</time>
     </span>
 
 
@@ -111,9 +110,7 @@ Research Computing in Earth Sciences            </a>
 <span class="label label-default">Tags</span>
 	<a href="./tag/python.html">python</a>
         /
-	<a href="./tag/functions.html">functions</a>
-        /
-	<a href="./tag/classes.html">classes</a>
+	<a href="./tag/xarray.html">xarray</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -1269,8 +1266,13 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Assignment-2:-Python-Functions-and-Classes">Assignment 2: Python Functions and Classes<a class="anchor-link" href="#Assignment-2:-Python-Functions-and-Classes">¶</a></h1><h2 id="Part-I:-Exploring-the-Python-Standard-Library">Part I: Exploring the Python Standard Library<a class="anchor-link" href="#Part-I:-Exploring-the-Python-Standard-Library">¶</a></h2><p>Skim the <a href="https://docs.python.org/3/library/datetime.html">documentation for the datetime module</a></p>
-<h3 id="1.-Import-the-datetime-module">1. Import the <code>datetime</code> module<a class="anchor-link" href="#1.-Import-the-datetime-module">¶</a></h3>
+<h1 id="Assignment-8-:-Xarray">Assignment 8 : Xarray<a class="anchor-link" href="#Assignment-8-:-Xarray">¶</a></h1><p>In this assignment, we will use Xarray to analyze top-of-atmosphere radiation data from <a href="https://eosweb.larc.nasa.gov/project/ceres/ceres_table">NASA's CERES project</a>.</p>
+<p><img alt="radiation budget" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/The-NASA-Earth%27s-Energy-Budget-Poster-Radiant-Energy-System-satellite-infrared-radiation-fluxes.jpg">
+<em>Public domain, by NASA, from Wikimedia Commons</em></p>
+<p>I have pre-downloaded and subsetted a portion of this dataset for use in our class. You can download it here:
+<a href="http://ldeo.columbia.edu/~rpa/CERES_EBAF-TOA_Edition4.0_200003-201701.condensed.nc">http://ldeo.columbia.edu/~rpa/CERES_EBAF-TOA_Edition4.0_200003-201701.condensed.nc</a>. The size of the data file is 702.53 MB. It will take a minute or two to download.</p>
+<p>Considering reviewing the <a href="https://eosweb.larc.nasa.gov/faq-page/ceres-faq#t67n120">FAQs</a> for this dataset before getting started.</p>
+<p>Start by importing xarray, numpy, and matplotlib</p>
 </div>
 </div>
 </div>
@@ -1288,7 +1290,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.-Create-a-datetime-object-for-the-day-you-were-born">2. Create a <code>datetime</code> object for the day you were born<a class="anchor-link" href="#2.-Create-a-datetime-object-for-the-day-you-were-born">¶</a></h3><p>and print its representation in your notebook</p>
+<h2 id="1.1)-Open-the-dataset-and-display-its-contents">1.1) Open the dataset and display its contents<a class="anchor-link" href="#1.1)-Open-the-dataset-and-display-its-contents">¶</a></h2>
 </div>
 </div>
 </div>
@@ -1306,7 +1308,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.-Create-a-timedelta-object-representing-100-days,-10-hours,-and-13-minutes">3. Create a <code>timedelta</code> object representing 100 days, 10 hours, and 13 minutes<a class="anchor-link" href="#3.-Create-a-timedelta-object-representing-100-days,-10-hours,-and-13-minutes">¶</a></h3>
+<h2 id="1.2)-Print-out-the-long_name-attribute-of-each-variable">1.2) Print out the <code>long_name</code> attribute of each variable<a class="anchor-link" href="#1.2)-Print-out-the-long_name-attribute-of-each-variable">¶</a></h2>
 </div>
 </div>
 </div>
@@ -1324,7 +1326,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.-Verify-that-these-two-objects-do-not-have-the-same-type">4. Verify that these two objects do not have the same type<a class="anchor-link" href="#4.-Verify-that-these-two-objects-do-not-have-the-same-type">¶</a></h3><p>Use an <code>assert</code> statement</p>
+<h2 id="2.1)-Calculate-the-time-mean-of-the-entire-dataset">2.1) Calculate the time-mean of the entire dataset<a class="anchor-link" href="#2.1)-Calculate-the-time-mean-of-the-entire-dataset">¶</a></h2>
 </div>
 </div>
 </div>
@@ -1342,7 +1344,8 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="5.-Add-the-timedelta-to-the-datetime">5. Add the timedelta to the datetime<a class="anchor-link" href="#5.-Add-the-timedelta-to-the-datetime">¶</a></h3><p>and assign it to a new variable</p>
+<h2 id="2.2)-From-this,-make-a-2D-plot-of-the-the-time-mean-TOA-longwave,-shortwave,-and-solar-radiation">2.2) From this, make a 2D plot of the the time-mean TOA longwave, shortwave, and solar radiation<a class="anchor-link" href="#2.2)-From-this,-make-a-2D-plot-of-the-the-time-mean-TOA-longwave,-shortwave,-and-solar-radiation">¶</a></h2><p>(All-Sky conditions)</p>
+<p>Note the sign conventions on each variable.</p>
 </div>
 </div>
 </div>
@@ -1360,7 +1363,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="6.-Display-the-month-of-the-new-date">6. Display the month of the new date<a class="anchor-link" href="#6.-Display-the-month-of-the-new-date">¶</a></h3>
+<h2 id="2.3)-Add-up-the-three-variables-above-and-verify-(visually)-that-they-are-equivalent-to-the-TOA-net-flux">2.3) Add up the three variables above and verify (visually) that they are equivalent to the TOA net flux<a class="anchor-link" href="#2.3)-Add-up-the-three-variables-above-and-verify-(visually)-that-they-are-equivalent-to-the-TOA-net-flux">¶</a></h2><p>Again, you have to pay attention to and think about the sign conventions for each variable in order to get this to work.</p>
 </div>
 </div>
 </div>
@@ -1378,7 +1381,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="7.-Create-a-list-of-datetimes-for-all-of-your-birthdays">7. Create a list of datetimes for all of your birthdays<a class="anchor-link" href="#7.-Create-a-list-of-datetimes-for-all-of-your-birthdays">¶</a></h3><p>beginning from your 1st birthday and ending on your most recent birthday. (Don't do this manually; use a loop or a list comprehension!)</p>
+<h2 id="3.1)-Calculate-the-global-mean-of-TOA-net-radiation-directly-from-the-dataset">3.1) Calculate the global mean of TOA net radiation directly from the dataset<a class="anchor-link" href="#3.1)-Calculate-the-global-mean-of-TOA-net-radiation-directly-from-the-dataset">¶</a></h2><p>Since the Earth is approximately in radiative balance, the net TOA radiation should be zero. But taking the naive mean from this dataset, you should find a number far from zero. Why?</p>
 </div>
 </div>
 </div>
@@ -1396,7 +1399,9 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="8.-Count-how-many-of-your-birthdays-occured-on-a-Tuesday">8. Count how many of your birthdays occured on a Tuesday<a class="anchor-link" href="#8.-Count-how-many-of-your-birthdays-occured-on-a-Tuesday">¶</a></h3><p>Don't forget about the <a href="https://docs.python.org/3/library/datetime.html">docs</a>!</p>
+<p>The answer is that each "pixel" or "grid point" of this dataset does not represent an equal area of Earth's surface. So naively taking the mean, i.e. giving equal weight to each point, gives the wrong answer.</p>
+<p>On a lat / lon grid, the relative area of each grid point is proportional to $\cos(\lambda)$. ($\lambda$ is latitude)</p>
+<h2 id="3.2)-Create-a-weight-array-proportional-to-$\cos(\lambda)$-with-a-mean-value-of-1">3.2) Create a <code>weight</code> array proportional to $\cos(\lambda)$ with a mean value of 1<a class="anchor-link" href="#3.2)-Create-a-weight-array-proportional-to-$\cos(\lambda)$-with-a-mean-value-of-1">¶</a></h2><p>Verify its mean is 1 and plot it. Be careful about radians vs. degrees.</p>
 </div>
 </div>
 </div>
@@ -1414,7 +1419,7 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Part-II:-Writing-Functions">Part II: Writing Functions<a class="anchor-link" href="#Part-II:-Writing-Functions">¶</a></h2><h3 id="1.-Write-a-function-to-convert-temperature-from-kelvin-to-celsius">1. Write a function to convert temperature from kelvin to celsius<a class="anchor-link" href="#1.-Write-a-function-to-convert-temperature-from-kelvin-to-celsius">¶</a></h3><p>and celsius to kelvin</p>
+<h2 id="3.3)-Redo-your-global-mean-TOA-net-radiation-calculation-with-this-weight-factor">3.3) Redo your global mean TOA net radiation calculation with this weight factor<a class="anchor-link" href="#3.3)-Redo-your-global-mean-TOA-net-radiation-calculation-with-this-weight-factor">¶</a></h2><p>Remember Xarray's <a href="http://xarray.pydata.org/en/stable/computation.html#broadcasting-by-dimension-name">handling of broadcasting</a>. Don't make this harder than it needs to be.</p>
 </div>
 </div>
 </div>
@@ -1432,8 +1437,8 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.-Write-a-function-to-convert-temperature-to-fahrenheit">2. Write a function to convert temperature to fahrenheit<a class="anchor-link" href="#2.-Write-a-function-to-convert-temperature-to-fahrenheit">¶</a></h3><p>Include an optional keyword argument to specify whether the input is in  celcius or kelvin.
-Call your previously defined functions if necessary.</p>
+<p>This time around, you should have found something much closer to zero. Ask a climate scientist what the net energy imbalance of Earth due to global warming is estimate to be. Do you think our calculation is precise enough to detect this?</p>
+<h2 id="3.4)-Now-that-you-have-a-weight-factor,-verify-that-the-TOA-incoming-solar,-outgoing-longwave,-and-outgoing-shortwave-approximately-match-up-with-the-cartoon-above">3.4) Now that you have a <code>weight</code> factor, verify that the TOA incoming solar, outgoing longwave, and outgoing shortwave approximately match up with the cartoon above<a class="anchor-link" href="#3.4)-Now-that-you-have-a-weight-factor,-verify-that-the-TOA-incoming-solar,-outgoing-longwave,-and-outgoing-shortwave-approximately-match-up-with-the-cartoon-above">¶</a></h2>
 </div>
 </div>
 </div>
@@ -1445,60 +1450,6 @@ Call your previously defined functions if necessary.</p>
 <div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.-Check-that-the-outputs-are-sensible">3. Check that the outputs are sensible<a class="anchor-link" href="#3.-Check-that-the-outputs-are-sensible">¶</a></h3><p>by trying a few examples</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.-Now-write-a-function-that-converts-from-farenheit">4. Now write a function that converts <em>from</em> farenheit<a class="anchor-link" href="#4.-Now-write-a-function-that-converts-from-farenheit">¶</a></h3><p>and uses a keyword argument to specify whether you want the output in celcius or kelvin</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="5.-Write-a-function-that-takes-two-arguments-(feet-and-inches)-and-returns-height-in-meters">5. Write a function that takes two arguments (feet and inches) and returns height in meters<a class="anchor-link" href="#5.-Write-a-function-that-takes-two-arguments-(feet-and-inches)-and-returns-height-in-meters">¶</a></h3><p>Verify it gives sensible answers</p>
 </div>
 </div>
 </div>
@@ -1527,36 +1478,9 @@ Call your previously defined functions if necessary.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="6.-Write-a-function-takes-one-argument-(height-in-meters)-and-returns-two-arguments-(feet-and-inches)">6. Write a function takes one argument (height in meters) and returns two arguments (feet and inches)<a class="anchor-link" href="#6.-Write-a-function-takes-one-argument-(height-in-meters)-and-returns-two-arguments-(feet-and-inches)">¶</a></h3><p>(Consult the <a href="https://docs.python.org/3/tutorial/introduction.html#numbers">tutorial on numbers</a> if you are stuck on how to implement this.)</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id='7.-Verify-that-the-"round-trip"-conversion-from-and-back-to-meters-is-consistent'>7. Verify that the "round trip" conversion from and back to meters is consistent<a class="anchor-link" href='#7.-Verify-that-the-"round-trip"-conversion-from-and-back-to-meters-is-consistent'>¶</a></h3><p>Check for 3 different values of height in meters</p>
+<p>We can go beyond a weight factor and actually calculate the area of each pixel of the dataset, using the formula</p>
+$$ dA = R^2 \cos(\lambda) d\lambda d \varphi $$<p>where $d\lambda$ and $d\varphi$ are the spacing of the points in latitude and longitude (measured in radians). We can approximate Earth's radius as $R = 6,371$ km.</p>
+<h2 id="4.1)-calculate-the-pixel-area-using-this-formula-and-create-a-2D-(lon,-lat)-DataArray-for-it">4.1) calculate the pixel area using this formula and create a 2D (lon, lat) DataArray for it<a class="anchor-link" href="#4.1)-calculate-the-pixel-area-using-this-formula-and-create-a-2D-(lon,-lat)-DataArray-for-it">¶</a></h2><p>(Xarray's <code>ones_like</code> function can help you easily create and broadcast DataArrays.) Verify that the sum of all the pixels equals the Earth's true surface area as evaluated using the formula for the area of a sphere (yes, I know the Earth is not a sphere...it's just a homework problem).</p>
 </div>
 </div>
 </div>
@@ -1574,9 +1498,8 @@ Call your previously defined functions if necessary.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Part-III:-Modules">Part III: Modules<a class="anchor-link" href="#Part-III:-Modules">¶</a></h2><p><em>[This section is worth 6 points]</em></p>
-<p>Put all of your above functions into a module called <code>units.py</code>. Create valid <a href="https://www.python.org/dev/peps/pep-0257/">docstrings</a> for each function.</p>
-<p>Import the module. Verify that you can call the functions and view their docstrings.</p>
+<p>Multiplying the pixel area from above with the radiative flux gives you the total amount of radiation absorbed in each pixel</p>
+<h2 id="4.2)-Calculate-and-plot-the-total-amount-of-net-radiation-in-each-1-degree-latitude-band">4.2) Calculate and plot the total amount of net radiation in each 1-degree latitude band<a class="anchor-link" href="#4.2)-Calculate-and-plot-the-total-amount-of-net-radiation-in-each-1-degree-latitude-band">¶</a></h2><p>Label with correct units</p>
 </div>
 </div>
 </div>
@@ -1594,14 +1517,8 @@ Call your previously defined functions if necessary.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Part-IV:-Classes">Part IV: Classes<a class="anchor-link" href="#Part-IV:-Classes">¶</a></h2><p><em>[This section is worth 6 points]</em></p>
-<p>Write a class that represents a Planet. The constructor class should accept the arguments <code>radius</code> (in meters) and <code>rotation_period</code> (in seconds).</p>
-<p>You should implement three methods:</p>
-<ul>
-<li><code>surface_area</code></li>
-<li><code>rotation_frequency</code></li>
-<li><code>__eq__</code> "magic/dunder method" used to test for equality between two planets (i.e. <code>planet1 == planet2</code>)</li>
-</ul>
+<h2 id="4.3)-Plot-the-cumulatuve-sum-in-latitude-of-that-quantity">4.3) Plot the cumulatuve sum in latitude of that quantity<a class="anchor-link" href="#4.3)-Plot-the-cumulatuve-sum-in-latitude-of-that-quantity">¶</a></h2><p>Label with correct units. (Hint: check out xarray's <a href="http://xarray.pydata.org/en/stable/generated/xarray.DataArray.cumsum.html">cumsum</a> function.)</p>
+<p>This curve tells you how much energy must be transported meridionally by the ocean and atmosphere in order to account for the radiative imbalance at the top of the atmosphere.</p>
 </div>
 </div>
 </div>
@@ -1619,7 +1536,15 @@ Call your previously defined functions if necessary.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If you class works properly, it should pass all of the tests below:</p>
+<p>You should get a curve tht looks something like this</p>
+<p><img alt="meridional energy transport" src="http://www.cgd.ucar.edu/cas/papers/jclim2001a/Fig7.gif"></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.1)-Plot-the-time-mean-cloud-area-fraction-(day-and-night)">5.1) Plot the time-mean cloud area fraction (day and night)<a class="anchor-link" href="#5.1)-Plot-the-time-mean-cloud-area-fraction-(day-and-night)">¶</a></h2>
 </div>
 </div>
 </div>
@@ -1628,20 +1553,53 @@ Call your previously defined functions if necessary.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">earth</span> <span class="o">=</span> <span class="n">Planet</span><span class="p">(</span><span class="mf">6.3781e6</span><span class="p">,</span> <span class="mi">86400</span><span class="p">)</span>
-
-<span class="kn">import</span> <span class="nn">pytest</span>
-<span class="k">assert</span> <span class="n">earth</span><span class="o">.</span><span class="n">surface_area</span><span class="p">()</span> <span class="o">==</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="mf">5.112015e14</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">earth</span><span class="o">.</span><span class="n">rotation_frequency</span><span class="p">()</span> <span class="o">==</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="mf">7.2722e-5</span><span class="p">)</span>
-
-<span class="n">earth2</span> <span class="o">=</span> <span class="n">Planet</span><span class="p">(</span><span class="mf">6.3781e6</span><span class="p">,</span> <span class="mi">86400</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">earth</span> <span class="o">==</span> <span class="n">earth2</span>
-
-<span class="n">jupyter</span> <span class="o">=</span> <span class="n">Planet</span><span class="p">(</span><span class="mf">69.911e6</span><span class="p">,</span> <span class="mf">9.925</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">jupyter</span><span class="o">.</span><span class="n">surface_area</span><span class="p">()</span> <span class="o">==</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="mf">6.14187e16</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">jupyter</span><span class="o">.</span><span class="n">rotation_frequency</span><span class="p">()</span> <span class="o">==</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="mf">1.758518e-4</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.2)-Define-boolean-masks-for-low-cloud-area-($\le$-25%)-and-high-cloud-area-($\ge$-75%)">5.2) Define boolean masks for low cloud area ($\le$ 25%) and high cloud area ($\ge$ 75%)<a class="anchor-link" href="#5.2)-Define-boolean-masks-for-low-cloud-area-($\le$-25%)-and-high-cloud-area-($\ge$-75%)">¶</a></h2><p>Use the whole dataset, not the time mean.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.3)-Calculate-and-plot-composites-of-time-mean-outgoing-shortwave-and-longwave-radiation-for-low-and-high-cloud-area-regions">5.3) Calculate and plot composites of time-mean outgoing shortwave and longwave radiation for low and high cloud area regions<a class="anchor-link" href="#5.3)-Calculate-and-plot-composites-of-time-mean-outgoing-shortwave-and-longwave-radiation-for-low-and-high-cloud-area-regions">¶</a></h2><p>Your results should be 2D maps.</p>
+<p>Xarray's <a href="http://xarray.pydata.org/en/stable/generated/xarray.DataArray.where.html">where</a> function will be helpful.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.4)-Using-the-weight-factor-from-3.2,-calculate-the-global-mean-values-of-shortwave-and-longwave-radiation,-composited-in-high-and-low-cloud-regions">5.4) Using the <code>weight</code> factor from 3.2, calculate the global mean values of shortwave and longwave radiation, composited in high and low cloud regions<a class="anchor-link" href="#5.4)-Using-the-weight-factor-from-3.2,-calculate-the-global-mean-values-of-shortwave-and-longwave-radiation,-composited-in-high-and-low-cloud-regions">¶</a></h2><p>What is the overall effect of clouds on shortwave and longwave radiation?</p>
 </div>
 </div>
 </div>
