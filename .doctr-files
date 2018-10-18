@@ -52,6 +52,7 @@
 ./tag/unix.html
 ./tag/version-control.html
 ./tag/visualization.html
+./tag/xarray.html
 ./tags.html
 ./theme/css/bootstrap.amelia.min.css
 ./theme/css/bootstrap.cerulean.min.css
@@ -133,3 +134,4 @@
 ./theme/tipuesearch/tipuesearch.min.js
 ./theme/tipuesearch/tipuesearch_content.js
 ./theme/tipuesearch/tipuesearch_set.js
+./xarray.html
