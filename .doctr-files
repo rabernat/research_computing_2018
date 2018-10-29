@@ -5,6 +5,7 @@
 ./Assignments/assignment_5_pandas.ipynb-meta
 ./Assignments/assignment_6_pandas_groupby.ipynb-meta
 ./Assignments/assignment_7_xarray.ipynb-meta
+./Assignments/assignment_8_xarray_groupby.ipynb-meta
 ./archives.html
 ./assignment-1-unix-git-basic-python.html
 ./assignment-2-python-functions-classes-and-modules.html
@@ -13,6 +14,7 @@
 ./assignment-5-pandas.html
 ./assignment-6-pandas-groupby.html
 ./assignment-7-xarray-fundamentals.html
+./assignment-8-xarray-for-enso.html
 ./author/ryan-abernathey.html
 ./authors.html
 ./categories.html

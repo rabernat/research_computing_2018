@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Assignment 1: Unix, Git, Basic Python - Research Computing in Earth Sciences</title>
+    <title>Assignment 8: Xarray for ENSO - Research Computing in Earth Sciences</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,22 +9,21 @@
 
 
 
-<link rel="canonical" href="./assignment-1-unix-git-basic-python.html">
+<link rel="canonical" href="./assignment-8-xarray-for-enso.html">
 
         <meta name="author" content="Ryan Abernathey" />
-        <meta name="keywords" content="unix,git,python" />
-        <meta name="description" content="Assignment 1¶Part 1: Files, Git, GitHub¶Use JupyterLab to launch a terminal and use the terminal to do the following tasks: Create a new directory called resume within your home directory Create an empty file within this directory called Readme.md Now use JupyterLab to edit the file: Navigate to the directory in the file browser" />
+        <meta name="keywords" content="python,xarray" />
+        <meta name="description" content="Assignment 8 : Xarray Groupby¶Here will will calculate the NINO 3.4 index of El Nino variabillity and use it to analyze datasets. First read this page from NOAA. It tells you the following. The Nino 3.4 region is defined as the region between +/- 5 deg. lat, 170 W - 120 W lon." />
 
         <meta property="og:site_name" content="Research Computing in Earth Sciences" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Assignment 1: Unix, Git, Basic Python"/>
-        <meta property="og:url" content="./assignment-1-unix-git-basic-python.html"/>
-        <meta property="og:description" content="Assignment 1¶Part 1: Files, Git, GitHub¶Use JupyterLab to launch a terminal and use the terminal to do the following tasks: Create a new directory called resume within your home directory Create an empty file within this directory called Readme.md Now use JupyterLab to edit the file: Navigate to the directory in the file browser"/>
-        <meta property="article:published_time" content="2018-09-06" />
+        <meta property="og:title" content="Assignment 8: Xarray for ENSO"/>
+        <meta property="og:url" content="./assignment-8-xarray-for-enso.html"/>
+        <meta property="og:description" content="Assignment 8 : Xarray Groupby¶Here will will calculate the NINO 3.4 index of El Nino variabillity and use it to analyze datasets. First read this page from NOAA. It tells you the following. The Nino 3.4 region is defined as the region between +/- 5 deg. lat, 170 W - 120 W lon."/>
+        <meta property="article:published_time" content="2018-10-29" />
             <meta property="article:section" content="assignments" />
-            <meta property="article:tag" content="unix" />
-            <meta property="article:tag" content="git" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="xarray" />
             <meta property="article:author" content="Ryan Abernathey" />
 
 
@@ -88,10 +87,10 @@ Research Computing in Earth Sciences            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./assignment-1-unix-git-basic-python.html"
+                    <a href="./assignment-8-xarray-for-enso.html"
                        rel="bookmark"
-                       title="Permalink to Assignment 1: Unix, Git, Basic Python">
-                        Assignment 1: Unix, Git, Basic Python
+                       title="Permalink to Assignment 8: Xarray for ENSO">
+                        Assignment 8: Xarray for ENSO
                     </a>
                 </h1>
             </header>
@@ -101,7 +100,7 @@ Research Computing in Earth Sciences            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2018-09-06T00:00:00-05:00"> Thu 06 September 2018</time>
+        <i class="fa fa-calendar"></i><time datetime="2018-10-29T00:00:00-05:00"> Mon 29 October 2018</time>
     </span>
 
 
@@ -109,11 +108,9 @@ Research Computing in Earth Sciences            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="./tag/unix.html">unix</a>
-        /
-	<a href="./tag/git.html">git</a>
-        /
 	<a href="./tag/python.html">python</a>
+        /
+	<a href="./tag/xarray.html">xarray</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -1269,78 +1266,22 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Assignment-1">Assignment 1<a class="anchor-link" href="#Assignment-1">¶</a></h1><h2 id="Part-1:-Files,-Git,-GitHub">Part 1: Files, Git, GitHub<a class="anchor-link" href="#Part-1:-Files,-Git,-GitHub">¶</a></h2><p>Use JupyterLab to launch a terminal and use the terminal to do the following tasks:</p>
-<ol>
-<li>Create a new directory called <code>resume</code> within your home directory</li>
-<li>Create an empty file within this directory called <code>Readme.md</code></li>
-</ol>
-<p>Now use JupyterLab to edit the file:</p>
-<ol>
-<li>Navigate to the directory in the file browser</li>
-<li>Open <code>Readme.md</code> in the text editor</li>
-<li>Open <code>Readme.md</code> in in Markdown Preview</li>
-<li>Arrange these files side-by-side so you can see your document rendered</li>
-<li><p>Edit the file in the editor. Add the following information:</p>
-<ol>
-<li>Top level heading with your name</li>
-<li>An image. It can be a photo of you or, if you prefer, a photo of your spirit animal.</li>
-<li>Secondary heading entitled "Education"</li>
-<li>A list of schools you attended, hyperlinked to the websites of those insitutions</li>
-</ol>
-</li>
-<li><p>Save the file</p>
-</li>
-</ol>
-<p>Now go back to the terminal and do the following:</p>
-<ol>
-<li>Initialize a new git repository in the <code>resume</code> directory</li>
-<li>Add the <code>Readme.md</code> file to the repository</li>
-<li>Create a new commit with a commit message</li>
-<li>Check the git log to see your commit history</li>
-<li>Go to github and create a <a href="https://github.com/new">new public repository</a> entitled <code>resume</code></li>
-<li>Push your local resume repository to GitHub following the instructions.</li>
-<li>View your online resume at <code>http://github.com/<your github username>/resume</code></li>
-</ol>
-<p>Finally, go back to the editor and add a new subsection called "Research Interests" to your <code>Readme.md</code> file. Update your local git repository and push your changes to GitHub. Verify that the remote repository is updated.</p>
-<p>To "hand in" this part of the assignment, just provide the link to your repository in the notebook cell below.</p>
-<h2 id="Create-your-Assignments-Repository">Create your Assignments Repository<a class="anchor-link" href="#Create-your-Assignments-Repository">¶</a></h2><p>Now that you know how to create a git repository, you should create your assignments repository.</p>
+<h1 id="Assignment-8-:-Xarray-Groupby">Assignment 8 : Xarray Groupby<a class="anchor-link" href="#Assignment-8-:-Xarray-Groupby">¶</a></h1><p>Here will will calculate the NINO 3.4 index of El Nino variabillity and use it to analyze datasets.</p>
+<p>First read <a href="https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst">this page from NOAA</a>. It tells you the following.</p>
 <ul>
-<li>Create a new directory called <code>rces-assignments</code> in your home directory.</li>
-<li><p>Copy the first assignment template into this directory (you will have to repeat this step each time a new assignment comes out.)</p>
-<pre><code>  cp examples/content/Assignments/assignment_1.ipynb rces-assignments/</code></pre>
-</li>
+<li>The Nino 3.4 region is defined as the region between +/- 5 deg. lat, 170 W - 120 W lon.</li>
+<li>Warm or cold phases of the Oceanic Nino Index are defined by a five consecutive 3-month running mean of sea surface temperature (SST) anomalies in the Niño 3.4 region that is above (below) the threshold of +0.5°C (-0.5°C). This is known as the Oceanic Niño Index (ONI).</li>
 </ul>
-<ul>
-<li>Initialize a new git repository </li>
-<li>Add the file and make your first commit</li>
-<li>Create a new <strong>private</strong> repository on GitHub called <code>rces-assignments</code>. (Call it exactly like that. Do not vary the spelling, capitalization, or punctuation.)</li>
-<li>Push your <code>rces-assignments</code> repository to github</li>
-<li>On github, go to "settings" -> "collaborators" and add <code>rabernat</code> and <code>xjin49</code></li>
-<li>Push new commits to this repository whenever you are ready to hand in your assignments</li>
-</ul>
+<p>(Note that "anomaly" means that the seasonal cycle is removed.)</p>
+<h3 id="1.-Reproduce-the-SST-curve-from-the-figure-below">1. Reproduce the SST curve from the figure below<a class="anchor-link" href="#1.-Reproduce-the-SST-curve-from-the-figure-below">¶</a></h3><p>Use the <code>NOAA_NCDC_ERSST_v3b_SST.nc</code> file we worked with in class. (You should already have downloaded it; the link is <a href="http://ldeo.columbia.edu/~rpa/NOAA_NCDC_ERSST_v3b_SST.nc">http://ldeo.columbia.edu/~rpa/NOAA_NCDC_ERSST_v3b_SST.nc</a>.)</p>
+<p>You don't have to match the stylistic details, just the "3mth running mean" curve.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Part-2:-Lists-and-Loops">Part 2: Lists and Loops<a class="anchor-link" href="#Part-2:-Lists-and-Loops">¶</a></h2><p>In this problem, we will explore the basic data structures and flow controls of python by <em>manually parsing a CSV file</em>.</p>
-<p>Note that this is a futile exercise. In the "real world" you should never manually parse a CSV file. There are utilities out there that will do it for you much more quickly and efficiently. However, it is a useful exercise for learning python.</p>
-<p>First we need to download a data file to parse. We can do this from the terminal, OR we can use <code>!</code> to run shell commands directly from the notebook. However you do it, you need to run these commands:</p>
-<pre><code>wget https://tinyurl.com/rces-roster
-mv rces-roster rces-roster.csv
-
-</code></pre>
-<p>Before starting the python part, use the JupyterLab file browser to browse to this file. Click to open it. What do you see?</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we will begin the process of reading the file with python</p>
-<h3 id="Open-the-file-using-the-open-function">Open the file using the <code>open</code> function<a class="anchor-link" href="#Open-the-file-using-the-open-function">¶</a></h3><p>Specifically, run the command</p>
-<pre><code>file = open('rces-roster.csv')</code></pre>
+<p><img alt="enso" src="https://www.ncdc.noaa.gov/monitoring-content/teleconnections/eln-f-pg.gif"></p>
 </div>
 </div>
 </div>
@@ -1358,7 +1299,7 @@ mv rces-roster rces-roster.csv
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Use-the-help-function-to-get-the-documentation-for-your-new-variable-file">Use the <code>help</code> function to get the documentation for your new variable <code>file</code><a class="anchor-link" href="#Use-the-help-function-to-get-the-documentation-for-your-new-variable-file">¶</a></h3><p>This will produce a long list of methods you can use with <code>file</code>.</p>
+<h3 id="2.-Calculate-boolean-timeseries-representing-the-positive-/-negative-enso-phases">2. Calculate boolean timeseries representing the positive / negative enso phases<a class="anchor-link" href="#2.-Calculate-boolean-timeseries-representing-the-positive-/-negative-enso-phases">¶</a></h3><p>Plot them somehow.</p>
 </div>
 </div>
 </div>
@@ -1376,7 +1317,7 @@ mv rces-roster rces-roster.csv
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Read-the-lines-of-the-file-into-a-variable-called-lines">Read the lines of the file into a variable called <code>lines</code><a class="anchor-link" href="#Read-the-lines-of-the-file-into-a-variable-called-lines">¶</a></h3><p>Hint: use the documentation above to find the method that sounds most likely to do what you want.</p>
+<h3 id="3.-Plot-composites-of-SST-anomaly-for-the-positive-and-negative-ENSO-regimes">3. Plot composites of SST anomaly for the positive and negative ENSO regimes<a class="anchor-link" href="#3.-Plot-composites-of-SST-anomaly-for-the-positive-and-negative-ENSO-regimes">¶</a></h3>
 </div>
 </div>
 </div>
@@ -1394,7 +1335,8 @@ mv rces-roster rces-roster.csv
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>What type of object is <code>lines</code>?</p>
+<p>Now load the following dataset of precipitation.</p>
+<p>I have given you the code to fix the broken date variable.</p>
 </div>
 </div>
 </div>
@@ -1403,7 +1345,15 @@ mv rces-roster rces-roster.csv
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">'http://iridl.ldeo.columbia.edu/SOURCES/.NASA/.GPCP/.V2p1/.multi-satellite/.prcp/dods'</span>
+<span class="n">dsp</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">decode_times</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">true_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">'1960-01-01'</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">dsp</span><span class="p">[</span><span class="s1">'T'</span><span class="p">]),</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'MS'</span><span class="p">)</span>
+             <span class="o">+</span><span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">14</span><span class="p">))</span>
+<span class="n">dsp</span><span class="p">[</span><span class="s1">'T'</span><span class="p">]</span> <span class="o">=</span> <span class="n">true_time</span>
+<span class="n">dsp</span> <span class="o">=</span> <span class="n">dsp</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">'T'</span><span class="p">:</span> <span class="s1">'time'</span><span class="p">})</span>
+<span class="n">dsp</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1412,161 +1362,7 @@ mv rces-roster rces-roster.csv
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It should be a familiar type we learned about in class.</p>
-<h3 id="Display-lines-at-the-end-of-a-cell-in-order-to-see-its-contents">Display <code>lines</code> at the end of a cell in order to see its contents<a class="anchor-link" href="#Display-lines-at-the-end-of-a-cell-in-order-to-see-its-contents">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Use-slicing-to-display-the-first-three-items-of-the-list.-And-the-last-3">Use slicing to display the first three items of the list. And the last 3<a class="anchor-link" href="#Use-slicing-to-display-the-first-three-items-of-the-list.-And-the-last-3">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Create-a-new-list-called-data-that-does-not-contain-the-header-row">Create a new list called <code>data</code> that does not contain the header row<a class="anchor-link" href="#Create-a-new-list-called-data-that-does-not-contain-the-header-row">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Now-iterate-through-lines-and-print-the-item-if-it-contains-your-uni">Now iterate through <code>lines</code> and <code>print</code> the item if it contains your uni<a class="anchor-link" href="#Now-iterate-through-lines-and-print-the-item-if-it-contains-your-uni">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>By now you have figured out what is in this data. Let's now transform it into a more useful format.</p>
-<h3 id="Write-code-to-transform-the-data-into-a-dictionary-whose-keys-are-UNIs-and-whose-values-are-full-names.">Write code to transform the data into a dictionary whose keys are UNIs and whose values are full names.<a class="anchor-link" href="#Write-code-to-transform-the-data-into-a-dictionary-whose-keys-are-UNIs-and-whose-values-are-full-names.">¶</a></h3><p>(You might need to review Python's <a href="https://docs.python.org/3/library/stdtypes.html#textseq">string methods</a>.)</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Use-this-dictionary-to-look-up-your-own-name-using-your-uni">Use this dictionary to look up your own name using your uni<a class="anchor-link" href="#Use-this-dictionary-to-look-up-your-own-name-using-your-uni">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Figure-out-who-has-the-longest-last-name-in-the-class">Figure out who has the longest last name in the class<a class="anchor-link" href="#Figure-out-who-has-the-longest-last-name-in-the-class">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
+<h3 id="4.-Calculate-the-composite-of-preciptiation-for-positive-and-negative-ENSO-phases.">4. Calculate the composite of preciptiation for positive and negative ENSO phases.<a class="anchor-link" href="#4.-Calculate-the-composite-of-preciptiation-for-positive-and-negative-ENSO-phases.">¶</a></h3><p>Plot the <em>difference</em> between these two fields.</p>
 </div>
 </div>
 </div>
