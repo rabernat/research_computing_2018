@@ -1,7 +1,7 @@
 Title: Python Environments
 Date: 2018-11-01
-Tags: python
-Category: software
+Category: lectures
+Tags: python, conda, environments
 
 _Note: many elements in this guide are adapted from
 [Daniel Rothenberg](http://danielrothenberg.com/)'s
