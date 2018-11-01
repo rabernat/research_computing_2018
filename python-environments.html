@@ -182,21 +182,21 @@ lightweight alternative installation method.</p>
 </pre></div>
 
 
+</li>
+</ol>
 <p>Follow the instructions; you can choose where to place the installation (
   preferably somewhere you have write access without super-user/root access,
   like your home directory). At the end of this process, add this path to your
   *rc configuration</p>
-<div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="s2">&quot;PATH=</span><span class="nv">$PATH</span><span class="s2">:/path/to/miniconda/bin&quot;</span> <span class="p">&amp;</span>gt<span class="p">;</span> ~/.bashrc
+<div class="highlight"><pre><span></span>    $ echo &quot;. $HOME/miniconda3/etc/profile.d/conda.sh&quot; &amp;gt; ~/.bashrc
 </pre></div>
 
 
 <p>If you do this, your <code>$PYTHONPATH</code> will be implicitly configured correctly
   and you will never have to touch it.</p>
-</li>
-<li>
-<p><strong>Create an environment and install packages.</strong>
-  This is described in the next section.</p>
-</li>
+<ol>
+<li><strong>Create an environment and install packages.</strong>
+  This is described in the next section.</li>
 </ol>
 <h2>Managing Environments with Conda</h2>
 <p>Python coupled with a package manager provides a way to make isolated,
@@ -429,9 +429,6 @@ associated with mis-matched libraries/headers if you go this route.</p>
       <a href="./tag/programming.html">programming</a>
     </li>
     <li class="list-group-item tag-2">
-      <a href="./tag/pandas.html">pandas</a>
-    </li>
-    <li class="list-group-item tag-2">
       <a href="./tag/xarray.html">xarray</a>
     </li>
     <li class="list-group-item tag-2">
@@ -440,47 +437,50 @@ associated with mis-matched libraries/headers if you go this route.</p>
     <li class="list-group-item tag-2">
       <a href="./tag/matplotlib.html">matplotlib</a>
     </li>
-    <li class="list-group-item tag-3">
-      <a href="./tag/classes.html">classes</a>
+    <li class="list-group-item tag-2">
+      <a href="./tag/pandas.html">pandas</a>
     </li>
     <li class="list-group-item tag-3">
       <a href="./tag/functions.html">functions</a>
     </li>
     <li class="list-group-item tag-3">
+      <a href="./tag/visualization.html">visualization</a>
+    </li>
+    <li class="list-group-item tag-3">
       <a href="./tag/unix.html">unix</a>
     </li>
     <li class="list-group-item tag-3">
-      <a href="./tag/git.html">git</a>
+      <a href="./tag/classes.html">classes</a>
     </li>
     <li class="list-group-item tag-3">
-      <a href="./tag/visualization.html">visualization</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/jupyter.html">Jupyter</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/shell.html">shell</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/conda.html">conda</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/environments.html">environments</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/github.html">github</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/file-system.html">file system</a>
+      <a href="./tag/git.html">git</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/bash.html">bash</a>
     </li>
     <li class="list-group-item tag-4">
+      <a href="./tag/file-system.html">file system</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/github.html">github</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/shell.html">shell</a>
+    </li>
+    <li class="list-group-item tag-4">
       <a href="./tag/assignment.html">assignment</a>
     </li>
     <li class="list-group-item tag-4">
+      <a href="./tag/environments.html">environments</a>
+    </li>
+    <li class="list-group-item tag-4">
       <a href="./tag/version-control.html">version control</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/jupyter.html">Jupyter</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/conda.html">conda</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/modules.html">modules</a>
