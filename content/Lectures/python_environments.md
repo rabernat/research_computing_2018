@@ -76,12 +76,14 @@ lightweight alternative installation method.
   You'll probably need to do this from the command line, e.g.
 
         $ sh Miniconda3-latest-MacOSX-x86_64.sh
+      
   Follow the instructions; you can choose where to place the installation (
   preferably somewhere you have write access without super-user/root access,
   like your home directory). At the end of this process, add this path to your
   \*rc configuration
 
-        $ echo "PATH=$PATH:/path/to/miniconda/bin" > ~/.bashrc
+        $ echo ". $HOME/miniconda3/etc/profile.d/conda.sh" > ~/.bashrc
+
   If you do this, your ``$PYTHONPATH`` will be implicitly configured correctly
   and you will never have to touch it.
 
