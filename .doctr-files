@@ -35,6 +35,7 @@
 ./pages/syllabus.html
 ./pandas-groupby.html
 ./pandas.html
+./python-environments.html
 ./static/custom.css
 ./static/delaunay.png
 ./static/trajectories.jpg
@@ -42,6 +43,8 @@
 ./tag/assignment.html
 ./tag/bash.html
 ./tag/classes.html
+./tag/conda.html
+./tag/environments.html
 ./tag/file-system.html
 ./tag/functions.html
 ./tag/git.html
