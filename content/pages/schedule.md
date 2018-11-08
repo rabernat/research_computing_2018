@@ -17,19 +17,19 @@ Summary: Overview of course schedule and topics
 | T 25 Sept  | in class partner activity                         |                   |
 | Th 27 Sept | [More Matplotlib]({filename}/Lectures/more_matplotlib.ipynb)                       | [assignment 3 due]({filename}/Assignments/Assignment_3.ipynb)   |
 | T 2 Oct    | in class partner activity                         |                   |
-| Th 4 Oct   | Pandas for Tabular Data I: Basics                 | [assignment 4 due]({filename}/Assignments/assignment_4.ipynb)   |
+| Th 4 Oct   | [Pandas for Tabular Data I: Basics]({filename}/Lectures/pandas.ipynb)     | [assignment 4 due]({filename}/Assignments/assignment_4.ipynb)   |
 | T 9 Oct    | in class partner activity                         |                   |
-| Th 11 Oct  | Pandas for Tabular Data II: Advanced Pandas       | --  |
+| Th 11 Oct  | [Pandas for Tabular Data II: Advanced Pandas]({filename}/Lectures/pandas_groupby.ipynb) | [assignment 5 due]({filename}/Assignments/assignment_5_pandas.ipynb) |
 | T 16 Oct   | in class partner activity                         |                   |
-| Th 18 Oct  | XArray for Multidimensional Data I: Basics        | [assignment 5 due]({filename}/Assignments/assignment_5_pandas.ipynb)  |
+| Th 18 Oct  | [XArray for Multidimensional Data I: Basics]({filename}/Lectures/xarray-part2.ipynb) | [assignment 6 due]({filename}/Assignments/assignment_6_pandas_groupby.ipynb)  |
 | T 23 Oct   | in class partner activity                         |                   |
-| Th 25 Oct  | XArray for Multidimensional Data II: Intermediate | assignment 7 due  |
+| Th 25 Oct  | [XArray for Multidimensional Data II: Intermediate]({filename}/Lectures/xarray-part2.ipynb) | [assignment 7 due]({filename}/Assignments/assignment_7_xarray.ipynb)  |
 | T 30 Oct   | in class partner activity                         |                   |
-| Th 1 Nov   | Using python on your computer                     | assignment 8 due  |
+| Th 1 Nov   | [Using python on your computer]({filename}/Lectures/python_environments.md) | [assignment 8 due]({filename}/Assignments/assignment_8_xarray_groupby.ipynb)   |
 | T 6 Nov    | NO CLASS                                          |                   |
-| Th 8 Nov   | Making maps with Basemap                          |                   |
+| Th 8 Nov   | [Dask for big data]({filename}/Lectures/dask.ipynb)                         |                   |
 | T 13 Nov   | in class partner activity                         |                   |
-| Th 15 Nov  | Other mapping packages                            | assignment 9 due  |
+| Th 15 Nov  | Mapping packages                            | assignment 9 due  |
 | T 20 Nov   | in class partner activity                         |                   |
 | Th 22 Nov  | NO CLASS                                          |                   |
 | T 27 Nov   | Geoscience specifc packages                       | assignment 10 due |
