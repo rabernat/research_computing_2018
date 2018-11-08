@@ -21,6 +21,7 @@
 ./category/assignments.html
 ./category/lectures.html
 ./course-introduction.html
+./dask-for-parallel-computing-and-big-data.html
 ./functions-classes-and-modules.html
 ./index.html
 ./intermediate-xarray.html
@@ -30,6 +31,7 @@
 ./introduction-to-python.html
 ./more-matplotlib.html
 ./numpy-and-matplotlib.html
+./pages/final-project.html
 ./pages/jupyterhub.html
 ./pages/schedule.html
 ./pages/syllabus.html
@@ -44,6 +46,7 @@
 ./tag/bash.html
 ./tag/classes.html
 ./tag/conda.html
+./tag/dask.html
 ./tag/environments.html
 ./tag/file-system.html
 ./tag/functions.html

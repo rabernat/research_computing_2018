@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>JupyterHub - Research Computing in Earth Sciences</title>
+    <title>Final Project - Research Computing in Earth Sciences</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,16 +9,16 @@
 
 
 
-<link rel="canonical" href="../pages/jupyterhub.html">
+<link rel="canonical" href="../pages/final-project.html">
 
         <meta name="author" content="Ryan Abernathey" />
-        <meta name="description" content="Instructions for accessing the course JupyterHub" />
+        <meta name="description" content="Guidelines and expectations for final project" />
 
     <meta property="og:site_name" content="Research Computing in Earth Sciences" />
     <meta property="og:type" content="article"/>
-    <meta property="og:title" content="JupyterHub"/>
-    <meta property="og:url" content="../pages/jupyterhub.html"/>
-    <meta property="og:description" content="Instructions for accessing the course JupyterHub" />
+    <meta property="og:title" content="Final Project"/>
+    <meta property="og:url" content="../pages/final-project.html"/>
+    <meta property="og:description" content="Guidelines and expectations for final project" />
 
 
     <!-- Bootstrap -->
@@ -50,10 +50,10 @@ Research Computing in Earth Sciences            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="../pages/final-project.html">
+                         <li class="active"><a href="../pages/final-project.html">
                              Final Project
                           </a></li>
-                         <li class="active"><a href="../pages/jupyterhub.html">
+                         <li><a href="../pages/jupyterhub.html">
                              JupyterHub
                           </a></li>
                          <li><a href="../pages/schedule.html">
@@ -81,23 +81,114 @@ Research Computing in Earth Sciences            </a>
     <div class="row">
         <div class="col-sm-9">
     <section id="content" class="body">
-        <h1 class="entry-title">JupyterHub</h1>
+        <h1 class="entry-title">Final Project</h1>
         
         <div class="entry-content">
-            <p>In past years, we spent an unjustifiably large amount of time on installing
-python packages on students' individual computers.
-This year, we have decided to create a cloud-based environment from which
-students can try the examples, complete assignments, and do any independent
-work they want.</p>
-<p>The cloud-based environment can be accessed at the following url:
-<strong> <a href="https://rces.pangeo.io">https://rces.pangeo.io</a> </strong></p>
-<p>This environment is a <a href="https://jupyterhub.readthedocs.io/en/stable/">JupyterHub</a>,
-a server which spawns individual Jupyter Labs for multiple users. It is based
-on the <a href="https://zero-to-jupyterhub.readthedocs.io/en/stable/">Zero-to-JupyterHub</a>
-project and deployed on <a href="https://cloud.google.com/">Google Cloud Platform</a>.
-The resources for running this service are provided by the
-<a href="https://www.nsf.gov/">National Science Foundation</a> and Google via
-<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1740648&amp;HistoricalAwards=false">NSF Award 1740648</a>.</p>
+            <p>Final projects must be completed individually.
+The final project is due Thursday, Dec 6 (the final day of class). Everyone will
+give a five minute overview of the project in class. In order to fit everyone in,
+four people will have to present their work in progress on Tuesday, Dec. 4
+(volunteers welcome).</p>
+<h3>Learning Goals</h3>
+<p>The goal of the final project is to assess your ability to combine and apply
+the skills you have learned in class in the context of a real-world research
+problem. Our class has mostly focused on tools for data analysis and
+visualization, so this must be the focus of your final project. Specifically,
+we seek to assess your ability to do the following tasks:</p>
+<ul>
+<li>Discover and download real datasets in standard formats (e.g. CSV, netCDF)</li>
+<li>Load the data into pandas or xarray, performing any necessary data cleanup
+  (dealing with missing values, proper time encoding, etc.) along the way.</li>
+<li>Perform realistic scientific calculation involving, for example tasks such as
+  grouping, aggregating, and applying mathematical formulas.</li>
+<li>Visualize your results in well-formatted plots.</li>
+</ul>
+<h3>Dataset Requirements</h3>
+<p>Your datasets can involve data collected by yourself or your lab, or can
+come from a public data repository. Ideally, your choice of dataset should be
+driven by your research. It is acceptable (and encouraged) to have your final
+project for this class involve an ongoing research project.
+<em>However, it is not acceptable to have your final project overlap with the final
+project for another class.</em></p>
+<p>If you don't know what dataset to use, here are a couple of links to get you
+started:</p>
+<ul>
+<li><a href="http://iridl.ldeo.columbia.edu">IRI Data Library</a></li>
+<li><a href="https://data.usgs.gov/datacatalog/">USGS Data Catalog</a></li>
+<li><a href="https://www.ncdc.noaa.gov/">NOAA National Climate Data Center</a></li>
+<li><a href="https://earthdata.nasa.gov/">NASA Earth Science Data</a></li>
+</ul>
+<p>You may use just one dataset, or you may choose to combine multiple datasets,
+depending on your scientific question.</p>
+<h3>Analysis Requirements</h3>
+<p>The goal here is the same as with any science project: to use the data to
+investigate a scientific question or hypothesis. In order to succeed on the
+project, you will have to draw on your experience <em>outside</em> our class, from
+your science-focused classes or independent research, in order to define a
+scientifically interesting question. It is also acceptable to use this project
+to reproduce the results from a published study that you find interesting,
+provided you have access to the original data.</p>
+<p>Whatever you choose, you should <em>clearly define a hypothesis or scientific
+question that you aim to investigate with your analysis</em>. This will determine
+what you have to do.</p>
+<p>The results of this analysis will be figures. Beautiful figures which clearly
+provide answers to your question / hypothesis. Your notebook should contain
+at least 4 and no more than 8 figures. If you have closer to 4, they
+should be complex, multi-panel figures. All figures must have titles, clearly
+labeled axes, informative colormaps / colorbars, and legends, where
+appropriate.</p>
+<h3>Technical Requirements</h3>
+<p>Your final project must meet the following technical requirements</p>
+<ul>
+<li>A <em>single jupyter notebook</em></li>
+<li>Stored in a standalone public github repo</li>
+<li>All data is either stored in the repo itself or downloaded / accessed from
+  within the notebook (no manual download steps)</li>
+<li>Complete explanatory text / equations included in the notebook as markdown
+  cells</li>
+<li>Notebook must execute in sequence with no errors</li>
+<li>The whole github repo must be configured to run on
+  <a href="https://mybinder.org">mybinder.org</a> or, for analysis involving dask,
+  <a href="http://binder.pangeo.io">binder.pangeo.io</a></li>
+</ul>
+<p>You <em>must</em> use either pandas or xarray (or both) in some part of your project.
+You <em>may</em> use other scientific python libraries as well, if you wish, to
+facilitate some analysis that is not possible with xarray / pandas alone. Some
+libraries you may wish to consider are:</p>
+<ul>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/">SciPy</a> for interpolation,
+  signal processing, spectral analysis, linear algebra, and other general
+  purpose scientific computing routines</li>
+<li><a href="https://github.com/statsmodels/statsmodels">Statsmodels</a> for advanced
+  statistical analysis</li>
+<li><a href="https://scikit-image.org/">Scikit-image</a> for image processing</li>
+<li><a href="https://scikit-learn.org/stable/">Scikit-learn</a> for machine learning</li>
+<li><a href="https://xgcm.readthedocs.io/en/latest/">XGCM</a> for working with
+  finite-volume data from general circulation models</li>
+<li><a href="https://xesmf.readthedocs.io/en/latest/">XESMF</a> for regridding of gridded
+  data</li>
+<li><a href="https://pyresample.readthedocs.io/en/latest/">Pyresample</a> for resampling
+  (reprojection) of satellite data</li>
+<li><a href="https://ajdawson.github.io/eofs/">EOFS</a> for empirical orthogonal function
+  analysis</li>
+<li><a href="https://ajdawson.github.io/windspharm/latest/">windspharm</a> for spherical
+  harmonic analysis of global atmospheric wind data</li>
+<li><a href="https://unidata.github.io/MetPy/latest/index.html">metpy</a> a collection of
+  tools in Python for reading, visualizing, and performing calculations with
+  weather data</li>
+</ul>
+<h3>Project Approval</h3>
+<p>You must have your dataset(s) and general scope for your project improved by
+the instructor. This must be done by Tuesday, Nov. 20. The approval process
+works like this:</p>
+<ul>
+<li>Create a new public github repo for your project</li>
+<li>Add a <code>README.md</code> file which contains the scientific question / hypothesis
+  you plan to investigate, links to the relevant datasets, and a three
+  sentence summary of the analysis you plan to do.</li>
+<li>Email the link to this repository to the instructor <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#112;&#97;&#64;&#108;&#100;&#101;&#111;&#46;&#99;&#111;&#108;&#117;&#109;&#98;&#105;&#97;&#46;&#101;&#100;&#117;">&#114;&#112;&#97;&#64;&#108;&#100;&#101;&#111;&#46;&#99;&#111;&#108;&#117;&#109;&#98;&#105;&#97;&#46;&#101;&#100;&#117;</a>
+  with the title "RCES Final Project Proposal"</li>
+</ul>
         </div>
     </section>
         </div>
