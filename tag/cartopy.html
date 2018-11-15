@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>JupyterHub - Research Computing in Earth Sciences</title>
+    <title>cartopy - Research Computing in Earth Sciences</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,16 +9,16 @@
 
 
 
-<link rel="canonical" href="../pages/jupyterhub.html">
 
-        <meta name="author" content="Ryan Abernathey" />
-        <meta name="description" content="Instructions for accessing the course JupyterHub" />
+    <meta name="author" content="Ryan Abernathey" />
+    <meta name="keywords" content="cartopy" />
 
-    <meta property="og:site_name" content="Research Computing in Earth Sciences" />
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="JupyterHub"/>
-    <meta property="og:url" content="../pages/jupyterhub.html"/>
-    <meta property="og:description" content="Instructions for accessing the course JupyterHub" />
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="Research Computing in Earth Sciences" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Research Computing in Earth Sciences"/>
+        <meta property="og:url" content=".."/>
+        <meta property="og:description" content="Research Computing in Earth Sciences"/>
 
 
     <!-- Bootstrap -->
@@ -53,7 +53,7 @@ Research Computing in Earth Sciences            </a>
                          <li><a href="../pages/final-project.html">
                              Final Project
                           </a></li>
-                         <li class="active"><a href="../pages/jupyterhub.html">
+                         <li><a href="../pages/jupyterhub.html">
                              JupyterHub
                           </a></li>
                          <li><a href="../pages/schedule.html">
@@ -80,26 +80,22 @@ Research Computing in Earth Sciences            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-    <section id="content" class="body">
-        <h1 class="entry-title">JupyterHub</h1>
-        
-        <div class="entry-content">
-            <p>In past years, we spent an unjustifiably large amount of time on installing
-python packages on students' individual computers.
-This year, we have decided to create a cloud-based environment from which
-students can try the examples, complete assignments, and do any independent
-work they want.</p>
-<p>The cloud-based environment can be accessed at the following url:
-<strong> <a href="https://rces.pangeo.io">https://rces.pangeo.io</a> </strong></p>
-<p>This environment is a <a href="https://jupyterhub.readthedocs.io/en/stable/">JupyterHub</a>,
-a server which spawns individual Jupyter Labs for multiple users. It is based
-on the <a href="https://zero-to-jupyterhub.readthedocs.io/en/stable/">Zero-to-JupyterHub</a>
-project and deployed on <a href="https://cloud.google.com/">Google Cloud Platform</a>.
-The resources for running this service are provided by the
-<a href="https://www.nsf.gov/">National Science Foundation</a> and Google via
-<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1740648&amp;HistoricalAwards=false">NSF Award 1740648</a>.</p>
-        </div>
-    </section>
+            <article>
+                <h2><a href="../maps-with-cartopy.html">Maps with Cartopy</a></h2>
+                <div class="summary">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Maps-in-Scientific-Python">Maps in Scientific Python<a class="anchor-link" href="#Maps-in-Scientific-Python">¶</a></h1><p>Making maps is a fundamental part of geoscience research.
+Maps differ from regular figures in the following principle ways:</p>
+<ul>
+<li>Maps require a <em>projection</em> of geographic coordinates on the 3D Earth to the 2D space of your figure.</li>
+<li>Maps often include extra decorations besides just our data (e.g. continents, country borders, etc.)</li>
+                    <a class="btn btn-default btn-xs" href="../maps-with-cartopy.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
@@ -112,15 +108,6 @@ The resources for running this service are provided by the
   <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
   <ul class="list-group" id="recentposts">
     <li class="list-group-item"><a href="../maps-with-cartopy.html">Maps with Cartopy</a></li>
-    <li class="list-group-item"><a href="../assignment-9-performance-and-profiling.html">Assignment 9: Performance and Profiling</a></li>
-    <li class="list-group-item"><a href="../dask-for-parallel-computing-and-big-data.html">Dask for Parallel Computing and Big Data</a></li>
-    <li class="list-group-item"><a href="../python-environments.html">Python Environments</a></li>
-    <li class="list-group-item"><a href="../assignment-8-xarray-for-enso.html">Assignment 8: Xarray for ENSO</a></li>
-    <li class="list-group-item"><a href="../intermediate-xarray.html">Intermediate Xarray</a></li>
-    <li class="list-group-item"><a href="../assignment-7-xarray-fundamentals.html">Assignment 7: Xarray Fundamentals</a></li>
-    <li class="list-group-item"><a href="../xarray.html">Xarray Fundamentals</a></li>
-    <li class="list-group-item"><a href="../assignment-6-pandas-groupby.html">Assignment 6: Pandas Groupby</a></li>
-    <li class="list-group-item"><a href="../pandas-groupby.html">Groupby in Pandas</a></li>
   </ul>
 </li>
 <!-- End Sidebar/Recent Posts -->

@@ -31,6 +31,7 @@
 ./intro-to-unix.html
 ./introduction-to-jupyterlab.html
 ./introduction-to-python.html
+./maps-with-cartopy.html
 ./more-matplotlib.html
 ./numpy-and-matplotlib.html
 ./pages/final-project.html
@@ -46,6 +47,7 @@
 ./static/trajectories.png
 ./tag/assignment.html
 ./tag/bash.html
+./tag/cartopy.html
 ./tag/classes.html
 ./tag/conda.html
 ./tag/dask.html
