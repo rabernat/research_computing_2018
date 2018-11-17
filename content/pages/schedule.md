@@ -29,10 +29,10 @@ Summary: Overview of course schedule and topics
 | T 6 Nov    | NO CLASS                                          |                   |
 | Th 8 Nov   | [Dask for big data]({filename}/Lectures/dask.ipynb)                         |                   |
 | T 13 Nov   | in class partner activity                         |                   |
-| Th 15 Nov  | Mapping packages                            | assignment 9 due  |
+| Th 15 Nov  | [Maps with Cartopy]({filename}/Lectures/mapping_cartopy.ipynb) | [assignment 9 due]({filename}/Assignments/assignment_9_profiling.ipynb)  |
 | T 20 Nov   | in class partner activity                         |                   |
 | Th 22 Nov  | NO CLASS                                          |                   |
-| T 27 Nov   | Geoscience specifc packages                       | assignment 10 due |
+| T 27 Nov   | Geoscience specific packages                       | [assignment 10 due]({filename}/Assignments/assignment_10_cartopy.ipynb) |
 | Th 29 Nov  | TBD                                               |                   |
 | T 4 Dec    | TBD                                               |                   |
 | Th 6 Dec   | TBD                                               |                   |
