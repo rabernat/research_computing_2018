@@ -1,5 +1,6 @@
 ./Assignments/Assignment_3.ipynb-meta
 ./Assignments/assignment_1.ipynb-meta
+./Assignments/assignment_10_cartopy.ipynb-meta
 ./Assignments/assignment_2.ipynb-meta
 ./Assignments/assignment_4.ipynb-meta
 ./Assignments/assignment_5_pandas.ipynb-meta
@@ -9,6 +10,7 @@
 ./Assignments/assignment_9_profiling.ipynb-meta
 ./archives.html
 ./assignment-1-unix-git-basic-python.html
+./assignment-10-maps-with-cartopy.html
 ./assignment-2-python-functions-classes-and-modules.html
 ./assignment-3-numpy-and-matplotlib.html
 ./assignment-4-more-matplotlib.html
