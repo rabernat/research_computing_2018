@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Assignment 3 - Numpy and Matplotlib - Research Computing in Earth Sciences</title>
+    <title>Binder for Reproducible Research - Research Computing in Earth Sciences</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,23 +9,20 @@
 
 
 
-<link rel="canonical" href="./assignment-3-numpy-and-matplotlib.html">
+<link rel="canonical" href="./binder.html">
 
         <meta name="author" content="Ryan Abernathey" />
-        <meta name="keywords" content="assignment,python,numpy,matplotlib" />
-        <meta name="description" content="Assignment 3 - Numpy and Matplotlib¶Due Thursday September 27¶1 Creating and Manipulating Arrays¶ First import numpy and matplotlib" />
+        <meta name="keywords" content="binder" />
+        <meta name="description" content="Binder for Reproducible Research¶This final lesson is concerned with the topic of reproducibility. Nearly everyone agrees that reproducibility is an important principle for science: if results are not reproducible, they are not valid. But how do we achieve reproducibility in practice? In computational / data science, a particular analysis, calculation, or notebook may depend on hundreds of different software packages, each with many different versions. Reproducibility of our results depends on having the correct version." />
 
         <meta property="og:site_name" content="Research Computing in Earth Sciences" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Assignment 3 - Numpy and Matplotlib"/>
-        <meta property="og:url" content="./assignment-3-numpy-and-matplotlib.html"/>
-        <meta property="og:description" content="Assignment 3 - Numpy and Matplotlib¶Due Thursday September 27¶1 Creating and Manipulating Arrays¶ First import numpy and matplotlib"/>
-        <meta property="article:published_time" content="2018-09-20" />
-            <meta property="article:section" content="assignments" />
-            <meta property="article:tag" content="assignment" />
-            <meta property="article:tag" content="python" />
-            <meta property="article:tag" content="numpy" />
-            <meta property="article:tag" content="matplotlib" />
+        <meta property="og:title" content="Binder for Reproducible Research"/>
+        <meta property="og:url" content="./binder.html"/>
+        <meta property="og:description" content="Binder for Reproducible Research¶This final lesson is concerned with the topic of reproducibility. Nearly everyone agrees that reproducibility is an important principle for science: if results are not reproducible, they are not valid. But how do we achieve reproducibility in practice? In computational / data science, a particular analysis, calculation, or notebook may depend on hundreds of different software packages, each with many different versions. Reproducibility of our results depends on having the correct version."/>
+        <meta property="article:published_time" content="2018-11-27" />
+            <meta property="article:section" content="lectures" />
+            <meta property="article:tag" content="binder" />
             <meta property="article:author" content="Ryan Abernathey" />
 
 
@@ -70,10 +67,10 @@ Research Computing in Earth Sciences            </a>
                          <li><a href="./pages/syllabus.html">
                              Syllabus
                           </a></li>
-                        <li class="active">
+                        <li >
                             <a href="./category/assignments.html">Assignments</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="./category/lectures.html">Lectures</a>
                         </li>
             </ul>
@@ -92,10 +89,10 @@ Research Computing in Earth Sciences            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./assignment-3-numpy-and-matplotlib.html"
+                    <a href="./binder.html"
                        rel="bookmark"
-                       title="Permalink to Assignment 3 - Numpy and Matplotlib">
-                        Assignment 3 - Numpy and Matplotlib
+                       title="Permalink to Binder for Reproducible Research">
+                        Binder for Reproducible Research
                     </a>
                 </h1>
             </header>
@@ -105,7 +102,7 @@ Research Computing in Earth Sciences            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2018-09-20T00:00:00-05:00"> Thu 20 September 2018</time>
+        <i class="fa fa-calendar"></i><time datetime="2018-11-27T00:00:00-05:00"> Tue 27 November 2018</time>
     </span>
 
 
@@ -113,13 +110,7 @@ Research Computing in Earth Sciences            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="./tag/assignment.html">assignment</a>
-        /
-	<a href="./tag/python.html">python</a>
-        /
-	<a href="./tag/numpy.html">numpy</a>
-        /
-	<a href="./tag/matplotlib.html">matplotlib</a>
+	<a href="./tag/binder.html">binder</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -1275,396 +1266,119 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Assignment-3---Numpy-and-Matplotlib">Assignment 3 - Numpy and Matplotlib<a class="anchor-link" href="#Assignment-3---Numpy-and-Matplotlib">¶</a></h1><h3 id="Due-Thursday-September-27">Due Thursday September 27<a class="anchor-link" href="#Due-Thursday-September-27">¶</a></h3><h2 id="1-Creating-and-Manipulating-Arrays">1 Creating and Manipulating Arrays<a class="anchor-link" href="#1-Creating-and-Manipulating-Arrays">¶</a></h2>
+<h1 id="Binder-for-Reproducible-Research">Binder for Reproducible Research<a class="anchor-link" href="#Binder-for-Reproducible-Research">¶</a></h1><p>This final lesson is concerned with the topic of reproducibility.
+Nearly everyone agrees that reproducibility is an important principle for science:
+if results are not reproducible, they are not valid.</p>
+<p>But how do we achieve reproducibility in practice?
+In computational / data science, a particular analysis, calculation, or notebook may depend on hundreds of different software packages, each with many different versions.
+Reproducibility of our results depends on having the correct version.</p>
+<p>In the <a href="./python-environments.html">lesson on python environments</a>, we learned how to use <a href="https://conda.io/docs/">conda</a> to manage the packages in our environment.
+In this lesson, we will learn how to package our own code / notebooks together with an environment in such a way that it can be executed by anyone / anywhere, using cloud computing.</p>
+<p>From the <a href="https://mybinder.readthedocs.io/en/latest/">Binder Documentation</a></p>
+<blockquote><p>Binder allows you to create custom computing environments that can be shared and used by many remote users. It is powered by <a href="https://github.com/jupyterhub/binderhub">BinderHub</a>, which is an open-source tool that deploys the Binder service in the cloud. One-such deployment lives ... at mybinder.org and is free to use.</p>
+</blockquote>
+<p>BinderHub uses a combination of open source technologies, including JupyterHub and <a href="https://docs.docker.com/">Docker</a> (a containerization service), to achieve this magic.</p>
+<p>In addition to the <a href="http://mybinder.org">http://mybinder.org</a> deployment, the Pangeo project operates a BinderHub service at <a href="http://binder.pangeo.io">http://binder.pangeo.io</a>. This BinderHub is customized to allow users to also launch Dask clusters in the cloud.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>First import numpy and matplotlib</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.1.-Create-two-2D-arrays-representing-coordinates-x,-y-on-the-cartesian-plan">1.1. Create two 2D arrays representing coordinates x, y on the cartesian plan<a class="anchor-link" href="#1.1.-Create-two-2D-arrays-representing-coordinates-x,-y-on-the-cartesian-plan">¶</a></h3><p>Both should cover the range (-2, 2) and have 100 points in each direction</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.2.-Visualize-each-2D-array-using-pcolormesh">1.2. Visualize each 2D array using <code>pcolormesh</code><a class="anchor-link" href="#1.2.-Visualize-each-2D-array-using-pcolormesh">¶</a></h3><p>Use the correct coordiantes for the x and y axes. Provide axis labels for all of your plots in this assignment.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.3-From-your-cartesian-coordinates,-create-polar-coordinates-$r$-and-$\varphi$">1.3 From your cartesian coordinates, create polar coordinates $r$ and $\varphi$<a class="anchor-link" href="#1.3-From-your-cartesian-coordinates,-create-polar-coordinates-$r$-and-$\varphi$">¶</a></h3><p>Refer to the <a href="https://en.wikipedia.org/wiki/Polar_coordinate_system#Converting_between_polar_and_Cartesian_coordinates">wikipedia page</a> for the conversion formula. You will need to use numpy's <code>arctan2</code> function. Read its documentation.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
+<h2 id="An-Example-Binder">An Example Binder<a class="anchor-link" href="#An-Example-Binder">¶</a></h2><p>All binders start with a github repository. As an example, let's consider the the official dask examples repo: <a href="https://github.com/dask/dask-examples">https://github.com/dask/dask-examples</a></p>
+<h3 id="Contents">Contents<a class="anchor-link" href="#Contents">¶</a></h3><p>The repository should contain the following two elements:</p>
+<ul>
+<li>Python code and / or notebooks (these can live in sub-directories)</li>
+<li>An <code>environment.yml</code> or <code>requirements.txt</code> file to specify the package dependencies (can be at the top level or in a subdirectory called <code>binder/</code>)</li>
+</ul>
+<p>The dask-examples repo contains about 10 different example notebooks.</p>
+<p>To specify the environment, the dask-example repo has the following file at <code>binder/environment.yml</code></p>
+<pre><code>channels:
+  - conda-forge
+dependencies:
+  - python=3
+  - bokeh=0.13
+  - dask=0.20
+  - dask-ml=0.10.0
+  - distributed=1.24
+  - jupyterlab=0.35.1
+  - nodejs=8.9
+  - numpy
+  - pandas
+  - pyarrow==0.10.0
+  - scikit-learn=0.20
+  - matplotlib
+  - nbserverproxy
+  - nomkl
+  - h5py
+  - xarray
+  - bottleneck
+  - py-xgboost
+  - pip:
+    - graphviz
+    - dask_xgboost
+    - seaborn
+    - mimesis
+
+</code></pre>
+<p>This is a rather complex set of dependencies.
+In addition, there are other files in the <code>binder/</code> directory that help further customize the environment.
+These customizations are described in the <a href="https://mybinder.readthedocs.io/en/latest/using.html#executing-post-build-commands">Binder Documentation</a>.</p>
+<h3 id="Binder-Link">Binder Link<a class="anchor-link" href="#Binder-Link">¶</a></h3><p>Once the repository is ready, it's time to generate a link to the BinderHub.
+These links have the following structure:</p>
+<pre><code>https://mybinder.org/v2/<provider-name>/<org-name>/<repo-name>/<branch|commit|tag>?filepath=<path to notebook.ipynb>
+
+</code></pre>
+<p>For the dask-examples repo, the link used is:</p>
+<pre><code>https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab
+
+</code></pre>
+<p>In this case, <code>provider</code> is <code>gh</code> (i.e. github).</p>
+<p>The <a href="https://mybinder.org/">https://mybinder.org/</a> website has a nifty tool to automatically generate badges that can be placed on a website or markdown file to make it easy to launch the binder.
+For dask-examples, the markdown code looks like this:</p>
+<p><code>[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab)</code></p>
+<p>And renders like this</p>
+<p><a href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge.svg"></a></p>
+<p>Take some time to launch the binder and play around with it.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.4.-Visualize-$r$-and-$\varphi$-as-functions-of-$x$-and-$y$">1.4. Visualize $r$ and $\varphi$ as functions of $x$ and $y$<a class="anchor-link" href="#1.4.-Visualize-$r$-and-$\varphi$-as-functions-of-$x$-and-$y$">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.5-Define-the-function-$f-=-\cos^2(4r)-+-\sin^2(4\varphi)$">1.5 Define the function $f = \cos^2(4r) + \sin^2(4\varphi)$<a class="anchor-link" href="#1.5-Define-the-function-$f-=-\cos^2(4r)-+-\sin^2(4\varphi)$">¶</a></h3><p>And plot it as a function of $x$ and $y$</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
+<h2 id="Creating-your-Own-Binder">Creating your Own Binder<a class="anchor-link" href="#Creating-your-Own-Binder">¶</a></h2><p>To create your own binder, you will need to have the same two ingredients:</p>
+<ul>
+<li>Some code to share</li>
+<li>An appropriate environment</li>
+</ul>
+<p>At this point, probably the best way to develop a binder is to start on your personal computer.</p>
+<p>First create or clone a github repo with the following file / directory structure:</p>
+<pre><code>binder/environment.yml
+some-notebook.ipynb
+Readme.md
+
+</code></pre>
+<p><strong>Note: you should use your <a href="{filename}/Pages/final_project.md">final_project</a> repository for this.</strong>
+Modify the <code>environment.yml</code> to specify the packages you think you will be using, and then create and activate the environment.
+(See the <a href="./python-environments.html">lesson on python environments</a> to review how to do this.)</p>
+<p>Then add some basic content to the notebook. For example, try importing the packages you might want to use:</p>
+<pre><code>import numpy as np
+import pandas as pd
+import xarray as xr
+import cartopy.crs as ccrs
+from matplotlib import pyplot as plt
+
+</code></pre>
+<p>Once things are working, push the repo to github. Then use <a href="https://mybinder.org">https://mybinder.org</a> to generate a binder badge and add it to your <code>Readme.md</code> file.</p>
+<p>You should now be able to run your binder on mybinder.org!</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.6-Plot-the-mean-of-f-with-respect-to-the-x-axis">1.6 Plot the mean of f with respect to the x axis<a class="anchor-link" href="#1.6-Plot-the-mean-of-f-with-respect-to-the-x-axis">¶</a></h3><p>as a function of y</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.7-Plot-the-mean-of-f-with-respect-to-the-y-axis">1.7 Plot the mean of f with respect to the y axis<a class="anchor-link" href="#1.7-Plot-the-mean-of-f-with-respect-to-the-y-axis">¶</a></h3><p>as a function of x</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.8-Plot-the-mean-of-$f$-with-respect-to-$r$-(worth-3-points)">1.8 Plot the mean of $f$ with respect to $r$ (worth 3 points)<a class="anchor-link" href="#1.8-Plot-the-mean-of-$f$-with-respect-to-$r$-(worth-3-points)">¶</a></h3><p>This is hard. You will need to define a discrete range of $r$ values and then figure out how to average $f$ within the bins defined by your $r$ grid. There are many different ways to accomplish this.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Part-2:-Analyze-ARGO-Data">Part 2: Analyze ARGO Data<a class="anchor-link" href="#Part-2:-Analyze-ARGO-Data">¶</a></h2><h3 id="1.1-Use-the-shell-command-wget-to-download-an-example-ARGO-float-profile-from-the-North-Atlantic.">1.1 Use the shell command <code>wget</code> to download an example ARGO float profile from the North Atlantic.<a class="anchor-link" href="#1.1-Use-the-shell-command-wget-to-download-an-example-ARGO-float-profile-from-the-North-Atlantic.">¶</a></h3><p>The data file's url is <a href="http://www.ldeo.columbia.edu/~rpa/argo_float_4901412.npz">http://www.ldeo.columbia.edu/~rpa/argo_float_4901412.npz</a></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.2-Load-the-data-file">1.2 Load the data file<a class="anchor-link" href="#1.2-Load-the-data-file">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.3-Extract-the-temperature,-pressure-and-salinity-arrays-to-arrays-T,-S,-P-and-masking-out-invalid-data-(the-nan-values-from-missing-points).">1.3 Extract the temperature, pressure and salinity arrays to arrays T, S, P and masking out invalid data (the nan values from missing points).<a class="anchor-link" href="#1.3-Extract-the-temperature,-pressure-and-salinity-arrays-to-arrays-T,-S,-P-and-masking-out-invalid-data-(the-nan-values-from-missing-points).">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.4-Extract-the-date,-lat,-lon,-and-level-arrays.">1.4 Extract the date, lat, lon, and level arrays.<a class="anchor-link" href="#1.4-Extract-the-date,-lat,-lon,-and-level-arrays.">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.5-Note-the-shapes-of-T,-S-and-P-compared-to-these-arrays.-How-do-they-line-up?">1.5 Note the shapes of T, S and P compared to these arrays. How do they line up?<a class="anchor-link" href="#1.5-Note-the-shapes-of-T,-S-and-P-compared-to-these-arrays.-How-do-they-line-up?">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.6-Load-the-necessary-package-for-plotting-using-pyplot-from-matplotlib.">1.6 Load the necessary package for plotting using pyplot from matplotlib.<a class="anchor-link" href="#1.6-Load-the-necessary-package-for-plotting-using-pyplot-from-matplotlib.">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.7-Make-a-1-x-3-array-of-plots-for-each-column-of-data-in-T,-S-and-P.">1.7 Make a 1 x 3 array of plots for each column of data in T, S and P.<a class="anchor-link" href="#1.7-Make-a-1-x-3-array-of-plots-for-each-column-of-data-in-T,-S-and-P.">¶</a></h3><p>The vertical scale should be the <code>levels</code> data. Flip the veritcal axis direction so that levels increase downward on the plot. Each plot should have a line for each column of data. It will look messy.  Make sure you label the axes and put a title on each subplot.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.8-Compute-the-mean-and-standard-deviation-of-each-of-T,-S-and-P-at-each-depth-in-level.">1.8 Compute the mean and standard deviation of each of T, S and P at each depth in <code>level</code>.<a class="anchor-link" href="#1.8-Compute-the-mean-and-standard-deviation-of-each-of-T,-S-and-P-at-each-depth-in-level.">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.9-Now-make-a-similar-plot,-but-show-only-the-mean-T,-S-and-P-at-each-depth.-Show-error-bars-on-each-plot-using-the-standard-deviations.">1.9 Now make a similar plot, but show only the mean T, S and P at each depth. Show error bars on each plot using the standard deviations.<a class="anchor-link" href="#1.9-Now-make-a-similar-plot,-but-show-only-the-mean-T,-S-and-P-at-each-depth.-Show-error-bars-on-each-plot-using-the-standard-deviations.">¶</a></h3><p>Again, make sure you label the axes and put a title on each subplot.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.10--Compute-the-mean-and-standard-deviation-of-each-of-T,-S-and-P-for-each-time-in-date.">1.10  Compute the mean and standard deviation of each of T, S and P for each time in <code>date</code>.<a class="anchor-link" href="#1.10--Compute-the-mean-and-standard-deviation-of-each-of-T,-S-and-P-for-each-time-in-date.">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.11-Plot-the-mean-T,-S-and-P-for-each-entry-in-time,-now-on-a-3-x-1-subplot-grid-with-time-on-the-horizontal-axis.-Show-error-bars-on-each-plot-using-the-standard-deviations.">1.11 Plot the mean T, S and P for each entry in <em>time</em>, now on a <em>3 x 1</em> subplot grid with time on the horizontal axis. Show error bars on each plot using the standard deviations.<a class="anchor-link" href="#1.11-Plot-the-mean-T,-S-and-P-for-each-entry-in-time,-now-on-a-3-x-1-subplot-grid-with-time-on-the-horizontal-axis.-Show-error-bars-on-each-plot-using-the-standard-deviations.">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.12-Create-a-scatter-plot-of-the-positions-of-the-ARGO-float-data.--Color-the-positions-by-the-date.-Add-a-grid-overlay.">1.12 Create a scatter plot of the positions of the ARGO float data.  Color the positions by the date. Add a grid overlay.<a class="anchor-link" href="#1.12-Create-a-scatter-plot-of-the-positions-of-the-ARGO-float-data.--Color-the-positions-by-the-date.-Add-a-grid-overlay.">¶</a></h3><p>Don't forget to label the axes!</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
+<h3 id="Updating-your-Binder">Updating your Binder<a class="anchor-link" href="#Updating-your-Binder">¶</a></h3><p>An important thing to remember is that <strong>you cannot save changes from within a running binder</strong>. The running notebooks will automatically shut down after 10 minutes of inactivity, and you will <strong>lose any modifications you made to the notebooks</strong>. (See <a href="https://mybinder.readthedocs.io/en/latest/faq.html">mybinder FAQ</a> for more details.) This is very different from our research computing jupyterhub, where all changes are saved. Binder is meant for demonstrating and sharing finished projects, not development of new ones.</p>
+<p>To update your binder, you need to go back to your personal copy of the repo, make changes, commit, and push back to github.</p>
 </div>
 </div>
 </div>

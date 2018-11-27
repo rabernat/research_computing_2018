@@ -21,6 +21,7 @@
 ./assignment-9-performance-and-profiling.html
 ./author/ryan-abernathey.html
 ./authors.html
+./binder.html
 ./categories.html
 ./category/assignments.html
 ./category/lectures.html
@@ -49,6 +50,7 @@
 ./static/trajectories.png
 ./tag/assignment.html
 ./tag/bash.html
+./tag/binder.html
 ./tag/cartopy.html
 ./tag/classes.html
 ./tag/conda.html
