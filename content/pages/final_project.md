@@ -116,3 +116,17 @@ works like this:
   sentence summary of the analysis you plan to do.
 - Email the link to this repository to the instructor <rpa@ldeo.columbia.edu>
   with the title "RCES Final Project Proposal"
+  
+### In-Class Presentations
+
+You are asked to give a 5-minute presentation about your project. Do not
+prepare any slides. Instead, make your presentation by opening your notebook
+from GitHub on the presentation computer and walking us through parts of it.
+Your presentation should be concise and cover the following topics:
+
+- What data did you analyze and how did you load it?
+- What is the most interesting figure you made? (Show us the figure.)
+- What was the biggest challenge you faced in completing your project.
+
+_Don't forget to make your project repo **public**; otherwise we won't be
+able to see it._
