@@ -67,6 +67,7 @@ BANNER_SUBTITLE = 'Fall 2018 | Columbia University Department of Earth and Envir
 
 
 IGNORE_FILES = ['.ipynb_checkpoints']
+IPYNB_NB_SAVE_AS = "notebooks/{slug}.ipynb"
 #IPYNB_IGNORE_CSS = True
 
 # license
