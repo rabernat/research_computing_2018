@@ -124,38 +124,38 @@ Research Computing in Earth Sciences            </a>
  <a href="http://swcarpentry.github.io/git-novice/">Version Control with Git</a>  on Software Carpentry website.</p>
 <p><strong>Summary of useful Git commands</strong></p>
 <p>Set up your username and email</p>
-<div class="highlight"><pre><span></span>git config --global user.name &quot;Ryan Abernathey&quot;
-git config --global user.email &quot;rpa@ldeo.columbia.edu&quot;
+<div class="highlight"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--global user.name &quot;Ryan Abernathey&quot;</span>
+<span class="n">git</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--global user.email &quot;rpa@ldeo.columbia.edu&quot;</span>
 </pre></div>
 
 
 <p>Create a new repository:</p>
-<div class="highlight"><pre><span></span>cd my_project
-git init      
+<div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">my_project</span>
+<span class="n">git</span> <span class="n">init</span>      
 </pre></div>
 
 
 <p>Stage files for addition to the repository:</p>
-<div class="highlight"><pre><span></span>git add &lt;filenames&gt;  
+<div class="highlight"><pre><span></span><span class="n">git</span> <span class="k">add</span> <span class="o">&lt;</span><span class="n">filenames</span><span class="o">&gt;</span>  
 </pre></div>
 
 
 <p>Commit staged files:</p>
-<div class="highlight"><pre><span></span>git commit -m &quot;your brief commit message goes here&quot;
+<div class="highlight"><pre><span></span><span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;your brief commit message goes here&quot;</span>
 </pre></div>
 
 
 <p>Other useful commands:</p>
-<div class="highlight"><pre><span></span>git status    # tells you what files are staged, which ones have been modified, are new,... )
-git log       # view the commit log
-git diff      # view file content differences
+<div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>    <span class="o">#</span> <span class="n">tells</span> <span class="n">you</span> <span class="n">what</span> <span class="n">files</span> <span class="k">are</span> <span class="n">staged</span><span class="p">,</span> <span class="n">which</span> <span class="n">ones</span> <span class="n">have</span> <span class="n">been</span> <span class="n">modified</span><span class="p">,</span> <span class="k">are</span> <span class="k">new</span><span class="p">,...</span> <span class="p">)</span>
+<span class="n">git</span> <span class="n">log</span>       <span class="o">#</span> <span class="k">view</span> <span class="n">the</span> <span class="k">commit</span> <span class="n">log</span>
+<span class="n">git</span> <span class="n">diff</span>      <span class="o">#</span> <span class="k">view</span> <span class="n">file</span> <span class="n">content</span> <span class="n">differences</span>
 </pre></div>
 
 
 <p>Working with a remote repository on GitHub:</p>
-<div class="highlight"><pre><span></span>git remote add ...
-git push
-git pull
+<div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="k">add</span> <span class="p">...</span>
+<span class="n">git</span> <span class="n">push</span>
+<span class="n">git</span> <span class="n">pull</span>
 </pre></div>
 
 
@@ -204,22 +204,28 @@ git pull
       <a href="./tag/xarray.html">xarray</a>
     </li>
     <li class="list-group-item tag-1">
-      <a href="./tag/programming.html">programming</a>
-    </li>
-    <li class="list-group-item tag-1">
       <a href="./tag/python.html">python</a>
     </li>
-    <li class="list-group-item tag-2">
-      <a href="./tag/matplotlib.html">matplotlib</a>
+    <li class="list-group-item tag-1">
+      <a href="./tag/programming.html">programming</a>
     </li>
     <li class="list-group-item tag-2">
       <a href="./tag/pandas.html">pandas</a>
     </li>
     <li class="list-group-item tag-2">
+      <a href="./tag/matplotlib.html">matplotlib</a>
+    </li>
+    <li class="list-group-item tag-2">
       <a href="./tag/numpy.html">numpy</a>
     </li>
     <li class="list-group-item tag-3">
+      <a href="./tag/dask.html">dask</a>
+    </li>
+    <li class="list-group-item tag-3">
       <a href="./tag/unix.html">unix</a>
+    </li>
+    <li class="list-group-item tag-3">
+      <a href="./tag/visualization.html">visualization</a>
     </li>
     <li class="list-group-item tag-3">
       <a href="./tag/classes.html">classes</a>
@@ -231,31 +237,19 @@ git pull
       <a href="./tag/cartopy.html">cartopy</a>
     </li>
     <li class="list-group-item tag-3">
-      <a href="./tag/dask.html">dask</a>
-    </li>
-    <li class="list-group-item tag-3">
-      <a href="./tag/visualization.html">visualization</a>
-    </li>
-    <li class="list-group-item tag-3">
       <a href="./tag/git.html">git</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/binder.html">binder</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/shell.html">shell</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/bash.html">bash</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/modules.html">modules</a>
+      <a href="./tag/environments.html">environments</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/version-control.html">version control</a>
+      <a href="./tag/shell.html">shell</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/jupyter.html">Jupyter</a>
+      <a href="./tag/binder.html">binder</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/assignment.html">assignment</a>
@@ -264,13 +258,19 @@ git pull
       <a href="./tag/file-system.html">file system</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/conda.html">conda</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/environments.html">environments</a>
+      <a href="./tag/jupyter.html">Jupyter</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/github.html">github</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/conda.html">conda</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/version-control.html">version control</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/modules.html">modules</a>
     </li>
   </ul>
 </li>

@@ -1374,7 +1374,7 @@ The goals of the next three lessons include the following.</p>
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
@@ -1396,7 +1396,7 @@ The goals of the next three lessons include the following.</p>
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="n">da</span>
 </pre></div>
 </div>
@@ -1427,7 +1427,7 @@ Dimensions without coordinates: dim_0</pre>
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">'x'</span><span class="p">])</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">'x'</span><span class="p">])</span>
 <span class="n">da</span>
 </pre></div>
 </div>
@@ -1458,7 +1458,7 @@ Dimensions without coordinates: x</pre>
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
                   <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">'x'</span><span class="p">],</span>
                   <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s1">'x'</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]})</span>
 <span class="n">da</span>
@@ -1492,7 +1492,7 @@ Coordinates:
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">da</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">da</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1507,7 +1507,7 @@ Coordinates:
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAd0AAAFACAYAAAD5xabzAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzt3Xl0Vddh7/Hv1jwiIV1JoBGBxGDm
@@ -1733,7 +1733,7 @@ RKUrIiISJCpdERGRIPn/8b6jJBVuZN0AAAAASUVORK5CYII=
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'argo_float_4901412.npz'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'argo_float_4901412.npz'</span><span class="p">)</span>
 <span class="n">argo_data</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1762,7 +1762,7 @@ RKUrIiISJCpdERGRIPn/8b6jJBVuZN0AAAAASUVORK5CYII=
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">argo_data</span><span class="o">.</span><span class="n">f</span><span class="o">.</span><span class="n">S</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">argo_data</span><span class="o">.</span><span class="n">f</span><span class="o">.</span><span class="n">S</span>
 <span class="n">T</span> <span class="o">=</span> <span class="n">argo_data</span><span class="o">.</span><span class="n">f</span><span class="o">.</span><span class="n">T</span>
 <span class="n">P</span> <span class="o">=</span> <span class="n">argo_data</span><span class="o">.</span><span class="n">f</span><span class="o">.</span><span class="n">P</span>
 <span class="n">levels</span> <span class="o">=</span> <span class="n">argo_data</span><span class="o">.</span><span class="n">f</span><span class="o">.</span><span class="n">levels</span>
@@ -1798,7 +1798,7 @@ RKUrIiISJCpdERGRIPn/8b6jJBVuZN0AAAAASUVORK5CYII=
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">da_salinity</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">'level'</span><span class="p">,</span> <span class="s1">'date'</span><span class="p">],</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">da_salinity</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">'level'</span><span class="p">,</span> <span class="s1">'date'</span><span class="p">],</span>
                            <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s1">'level'</span><span class="p">:</span> <span class="n">levels</span><span class="p">,</span>
                                    <span class="s1">'date'</span><span class="p">:</span> <span class="n">date</span><span class="p">},)</span>
 <span class="n">da_salinity</span>
@@ -1838,7 +1838,7 @@ Coordinates:
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">da_salinity</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">yincrease</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">da_salinity</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">yincrease</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1853,7 +1853,7 @@ Coordinates:
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdYAAAFUCAYAAACZYh2JAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzsvXu4ZGdV5/9ddTuXPn1JpzuhQyCR
@@ -2334,7 +2334,7 @@ QmCC
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">da_salinity</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'PSU'</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">da_salinity</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'PSU'</span>
 <span class="n">da_salinity</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'standard_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'sea_water_salinity'</span>
 <span class="n">da_salinity</span>
 </pre></div>
@@ -2399,7 +2399,7 @@ Attributes:
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span>
         <span class="n">data_vars</span><span class="o">=</span><span class="p">{</span><span class="s1">'salinity'</span><span class="p">:</span>    <span class="p">((</span><span class="s1">'level'</span><span class="p">,</span> <span class="s1">'date'</span><span class="p">),</span> <span class="n">S</span><span class="p">),</span>
                    <span class="s1">'temperature'</span><span class="p">:</span> <span class="p">((</span><span class="s1">'level'</span><span class="p">,</span> <span class="s1">'date'</span><span class="p">),</span> <span class="n">T</span><span class="p">),</span>
                    <span class="s1">'pressure'</span><span class="p">:</span>    <span class="p">((</span><span class="s1">'level'</span><span class="p">,</span> <span class="s1">'date'</span><span class="p">),</span> <span class="n">P</span><span class="p">)},</span>
@@ -2441,7 +2441,7 @@ Data variables:
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">'lon'</span><span class="p">]</span> <span class="o">=</span> <span class="n">lon</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">'lon'</span><span class="p">]</span> <span class="o">=</span> <span class="n">lon</span>
 <span class="n">argo</span>
 </pre></div>
 </div>
@@ -2479,7 +2479,7 @@ Data variables:
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">argo</span><span class="p">[</span><span class="s1">'lon'</span><span class="p">]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">argo</span><span class="p">[</span><span class="s1">'lon'</span><span class="p">]</span>
 <span class="n">argo</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">'lon'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span>
 <span class="n">argo</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">'lat'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
 <span class="n">argo</span>
@@ -2520,7 +2520,7 @@ Data variables:
 <div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span> <span class="o">*</span> <span class="mi">10000</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span> <span class="o">*</span> <span class="mi">10000</span>
 </pre></div>
 </div>
 </div>
@@ -2558,7 +2558,7 @@ Data variables:
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span> <span class="o">=</span> <span class="n">argo</span><span class="o">.</span><span class="n">set_coords</span><span class="p">([</span><span class="s1">'lon'</span><span class="p">,</span> <span class="s1">'lat'</span><span class="p">])</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span> <span class="o">=</span> <span class="n">argo</span><span class="o">.</span><span class="n">set_coords</span><span class="p">([</span><span class="s1">'lon'</span><span class="p">,</span> <span class="s1">'lat'</span><span class="p">])</span>
 <span class="n">argo</span>
 </pre></div>
 </div>
@@ -2598,7 +2598,7 @@ Data variables:
 <div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">'lon'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">'lon'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span>
 <span class="n">argo</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s1">'lat'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2618,7 +2618,7 @@ Data variables:
 <div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">salinity</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">salinity</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2633,7 +2633,7 @@ Data variables:
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfsAAAFgCAYAAAC8KtBSAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzs3Xd823ed+PHXR9OyLO894iw7cZKm
@@ -3036,7 +3036,7 @@ f20AAAAASUVORK5CYII=
 <div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">salinity</span><span class="p">[:,</span> <span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">salinity</span><span class="p">[:,</span> <span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -3051,7 +3051,7 @@ f20AAAAASUVORK5CYII=
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfsAAAFNCAYAAAAHGMa6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzs3Xd4HNXVx/HvUe+2bMm994Yt28KY
@@ -3365,7 +3365,7 @@ qQAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">salinity</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">salinity</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -3380,7 +3380,7 @@ qQAAAABJRU5ErkJggg==
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfsAAAFgCAYAAAC8KtBSAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzs3Xd823ed+PHXR9OyLO894iw7cZKm
@@ -3783,7 +3783,7 @@ f20AAAAASUVORK5CYII=
 <div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">salinity</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s1">'2012-10-22'</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">'level'</span><span class="p">,</span> <span class="n">yincrease</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">salinity</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s1">'2012-10-22'</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">'level'</span><span class="p">,</span> <span class="n">yincrease</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3798,7 +3798,7 @@ f20AAAAASUVORK5CYII=
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfEAAAFNCAYAAAAQOlZzAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzt3Xd8nXXd//HXJ6tN0mY1aZqONN2D
@@ -4083,7 +4083,7 @@ TkSuQmCC
 <div class="prompt input_prompt">In [21]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">salinity</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">'2012-10-01'</span><span class="p">,</span> <span class="s1">'2012-12-01'</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">salinity</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">'2012-10-01'</span><span class="p">,</span> <span class="s1">'2012-12-01'</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -4098,7 +4098,7 @@ TkSuQmCC
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeQAAAFcCAYAAAAZN83hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzt3XucHFWZ//HPd26ZhCSEQMAIaLyg
@@ -4358,7 +4358,7 @@ gwAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In [22]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s1">'2012-10-22'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s1">'2012-10-22'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4396,7 +4396,7 @@ Data variables:
 <div class="prompt input_prompt">In [23]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_kelvin</span> <span class="o">=</span> <span class="n">argo</span><span class="o">.</span><span class="n">temperature</span> <span class="o">+</span> <span class="mf">273.15</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">temp_kelvin</span> <span class="o">=</span> <span class="n">argo</span><span class="o">.</span><span class="n">temperature</span> <span class="o">+</span> <span class="mf">273.15</span>
 <span class="n">temp_kelvin</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">yincrease</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4412,7 +4412,7 @@ Data variables:
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeoAAAFUCAYAAADrrX8/AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzsvXmYZVV1sP+uulXdDTQNMikBYkMC
@@ -4869,7 +4869,7 @@ rkJggg==
 <div class="prompt input_prompt">In [24]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mf">9.8</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="mf">9.8</span>
 <span class="n">buoyancy</span> <span class="o">=</span> <span class="n">g</span> <span class="o">*</span> <span class="p">(</span><span class="mf">2e-4</span> <span class="o">*</span> <span class="n">argo</span><span class="o">.</span><span class="n">temperature</span> <span class="o">-</span> <span class="mf">7e-4</span> <span class="o">*</span> <span class="n">argo</span><span class="o">.</span><span class="n">salinity</span><span class="p">)</span>
 <span class="n">buoyancy</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">yincrease</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
@@ -4886,7 +4886,7 @@ rkJggg==
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeUAAAFUCAYAAAAapiSyAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJztvXu4JFV1sP+uc85cYLgMd0Yg4GW8
@@ -5277,7 +5277,7 @@ EARBUBNiUg6CIAiCmhCTchAEQRDUhJiUgyAIgqAm/D+ZgKObD6NlgwAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In [25]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">level_times_lat</span> <span class="o">=</span> <span class="n">argo</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="n">argo</span><span class="o">.</span><span class="n">lat</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">level_times_lat</span> <span class="o">=</span> <span class="n">argo</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="n">argo</span><span class="o">.</span><span class="n">lat</span>
 <span class="n">level_times_lat</span>
 </pre></div>
 </div>
@@ -5311,7 +5311,7 @@ Coordinates:
 <div class="prompt input_prompt">In [26]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">level_times_lat</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">level_times_lat</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -5326,7 +5326,7 @@ Coordinates:
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdkAAAFUCAYAAABoaUYEAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJztvXuYZWV15//5VtOAchGQiy2gaOwY
@@ -5644,7 +5644,7 @@ ssYYY0xLeJI1xhhjWsKTrDHGGNMS/z9/MTBUjeGaQgAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In [27]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">dims</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">dims</span>
 </pre></div>
 </div>
 </div>
@@ -5665,7 +5665,7 @@ ssYYY0xLeJI1xhhjWsKTrDHGGNMS/z9/MTBUjeGaQgAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In [28]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">dims</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">dims</span>
 </pre></div>
 </div>
 </div>
@@ -5693,7 +5693,7 @@ ssYYY0xLeJI1xhhjWsKTrDHGGNMS/z9/MTBUjeGaQgAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In [29]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo_mean</span> <span class="o">=</span> <span class="n">argo</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'date'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo_mean</span> <span class="o">=</span> <span class="n">argo</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'date'</span><span class="p">)</span>
 <span class="n">argo_mean</span>
 </pre></div>
 </div>
@@ -5722,7 +5722,7 @@ Data variables:
 <div class="prompt input_prompt">In [30]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo_mean</span><span class="o">.</span><span class="n">salinity</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">'level'</span><span class="p">,</span> <span class="n">yincrease</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo_mean</span><span class="o">.</span><span class="n">salinity</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">'level'</span><span class="p">,</span> <span class="n">yincrease</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -5737,7 +5737,7 @@ Data variables:
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfEAAAFACAYAAACspEWtAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzt3Xd81fW9x/HXJ4skkEBCQpghYU8B
@@ -5956,7 +5956,7 @@ ZsWgMhycJ8wAAAAASUVORK5CYII=
 <div class="prompt input_prompt">In [31]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">argo_std</span> <span class="o">=</span> <span class="n">argo</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'date'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">argo_std</span> <span class="o">=</span> <span class="n">argo</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'date'</span><span class="p">)</span>
 <span class="n">argo_std</span><span class="o">.</span><span class="n">salinity</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">'level'</span><span class="p">,</span> <span class="n">yincrease</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5972,7 +5972,7 @@ ZsWgMhycJ8wAAAAASUVORK5CYII=
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfEAAAFACAYAAACspEWtAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzt3Xd4XOWd9//3V733ZkuWZLl3G4Qx
@@ -6243,7 +6243,7 @@ IiIhSiEuIiISohTiIiIiIer/B4Ah6zGmWI/HAAAAAElFTkSuQmCC
 <div class="prompt input_prompt">In [32]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> wget https://data.giss.nasa.gov/pub/gistemp/gistemp1200_ERSSTv5.nc.gz
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span> wget https://data.giss.nasa.gov/pub/gistemp/gistemp1200_ERSSTv5.nc.gz
 <span class="o">!</span> gunzip gistemp1200_ERSSTv5.nc.gz
 </pre></div>
 </div>
@@ -6255,7 +6255,7 @@ IiIhSiEuIiISohTiIiIiIer/B4Ah6zGmWI/HAAAAAElFTkSuQmCC
 <div class="prompt input_prompt">In [33]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'gistemp1200_ERSSTv5.nc'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'gistemp1200_ERSSTv5.nc'</span><span class="p">)</span>
 <span class="n">ds</span>
 </pre></div>
 </div>
@@ -6292,7 +6292,7 @@ Attributes:
 <div class="prompt input_prompt">In [34]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">tempanomaly</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">tempanomaly</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -6307,7 +6307,7 @@ Attributes:
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfEAAAFOCAYAAACWriTdAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzsvXm4ZFdVNv6uU1X33r7dfbs73Z1O
@@ -6957,7 +6957,7 @@ AAAAAElFTkSuQmCC
 <div class="prompt input_prompt">In [35]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">tempanomaly</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s1">'lon'</span><span class="p">,</span> <span class="s1">'lat'</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">tempanomaly</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s1">'lon'</span><span class="p">,</span> <span class="s1">'lat'</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -6972,7 +6972,7 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAf0AAAFMCAYAAADBWmVYAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzsnXeYG8X5x7+jcnfuvWEb9wLYuJsO
@@ -7508,7 +7508,7 @@ mVWEk76ZmVlFOOmbmZlVhJO+mZlZRTjpm5mZVcT/AyMLK6bgW6yLAAAAAElFTkSuQmCC
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -7582,22 +7582,28 @@ mVWEk76ZmVlFOOmbmZlVhJO+mZlZRTjpm5mZVcT/AyMLK6bgW6yLAAAAAElFTkSuQmCC
       <a href="./tag/xarray.html">xarray</a>
     </li>
     <li class="list-group-item tag-1">
-      <a href="./tag/programming.html">programming</a>
-    </li>
-    <li class="list-group-item tag-1">
       <a href="./tag/python.html">python</a>
     </li>
-    <li class="list-group-item tag-2">
-      <a href="./tag/matplotlib.html">matplotlib</a>
+    <li class="list-group-item tag-1">
+      <a href="./tag/programming.html">programming</a>
     </li>
     <li class="list-group-item tag-2">
       <a href="./tag/pandas.html">pandas</a>
     </li>
     <li class="list-group-item tag-2">
+      <a href="./tag/matplotlib.html">matplotlib</a>
+    </li>
+    <li class="list-group-item tag-2">
       <a href="./tag/numpy.html">numpy</a>
     </li>
     <li class="list-group-item tag-3">
+      <a href="./tag/dask.html">dask</a>
+    </li>
+    <li class="list-group-item tag-3">
       <a href="./tag/unix.html">unix</a>
+    </li>
+    <li class="list-group-item tag-3">
+      <a href="./tag/visualization.html">visualization</a>
     </li>
     <li class="list-group-item tag-3">
       <a href="./tag/classes.html">classes</a>
@@ -7609,31 +7615,19 @@ mVWEk76ZmVlFOOmbmZlVhJO+mZlZRTjpm5mZVcT/AyMLK6bgW6yLAAAAAElFTkSuQmCC
       <a href="./tag/cartopy.html">cartopy</a>
     </li>
     <li class="list-group-item tag-3">
-      <a href="./tag/dask.html">dask</a>
-    </li>
-    <li class="list-group-item tag-3">
-      <a href="./tag/visualization.html">visualization</a>
-    </li>
-    <li class="list-group-item tag-3">
       <a href="./tag/git.html">git</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/binder.html">binder</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/shell.html">shell</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/bash.html">bash</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/modules.html">modules</a>
+      <a href="./tag/environments.html">environments</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/version-control.html">version control</a>
+      <a href="./tag/shell.html">shell</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/jupyter.html">Jupyter</a>
+      <a href="./tag/binder.html">binder</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/assignment.html">assignment</a>
@@ -7642,13 +7636,19 @@ mVWEk76ZmVlFOOmbmZlVhJO+mZlZRTjpm5mZVcT/AyMLK6bgW6yLAAAAAElFTkSuQmCC
       <a href="./tag/file-system.html">file system</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/conda.html">conda</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/environments.html">environments</a>
+      <a href="./tag/jupyter.html">Jupyter</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/github.html">github</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/conda.html">conda</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/version-control.html">version control</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/modules.html">modules</a>
     </li>
   </ul>
 </li>

@@ -1309,7 +1309,7 @@ This mode of operation is called "lazy"; it allows one to build up complex, larg
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">)</span>
 <span class="n">ones_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">ones_np</span>
@@ -1346,7 +1346,7 @@ This mode of operation is called "lazy"; it allows one to build up complex, larg
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ones_np</span><span class="o">.</span><span class="n">nbytes</span> <span class="o">/</span> <span class="mf">1e6</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ones_np</span><span class="o">.</span><span class="n">nbytes</span> <span class="o">/</span> <span class="mf">1e6</span>
 </pre></div>
 </div>
 </div>
@@ -1374,7 +1374,7 @@ This mode of operation is called "lazy"; it allows one to build up complex, larg
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">dask.array</span> <span class="k">as</span> <span class="nn">da</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">dask.array</span> <span class="k">as</span> <span class="nn">da</span>
 <span class="n">ones</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1433,7 +1433,7 @@ In this lecture, we will use a block shape.</p>
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">chunk_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">chunk_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="n">ones</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="n">chunk_shape</span><span class="p">)</span>
 <span class="n">ones</span>
 </pre></div>
@@ -1465,7 +1465,7 @@ When we call <code>.compute()</code> on a dask array, the computation is trigger
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ones</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ones</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1499,7 +1499,7 @@ When we call <code>.compute()</code> on a dask array, the computation is trigger
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ones</span><span class="o">.</span><span class="n">visualize</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ones</span><span class="o">.</span><span class="n">visualize</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1529,7 +1529,7 @@ When we call <code>.compute()</code> on a dask array, the computation is trigger
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sum_of_ones</span> <span class="o">=</span> <span class="n">ones</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sum_of_ones</span> <span class="o">=</span> <span class="n">ones</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">sum_of_ones</span><span class="o">.</span><span class="n">visualize</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1560,7 +1560,7 @@ When we call <code>.compute()</code> on a dask array, the computation is trigger
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fancy_calculation</span> <span class="o">=</span> <span class="p">(</span><span class="n">ones</span> <span class="o">*</span> <span class="n">ones</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">fancy_calculation</span> <span class="o">=</span> <span class="p">(</span><span class="n">ones</span> <span class="o">*</span> <span class="n">ones</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">fancy_calculation</span><span class="o">.</span><span class="n">visualize</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1591,7 +1591,7 @@ When we call <code>.compute()</code> on a dask array, the computation is trigger
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bigshape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">200000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">bigshape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">200000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">)</span>
 <span class="n">big_ones</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">bigshape</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="n">chunk_shape</span><span class="p">)</span>
 <span class="n">big_ones</span>
 </pre></div>
@@ -1614,7 +1614,7 @@ When we call <code>.compute()</code> on a dask array, the computation is trigger
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">big_ones</span><span class="o">.</span><span class="n">nbytes</span> <span class="o">/</span> <span class="mf">1e6</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">big_ones</span><span class="o">.</span><span class="n">nbytes</span> <span class="o">/</span> <span class="mf">1e6</span>
 </pre></div>
 </div>
 </div>
@@ -1644,7 +1644,7 @@ When we call <code>.compute()</code> on a dask array, the computation is trigger
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dask.diagnostics</span> <span class="k">import</span> <span class="n">ProgressBar</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dask.diagnostics</span> <span class="k">import</span> <span class="n">ProgressBar</span>
 
 <span class="n">big_calc</span> <span class="o">=</span> <span class="p">(</span><span class="n">big_ones</span> <span class="o">*</span> <span class="n">big_ones</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
@@ -1686,7 +1686,7 @@ You can also apply numpy function directly to a dask array, and it will stay laz
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">big_ones_reduce</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">big_ones</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">big_ones_reduce</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">big_ones</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">big_ones_reduce</span>
 </pre></div>
 </div>
@@ -1715,7 +1715,7 @@ You can also apply numpy function directly to a dask array, and it will stay laz
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'figure.figsize'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
 </pre></div>
@@ -1728,7 +1728,7 @@ You can also apply numpy function directly to a dask array, and it will stay laz
 <div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">big_ones_reduce</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">big_ones_reduce</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1743,7 +1743,7 @@ You can also apply numpy function directly to a dask array, and it will stay laz
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,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
 ">
 </div>
@@ -1763,7 +1763,7 @@ You can also apply numpy function directly to a dask array, and it will stay laz
 <div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dask_kubernetes</span> <span class="k">import</span> <span class="n">KubeCluster</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dask_kubernetes</span> <span class="k">import</span> <span class="n">KubeCluster</span>
 <span class="n">cluster</span> <span class="o">=</span> <span class="n">KubeCluster</span><span class="p">(</span><span class="n">nworkers</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">cluster</span>
 </pre></div>
@@ -1774,10 +1774,10 @@ You can also apply numpy function directly to a dask array, and it will stay laz
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div id="f7bc6855-9b4f-4c47-bfd6-bcc9253d97c3"></div>
-<div class="output_subarea output_widget_view ">
+<div id="65b19e41-5083-41a0-880a-dd3764a2ecbd"></div>
+<div class="output_subarea output_widget_view">
 <script type="text/javascript">
-var element = $('#f7bc6855-9b4f-4c47-bfd6-bcc9253d97c3');
+var element = $('#65b19e41-5083-41a0-880a-dd3764a2ecbd');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "0405153d9e8849eab6c612177536decf", "version_major": 2, "version_minor": 0}
@@ -1792,7 +1792,7 @@ var element = $('#f7bc6855-9b4f-4c47-bfd6-bcc9253d97c3');
 <div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="k">import</span> <span class="n">Client</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="k">import</span> <span class="n">Client</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
 <span class="n">client</span>
 </pre></div>
@@ -1833,7 +1833,7 @@ var element = $('#f7bc6855-9b4f-4c47-bfd6-bcc9253d97c3');
 <div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">big_calc</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">big_calc</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1854,7 +1854,7 @@ var element = $('#f7bc6855-9b4f-4c47-bfd6-bcc9253d97c3');
 <div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">random_values</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mf">2e8</span><span class="p">,),</span> <span class="n">chunks</span><span class="o">=</span><span class="p">(</span><span class="mf">1e6</span><span class="p">,))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">random_values</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mf">2e8</span><span class="p">,),</span> <span class="n">chunks</span><span class="o">=</span><span class="p">(</span><span class="mf">1e6</span><span class="p">,))</span>
 <span class="n">hist</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">random_values</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span> 
 </pre></div>
 </div>
@@ -1866,7 +1866,7 @@ var element = $('#f7bc6855-9b4f-4c47-bfd6-bcc9253d97c3');
 <div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hist</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">hist</span>
 </pre></div>
 </div>
 </div>
@@ -1887,7 +1887,7 @@ var element = $('#f7bc6855-9b4f-4c47-bfd6-bcc9253d97c3');
 <div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">width</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">hist</span><span class="p">,</span> <span class="n">width</span><span class="p">);</span>
 </pre></div>
@@ -1898,7 +1898,7 @@ var element = $('#f7bc6855-9b4f-4c47-bfd6-bcc9253d97c3');
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAuIAAAHVCAYAAAC0dJ63AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAH2ZJREFUeJzt3X/Mnld5H/Dvtbgp9AdNAENZHM2Z
@@ -2064,7 +2064,7 @@ sea-surface height satellite altimetry dataset.</p>
 <div class="prompt input_prompt">In [24]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> wget http://www.ldeo.columbia.edu/~rpa/aviso_madt_2015.tar.gz
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span> wget http://www.ldeo.columbia.edu/~rpa/aviso_madt_2015.tar.gz
 </pre></div>
 </div>
 </div>
@@ -2100,7 +2100,7 @@ aviso_madt_2015.tar 100%[===================>] 471.91M  94.6MB/s    in 5.2s
 <div class="prompt input_prompt">In [25]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> tar -xvzf aviso_madt_2015.tar.gz
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span> tar -xvzf aviso_madt_2015.tar.gz
 </pre></div>
 </div>
 </div>
@@ -2488,7 +2488,7 @@ aviso_madt_2015.tar 100%[===================>] 471.91M  94.6MB/s    in 5.2s
 <div class="prompt input_prompt">In [22]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span> ls <span class="m">2015</span> <span class="p">|</span> wc -l
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span> ls <span class="m">2015</span> <span class="p">|</span> wc -l
 </pre></div>
 </div>
 </div>
@@ -2517,7 +2517,7 @@ aviso_madt_2015.tar 100%[===================>] 471.91M  94.6MB/s    in 5.2s
 <div class="prompt input_prompt">In [29]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 </pre></div>
 </div>
 </div>
@@ -2528,7 +2528,7 @@ aviso_madt_2015.tar 100%[===================>] 471.91M  94.6MB/s    in 5.2s
 <div class="prompt input_prompt">In [30]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds_first</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'2015/dt_global_allsat_madt_h_20150101_20150914.nc'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ds_first</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'2015/dt_global_allsat_madt_h_20150101_20150914.nc'</span><span class="p">)</span>
 <span class="n">ds_first</span>
 </pre></div>
 </div>
@@ -2605,7 +2605,7 @@ Attributes:
 <div class="prompt input_prompt">In [31]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds_first</span><span class="o">.</span><span class="n">nbytes</span> <span class="o">/</span> <span class="mf">1e6</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ds_first</span><span class="o">.</span><span class="n">nbytes</span> <span class="o">/</span> <span class="mf">1e6</span>
 </pre></div>
 </div>
 </div>
@@ -2634,7 +2634,7 @@ Attributes:
 <div class="prompt input_prompt">In [32]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2765,7 +2765,7 @@ open_mfdataset(paths, chunks=None, concat_dim='__infer_concat_dim__', compat='no
 <div class="prompt input_prompt">In [33]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># On I got a "Too many open files" OSError.</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># On I got a "Too many open files" OSError.</span>
 <span class="c1"># It's only 365 files. That shouldn't be too many. </span>
 <span class="c1"># However, I discovered my ulimit was extremely low.</span>
 <span class="c1"># One workaround is to call </span>
@@ -2856,7 +2856,7 @@ Attributes:
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ssh</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">adt</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ssh</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">adt</span>
 <span class="n">ssh</span>
 </pre></div>
 </div>
@@ -2888,7 +2888,7 @@ Attributes:
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ssh</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ssh</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2903,7 +2903,7 @@ Attributes:
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArQAAAHwCAYAAABXH/w9AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzsvWu0LVlVJvjNtSL23uece+69+SQT
@@ -6250,7 +6250,7 @@ ONFQQqtQKBQKhUKhONH4/wEk7MB3OavUZwAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ssh_2015_mean</span> <span class="o">=</span> <span class="n">ssh</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ssh_2015_mean</span> <span class="o">=</span> <span class="n">ssh</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span>
 <span class="n">ssh_2015_mean</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -6282,7 +6282,7 @@ Coordinates:
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ssh_2015_mean</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ssh_2015_mean</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -6297,7 +6297,7 @@ Coordinates:
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArQAAAHjCAYAAADSXYwIAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzsvW2sZcd1JbZ21Tn3vdfNJptii5Qo
@@ -8871,7 +8871,7 @@ MzMzM6s1N7RmZmZmVmtuaM3MzMys1v4Cvw3jLl8sLWEAAAAASUVORK5CYII=
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ssh_anom</span> <span class="o">=</span> <span class="n">ssh</span> <span class="o">-</span> <span class="n">ssh_2015_mean</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ssh_anom</span> <span class="o">=</span> <span class="n">ssh</span> <span class="o">-</span> <span class="n">ssh_2015_mean</span>
 <span class="n">ssh_variance_lonmean</span> <span class="o">=</span> <span class="p">(</span><span class="n">ssh_anom</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s1">'lon'</span><span class="p">,</span> <span class="s1">'time'</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -8883,7 +8883,7 @@ MzMzM6s1N7RmZmZmVmtuaM3MzMys1v4Cvw3jLl8sLWEAAAAASUVORK5CYII=
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ssh_variance_lonmean</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ssh_variance_lonmean</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -8898,7 +8898,7 @@ MzMzM6s1N7RmZmZmVmtuaM3MzMys1v4Cvw3jLl8sLWEAAAAASUVORK5CYII=
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAuEAAAHjCAYAAACNYMEEAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzs3XmYXOV5Jvz7rX3tvVu7kJCExCIE
@@ -9537,7 +9537,7 @@ TkSuQmCC
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weight</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">lat</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">weight</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">lat</span><span class="p">))</span>
 <span class="n">weight</span> <span class="o">/=</span> <span class="n">weight</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="p">(</span><span class="n">ssh_anom</span> <span class="o">*</span> <span class="n">weight</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s1">'lon'</span><span class="p">,</span> <span class="s1">'lat'</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
@@ -9554,7 +9554,7 @@ TkSuQmCC
 </div>
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_png output_subarea ">
+<div class="output_png output_subarea">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtUAAAHMCAYAAAAaglSlAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
 dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAIABJREFUeJzt3XmcXGd95/vvr6q6qvdNraUlWZZs
@@ -9840,7 +9840,7 @@ oE7/P/kgcqD/T0zxAAAAAElFTkSuQmCC
 <div class="prompt input_prompt">In [35]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">gcsfs</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">gcsfs</span>
 <span class="n">gcsmap</span> <span class="o">=</span> <span class="n">gcsfs</span><span class="o">.</span><span class="n">mapping</span><span class="o">.</span><span class="n">GCSMap</span><span class="p">(</span><span class="s1">'pangeo-data/dataset-duacs-rep-global-merged-allsat-phy-l4-v3-alt'</span><span class="p">)</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">gcsmap</span><span class="p">)</span>
 <span class="n">ds</span>
@@ -9925,7 +9925,7 @@ Attributes:
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -9999,22 +9999,28 @@ Attributes:
       <a href="./tag/xarray.html">xarray</a>
     </li>
     <li class="list-group-item tag-1">
-      <a href="./tag/programming.html">programming</a>
-    </li>
-    <li class="list-group-item tag-1">
       <a href="./tag/python.html">python</a>
     </li>
-    <li class="list-group-item tag-2">
-      <a href="./tag/matplotlib.html">matplotlib</a>
+    <li class="list-group-item tag-1">
+      <a href="./tag/programming.html">programming</a>
     </li>
     <li class="list-group-item tag-2">
       <a href="./tag/pandas.html">pandas</a>
     </li>
     <li class="list-group-item tag-2">
+      <a href="./tag/matplotlib.html">matplotlib</a>
+    </li>
+    <li class="list-group-item tag-2">
       <a href="./tag/numpy.html">numpy</a>
     </li>
     <li class="list-group-item tag-3">
+      <a href="./tag/dask.html">dask</a>
+    </li>
+    <li class="list-group-item tag-3">
       <a href="./tag/unix.html">unix</a>
+    </li>
+    <li class="list-group-item tag-3">
+      <a href="./tag/visualization.html">visualization</a>
     </li>
     <li class="list-group-item tag-3">
       <a href="./tag/classes.html">classes</a>
@@ -10026,31 +10032,19 @@ Attributes:
       <a href="./tag/cartopy.html">cartopy</a>
     </li>
     <li class="list-group-item tag-3">
-      <a href="./tag/dask.html">dask</a>
-    </li>
-    <li class="list-group-item tag-3">
-      <a href="./tag/visualization.html">visualization</a>
-    </li>
-    <li class="list-group-item tag-3">
       <a href="./tag/git.html">git</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/binder.html">binder</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/shell.html">shell</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/bash.html">bash</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/modules.html">modules</a>
+      <a href="./tag/environments.html">environments</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/version-control.html">version control</a>
+      <a href="./tag/shell.html">shell</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/jupyter.html">Jupyter</a>
+      <a href="./tag/binder.html">binder</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/assignment.html">assignment</a>
@@ -10059,13 +10053,19 @@ Attributes:
       <a href="./tag/file-system.html">file system</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/conda.html">conda</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/environments.html">environments</a>
+      <a href="./tag/jupyter.html">Jupyter</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/github.html">github</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/conda.html">conda</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/version-control.html">version control</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/modules.html">modules</a>
     </li>
   </ul>
 </li>

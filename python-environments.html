@@ -191,7 +191,7 @@ lightweight alternative installation method.</p>
   preferably somewhere you have write access without super-user/root access,
   like your home directory). At the end of this process, add this path to your
   *rc configuration</p>
-<div class="highlight"><pre><span></span>    $ echo &quot;. $HOME/miniconda3/etc/profile.d/conda.sh&quot; &amp;gt; ~/.bashrc
+<div class="highlight"><pre><span></span>    <span class="err">$</span> <span class="n">echo</span> <span class="ss">&quot;. $HOME/miniconda3/etc/profile.d/conda.sh&quot;</span> <span class="o">&gt;</span> <span class="o">~/</span><span class="p">.</span><span class="n">bashrc</span>
 </pre></div>
 
 
@@ -267,16 +267,16 @@ configuration can be installed by executing</p>
 full-featured scientific Python environment with a set of packages curated for the
 geosciences. Copy and paste the following <code>environment.yml</code> file somewhere
 on your local hard drive:</p>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">geo_scipy</span>
-<span class="l l-Scalar l-Scalar-Plain">channels</span><span class="p p-Indicator">:</span>
+<div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">geo_scipy</span>
+<span class="nt">channels</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">defaults</span>
-<span class="l l-Scalar l-Scalar-Plain">dependencies</span><span class="p p-Indicator">:</span>
+<span class="nt">dependencies</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">python=3.6</span>    <span class="c1"># Python version 3.6</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">basemap</span>       <span class="c1"># mapping package</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bottleneck</span>    <span class="c1"># C-optimized array functions for NumPy</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cartopy</span>       <span class="c1"># Geographic plotting toolkit</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cython</span>        <span class="c1"># Transpile Python-&amp;gt;C</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cython</span>        <span class="c1"># Transpile Python-&gt;C</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">dask</span>          <span class="c1"># Parallel processing library</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">h5py</span>          <span class="c1"># Wrapper for HDF5</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ipython</span>       <span class="c1"># IPython interpreter and tools</span>
@@ -330,7 +330,7 @@ the command line.
 With it, you can easily install packages from an official, curated set of packages which are
 built and tested for a number of different system configurations on Linux,
 Windows, and macOS</p>
-<div class="highlight"><pre><span></span>$ conda install <span class="p">&amp;</span>lt<span class="p">;</span>package-name<span class="p">&amp;</span>gt<span class="p">;</span>
+<div class="highlight"><pre><span></span>$ conda install &lt;package-name&gt;
 </pre></div>
 
 
@@ -338,7 +338,7 @@ Windows, and macOS</p>
 community-maintained collection of packages/recipes called
 <a href="https://conda-forge.github.io/&gt;">conda forge</a>
 which is accessible through conda as a special "channel"</p>
-<div class="highlight"><pre><span></span>$ conda install -c conda-forge <span class="p">&amp;</span>lt<span class="p">;</span>package-name<span class="p">&amp;</span>gt<span class="p">;</span>
+<div class="highlight"><pre><span></span>$ conda install -c conda-forge &lt;package-name&gt;
 </pre></div>
 
 
@@ -350,7 +350,7 @@ the most common way to install packages is to search for them on the official
 <a href="https://pypi.python.org/pypi">PyPI</a> index. Once you've found the package you
 want to install (you may have also just found it on github or elsewhere), you
 use the <strong>pip</strong> command from a the command line:</p>
-<div class="highlight"><pre><span></span>$ pip install <span class="p">&amp;</span>lt<span class="p">;</span>package-name<span class="p">&amp;</span>gt<span class="p">;</span>
+<div class="highlight"><pre><span></span>$ pip install &lt;package-name&gt;
 </pre></div>
 
 
@@ -361,7 +361,7 @@ when the code you're installing doesn't have any compiled dependencies.</p>
 can't find a package on either PyPI or conda-forge, you can always install it
 directly from the source code. If the package is on github, <code>pip</code> already has
 an alias to do this for you:</p>
-<div class="highlight"><pre><span></span>$ pip install git+https://github.com/<span class="p">&amp;</span>lt<span class="p">;</span>user<span class="p">&amp;</span>gt<span class="p">;</span>/<span class="p">&amp;</span>lt<span class="p">;</span>package-name<span class="p">&amp;</span>gt<span class="p">;</span>.git
+<div class="highlight"><pre><span></span>$ pip install git+https://github.com/&lt;user&gt;/&lt;package-name&gt;.git
 </pre></div>
 
 
@@ -429,22 +429,28 @@ associated with mis-matched libraries/headers if you go this route.</p>
       <a href="./tag/xarray.html">xarray</a>
     </li>
     <li class="list-group-item tag-1">
-      <a href="./tag/programming.html">programming</a>
-    </li>
-    <li class="list-group-item tag-1">
       <a href="./tag/python.html">python</a>
     </li>
-    <li class="list-group-item tag-2">
-      <a href="./tag/matplotlib.html">matplotlib</a>
+    <li class="list-group-item tag-1">
+      <a href="./tag/programming.html">programming</a>
     </li>
     <li class="list-group-item tag-2">
       <a href="./tag/pandas.html">pandas</a>
     </li>
     <li class="list-group-item tag-2">
+      <a href="./tag/matplotlib.html">matplotlib</a>
+    </li>
+    <li class="list-group-item tag-2">
       <a href="./tag/numpy.html">numpy</a>
     </li>
     <li class="list-group-item tag-3">
+      <a href="./tag/dask.html">dask</a>
+    </li>
+    <li class="list-group-item tag-3">
       <a href="./tag/unix.html">unix</a>
+    </li>
+    <li class="list-group-item tag-3">
+      <a href="./tag/visualization.html">visualization</a>
     </li>
     <li class="list-group-item tag-3">
       <a href="./tag/classes.html">classes</a>
@@ -456,31 +462,19 @@ associated with mis-matched libraries/headers if you go this route.</p>
       <a href="./tag/cartopy.html">cartopy</a>
     </li>
     <li class="list-group-item tag-3">
-      <a href="./tag/dask.html">dask</a>
-    </li>
-    <li class="list-group-item tag-3">
-      <a href="./tag/visualization.html">visualization</a>
-    </li>
-    <li class="list-group-item tag-3">
       <a href="./tag/git.html">git</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/binder.html">binder</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/shell.html">shell</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/bash.html">bash</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/modules.html">modules</a>
+      <a href="./tag/environments.html">environments</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/version-control.html">version control</a>
+      <a href="./tag/shell.html">shell</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/jupyter.html">Jupyter</a>
+      <a href="./tag/binder.html">binder</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/assignment.html">assignment</a>
@@ -489,13 +483,19 @@ associated with mis-matched libraries/headers if you go this route.</p>
       <a href="./tag/file-system.html">file system</a>
     </li>
     <li class="list-group-item tag-4">
-      <a href="./tag/conda.html">conda</a>
-    </li>
-    <li class="list-group-item tag-4">
-      <a href="./tag/environments.html">environments</a>
+      <a href="./tag/jupyter.html">Jupyter</a>
     </li>
     <li class="list-group-item tag-4">
       <a href="./tag/github.html">github</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/conda.html">conda</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/version-control.html">version control</a>
+    </li>
+    <li class="list-group-item tag-4">
+      <a href="./tag/modules.html">modules</a>
     </li>
   </ul>
 </li>
